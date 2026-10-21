@@ -29,7 +29,7 @@ DEMO = Path(__file__).resolve().parents[1] / "demo" / "matches"
 
 def list_models(url: str) -> list[str]:
     import os
-    req = urllib.request.Request(url.rstrip("/") + "/models", headers={"Authorization": f"Bearer {os.environ.get('KV_LLM_KEY', 'none')}"})
+    req = urllib.request.Request(url.rstrip("/") + "/models", headers={"Authorization": f"Bearer {os.environ.get('KV_LLM_KEY', 'none').strip()}", "User-Agent": "kooravision/1.0", "Accept": "application/json"})
     with urllib.request.urlopen(req, timeout=20) as r:  # noqa: S310
         return [m["id"] for m in json.loads(r.read())["data"]]
 

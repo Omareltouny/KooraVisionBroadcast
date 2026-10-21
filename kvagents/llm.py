@@ -23,14 +23,15 @@ class TextModel(Protocol):
 class OpenAICompat:
     def __init__(self, base_url: str, model: str, api_key: str | None = None, timeout: float = 90.0, temperature: float = 0.4):
         self.base_url, self.model, self.timeout, self.temperature = base_url.rstrip("/"), model, timeout, temperature
-        self.api_key = api_key or os.environ.get("KV_LLM_KEY", "none")
+        self.api_key = (api_key or os.environ.get("KV_LLM_KEY", "none")).strip()
         self.name = f"openai-compatible:{model}"
 
     def complete(self, system: str, user: str) -> str:
         body = json.dumps({"model": self.model, "temperature": self.temperature,
                            "messages": [{"role": "system", "content": system}, {"role": "user", "content": user}]}).encode()
         req = urllib.request.Request(f"{self.base_url}/chat/completions", data=body,
-                                     headers={"Content-Type": "application/json", "Authorization": f"Bearer {self.api_key}"})
+                                     headers={"Content-Type": "application/json", "Authorization": f"Bearer {self.api_key}",
+                                              "User-Agent": "kooravision/1.0", "Accept": "application/json"})
         with urllib.request.urlopen(req, timeout=self.timeout) as r:  # noqa: S310 (user-configured endpoint)
             return json.loads(r.read())["choices"][0]["message"]["content"]
 
@@ -45,7 +46,7 @@ class AgentFrameworkModel:
 
     def __init__(self, model: str, base_url: str | None = None, backend: str = "openai", api_key: str | None = None):
         self.model, self.base_url, self.backend = model, base_url, backend
-        self.api_key = api_key or os.environ.get("KV_LLM_KEY", "none")
+        self.api_key = (api_key or os.environ.get("KV_LLM_KEY", "none")).strip()
         self.name = f"agent-framework:{backend}:{model}"
         self._client = None
         self._agents: dict[str, object] = {}
