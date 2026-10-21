@@ -1,0 +1,79 @@
+name: Narrate with a free model
+
+# Runs the KooraVision agents on GitHub's servers, with a free hosted model, so nothing heavy runs on your computer.
+# One-time setup: add a repository secret called LLM_API_KEY (Settings > Secrets and variables > Actions).
+# Then: Actions tab > "Narrate with a free model" > Run workflow.
+
+on:
+  workflow_dispatch:
+    inputs:
+      base_url:
+        description: "OpenAI-compatible base URL of the model provider"
+        default: "https://api.groq.com/openai/v1"
+      model:
+        description: "Model id exactly as the provider lists it"
+        default: "openai/gpt-oss-120b"
+      backend:
+        description: "openai = Microsoft Agent Framework agent, plain = bare HTTP client"
+        default: "openai"
+      min_interval:
+        description: "Seconds between model calls (free tiers have rate limits)"
+        default: "7"
+
+permissions:
+  contents: write
+
+jobs:
+  narrate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: pip install -e ".[agents,dev]"
+      - name: Unit tests
+        run: python -m pytest -q
+      - name: Check the model on one goal note (en, ar, es)
+        continue-on-error: true
+        env:
+          KV_LLM_KEY: ${{ secrets.LLM_API_KEY }}
+          BASE_URL: ${{ inputs.base_url }}
+          MODEL: ${{ inputs.model }}
+          BACKEND: ${{ inputs.backend }}
+        run: python tools/foundry_check.py --url "$BASE_URL" --model "$MODEL" --backend "$BACKEND"
+      - name: Generate the two demo matches (same seeds as the repo demo)
+        run: |
+          python -m eventgen.cli generate --seed 7 --stories config/stories.example.yaml --out "$RUNNER_TEMP/a"
+          python -m eventgen.cli generate --seed 21 --stories random --out "$RUNNER_TEMP/b"
+      - name: Run the agents with the model
+        env:
+          KV_LLM_KEY: ${{ secrets.LLM_API_KEY }}
+          KV_LLM_URL: ${{ inputs.base_url }}
+          KV_LLM_MODEL: ${{ inputs.model }}
+          KV_LLM_BACKEND: ${{ inputs.backend }}
+          KV_LLM_MIN_INTERVAL: ${{ inputs.min_interval }}
+        run: |
+          for d in a b; do
+            python -m kvagents run "$RUNNER_TEMP/$d" --out demo/out --model-cache demo/llm_cache.json
+          done
+      - name: Replay offline from the saved answers (must work with no model)
+        run: |
+          for d in a b; do
+            python -m kvagents run "$RUNNER_TEMP/$d" --out "$RUNNER_TEMP/replay" --model-cache demo/llm_cache.json --offline
+          done
+      - name: Save results to the repository
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add demo
+          git commit -m "Narrate demo matches with $MODEL_NAME (cached answers)" || echo "nothing to commit"
+          git push
+        env:
+          MODEL_NAME: ${{ inputs.model }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: demo-output
+          path: demo/
