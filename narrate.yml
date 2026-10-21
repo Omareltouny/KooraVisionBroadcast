@@ -1,0 +1,77 @@
+name: Narrate with a free model
+
+# Runs the KooraVision agents on GitHub's servers, with a free hosted model, so nothing heavy runs on your computer.
+# Secrets (Settings > Secrets and variables > Actions): LLM_API_KEY = Groq key, GEMINI_API_KEY = Google Gemini key.
+# Then: Actions tab > "Narrate with a free model" > Run workflow > pick the provider.
+
+on:
+  workflow_dispatch:
+    inputs:
+      provider:
+        description: "Which free model provider to use"
+        type: choice
+        options:
+          - groq
+          - gemini
+        default: groq
+      model:
+        description: "Optional: model id to override the provider default (leave empty for default)"
+        default: ""
+      backend:
+        description: "openai = Microsoft Agent Framework agent, plain = bare HTTP client"
+        default: "openai"
+      min_interval:
+        description: "Seconds between model calls (free tiers have rate limits)"
+        default: "7"
+
+permissions:
+  contents: write
+
+env:
+  KV_LLM_KEY: ${{ inputs.provider == 'gemini' && secrets.GEMINI_API_KEY || secrets.LLM_API_KEY }}
+  KV_LLM_URL: ${{ inputs.provider == 'gemini' && 'https://generativelanguage.googleapis.com/v1beta/openai/' || 'https://api.groq.com/openai/v1' }}
+  KV_LLM_MODEL: ${{ inputs.model != '' && inputs.model || (inputs.provider == 'gemini' && 'gemini-3.8-flash' || 'openai/gpt-oss-120b') }}
+  KV_LLM_BACKEND: ${{ inputs.backend }}
+  KV_LLM_MIN_INTERVAL: ${{ inputs.min_interval }}
+
+jobs:
+  narrate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: pip install -e ".[agents,dev]"
+      - name: Unit tests
+        run: python -m pytest -q
+      - name: Check the model on one goal note (en, ar, es)
+        continue-on-error: true
+        run: python tools/foundry_check.py --url "$KV_LLM_URL" --model "$KV_LLM_MODEL" --backend "$KV_LLM_BACKEND"
+      - name: Generate the two demo matches (same seeds as the repo demo)
+        run: |
+          python -m eventgen.cli generate --seed 7 --stories config/stories.example.yaml --out "$RUNNER_TEMP/a"
+          python -m eventgen.cli generate --seed 21 --stories random --out "$RUNNER_TEMP/b"
+      - name: Run the agents with the model
+        run: |
+          for d in a b; do
+            python -m kvagents run "$RUNNER_TEMP/$d" --out demo/out --model-cache demo/llm_cache.json
+          done
+      - name: Replay offline from the saved answers (must work with no model)
+        run: |
+          for d in a b; do
+            python -m kvagents run "$RUNNER_TEMP/$d" --out "$RUNNER_TEMP/replay" --model-cache demo/llm_cache.json --offline
+          done
+      - name: Save results to the repository
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add demo
+          git commit -m "Narrate demo matches with $KV_LLM_MODEL (cached answers)" || echo "nothing to commit"
+          git push
+      - uses: actions/upload-artifact@v4
+        with:
+          name: demo-output
+          path: demo/
