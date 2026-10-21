@@ -18,6 +18,25 @@ _NUM = re.compile(r"\d+")
 _LABEL_KEYS = ("start_label", "end_label", "behind_minute", "sub_label")
 
 
+def _tokens(name: str) -> set[str]:
+    """The words of a name that can stand for it on their own (surname, club word); very short words are ignored."""
+    return {w for w in re.split(r"[\s\-]+", name) if len(w) >= 4}
+
+
+def _has_word(text: str, tok: str) -> bool:
+    if tok.isascii():
+        return re.search(r"(?<!\w)" + re.escape(tok) + r"(?!\w)", text) is not None
+    return tok in text  # Arabic and other scripts glue prefixes onto words, so a plain substring test
+
+
+def _mentions(text: str, name: str) -> bool:
+    """The full name, or its last word (a writer may say just 'Vokafet' after the headline used the full name)."""
+    if name in text:
+        return True
+    last = re.split(r"[\s\-]+", name.strip())[-1]
+    return len(last) >= 4 and _has_word(text, last)
+
+
 def _ints(obj: Any, out: set[str]) -> None:
     """Collect the numbers a text may state. Only numeric facts and minute labels count: ids such as T06-P11
     contain digits that are not facts, so strings are ignored except the known minute-label keys."""
@@ -59,9 +78,13 @@ def verify_text(p: FactPacket, text: str, lang: str, all_names: set[str], headli
     if bad:
         return False, f"number not in facts: {bad[0]}"
     allowed_names = {n for d in p.names.values() for n in d.values()}
+    allowed_tokens = {t for n in allowed_names for t in _tokens(n)}
     for n in all_names - allowed_names:
         if n and n in text:
             return False, f"name not in facts: {n}"
+        for tok in _tokens(n) - allowed_tokens:  # a surname alone must not smuggle in someone who is not in the facts
+            if _has_word(text, tok):
+                return False, f"name not in facts: {n}"
     if len(text) > (MAX_HEAD if headline else MAX_BODY):
         return False, "too long"
     return True, ""
@@ -76,7 +99,7 @@ def verify_narration(p: FactPacket, head: str, body: str, lang: str, all_names: 
         return ok, why
     for pid in main_actor_ids(p):
         nm = p.names.get(pid, {}).get(lang)
-        if nm and nm not in head + " " + body:
+        if nm and not _mentions(head + " " + body, nm):
             return False, f"main actor missing: {nm}"
     return True, ""
 

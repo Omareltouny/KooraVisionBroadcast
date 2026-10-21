@@ -85,6 +85,20 @@ def test_verify_rejects_invented_number_and_foreign_name(mv, packets):
     assert not verify_narration(p, head, body + " Number 06 shirt.", "en", names)[0]  # digits of an id are not facts
 
 
+def test_surname_alone_counts_for_the_main_actor_but_cannot_smuggle_in_others(mv, packets):
+    p = next(x for x in packets if x.kind == "goal")
+    names = mv.all_names()
+    full = p.names[p.facts["scorer"]]["en"]
+    surname = full.split()[-1]
+    head, body = f"{full} scores!", f"{surname} fires it in at minute {p.minute.split('+')[0]}."
+    allowed = {v for d in p.names.values() for v in d.values()}
+    other = next(n for n in names if n not in allowed and len(n.split()) > 1 and n.split()[-1] not in " ".join(allowed))
+    ok, _ = verify_narration(p, head, f"{surname} scores. Then {other.split()[-1]} reacts.", "en", names)
+    assert not ok                                   # a foreign surname on its own is caught
+    ok2, why2 = verify_narration(p, "Goal", f"{surname} scores.", "en", names)
+    assert "main actor" not in why2                 # the surname satisfies the main-actor rule
+
+
 def test_arabic_number_agreement():
     T = LANG["ar"].T
     assert _nf(T, "press_body", 5) == T["press_body_few"]

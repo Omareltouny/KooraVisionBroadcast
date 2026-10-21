@@ -66,10 +66,19 @@ class AgentFrameworkModel:
             self._agents[system] = Agent(self._client, instructions=system, name="narrator")
         return self._agents[system]
 
-    def complete(self, system: str, user: str) -> str:
+    def _run(self, coro):
+        """Run a coroutine on ONE long-lived event loop (in a helper thread). The chat client keeps HTTP connections
+        that belong to the loop that opened them, so a fresh `asyncio.run` per call fails with 'Event loop is closed'."""
         import asyncio
+        import threading
+        if getattr(self, "_loop", None) is None:
+            self._loop = asyncio.new_event_loop()
+            threading.Thread(target=self._loop.run_forever, daemon=True, name="kv-model-loop").start()
+        return asyncio.run_coroutine_threadsafe(coro, self._loop).result()
+
+    def complete(self, system: str, user: str) -> str:
         agent = self._agent(system)
-        return asyncio.run(agent.run(user)).text
+        return self._run(agent.run(user)).text
 
 
 class CachedModel:
