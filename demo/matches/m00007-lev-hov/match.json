@@ -1,0 +1,40 @@
+{
+  "match_id": "m00007-lev-hov",
+  "competition": "Meridian Federation League",
+  "season": "2026/27",
+  "matchday": 1,
+  "kickoff_utc": "2026-11-07T15:00:00Z",
+  "venue": "Levmoor Park",
+  "home_team_id": "T01",
+  "away_team_id": "T06",
+  "seed": 7,
+  "generator_version": "1.1.0",
+  "periods": [
+    {
+      "period": 1,
+      "start_match_clock_ms": 0,
+      "end_match_clock_ms": 2942856,
+      "scheduled_duration_ms": 2700000,
+      "stoppage_ms": 242856,
+      "attacking_direction": {
+        "T01": "left_to_right",
+        "T06": "right_to_left"
+      }
+    },
+    {
+      "period": 2,
+      "start_match_clock_ms": 2942856,
+      "end_match_clock_ms": 6124037,
+      "scheduled_duration_ms": 2700000,
+      "stoppage_ms": 481181,
+      "attacking_direction": {
+        "T01": "right_to_left",
+        "T06": "left_to_right"
+      }
+    }
+  ],
+  "final_score": {
+    "home": 4,
+    "away": 3
+  }
+}

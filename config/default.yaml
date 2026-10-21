@@ -1,0 +1,179 @@
+# Default configuration for the synthetic event generator.
+# Rule: every value that is a guess (not a fact of the game, not calibrated against
+# a source) carries "# UNCALIBRATED - <what it controls>". docs/UNCALIBRATED.md is
+# generated from these markers and a test keeps the two in sync.
+# Keep each setting on ONE line (the marker parser is line based).
+
+competition:
+  name: "Meridian Federation League"   # fictional
+  season: "2026/27"
+  num_clubs: 6                         # UNCALIBRATED - demo league size (owner decision pending)
+  first_kickoff_utc: "2026-11-07T15:00:00Z"
+  matchday_interval_days: 7
+
+pitch:                                 # laws-of-the-game facts, not guesses
+  length_m: 105.0
+  width_m: 68.0
+  goal_width_m: 7.32
+  penalty_area_depth_m: 16.5
+  penalty_area_width_m: 40.32
+  penalty_spot_m: 11.0
+
+match:
+  period_length_ms: 2700000
+  formations: ["4-3-3", "4-2-3-1", "4-4-2", "3-5-2"]
+  stoppage_min_ms: 60000               # UNCALIBRATED - minimum added time per half
+  stoppage_max_ms: 480000              # UNCALIBRATED - maximum added time per half
+  stoppage_per_foul_ms: 8000          # UNCALIBRATED - added time accrued per foul
+  stoppage_per_card_ms: 20000          # UNCALIBRATED - added time accrued per card
+  stoppage_per_sub_ms: 30000           # UNCALIBRATED - added time accrued per substitution
+  stoppage_per_goal_ms: 25000          # UNCALIBRATED - added time accrued per goal
+  max_substitutions: 5
+  sub_count_range: [3, 5]              # UNCALIBRATED - substitutions each team makes (research: about 4 per team)
+  sub_minute_range: [46, 85]           # UNCALIBRATED - when substitutions are scheduled
+
+team_style:                            # sampled per club when the league is built
+  attack_intensity: [0.9, 1.1]        # UNCALIBRATED - multiplier on shot appetite
+  pressing_intensity: [0.8, 1.2]       # UNCALIBRATED - multiplier on pressing frequency
+  buildup_directness: [0.2, 0.7]       # UNCALIBRATED - 0 patient, 1 direct
+  quality: [-0.02, 0.02]               # UNCALIBRATED - additive pass completion edge
+
+player:
+  skill_range: [0.35, 0.95]            # UNCALIBRATED - hidden player skill range
+  involvement_range: [0.8, 1.2]        # UNCALIBRATED - hidden ball involvement range
+  skill_pass_weight: 0.10              # UNCALIBRATED - pass completion per unit of skill above 0.65
+  skill_finish_weight: 0.15            # UNCALIBRATED - goal probability per unit of skill above 0.65
+
+roles:
+  anchor_x: {GK: 5, CB: 24, FB: 30, DM: 38, CM: 50, AM: 62, W: 72, ST: 85}  # UNCALIBRATED - typical own-half-relative x of each role
+  involvement: {GK: 0.5, CB: 0.9, FB: 1.0, DM: 1.1, CM: 1.2, AM: 1.2, W: 1.0, ST: 0.9}  # UNCALIBRATED - ball involvement by role
+  shot_mult: {GK: 0.0, CB: 0.3, FB: 0.4, DM: 0.6, CM: 0.9, AM: 1.2, W: 1.2, ST: 1.6}  # UNCALIBRATED - shooting appetite by role
+  anchor_spread_x: 18.0                # UNCALIBRATED - how strictly players hold their x zone
+  lane_spread_y: 16.0                  # UNCALIBRATED - how strictly players hold their lane
+
+passing:
+  base_weights: {short: 1.2, forward: 0.45, lateral: 0.75, back: 0.30, long: 0.30}  # UNCALIBRATED - relative pass type frequency
+  cross_weight: 1.0                    # UNCALIBRATED - crossing weight when wide in the final third
+  cross_min_x: 72.0                    # UNCALIBRATED - x from which crosses are considered
+  cross_wide_band_m: 14.0              # UNCALIBRATED - distance from touchline counted as wide
+  length_m: {short: [5, 17], forward: [11, 30], lateral: [6, 24], back: [5, 24], long: [32, 58], goal_kick_short: [12, 24]}  # UNCALIBRATED - pass length ranges
+  completion: {short: 0.91, forward: 0.80, lateral: 0.93, back: 0.95, long: 0.58, cross: 0.32, throw_in: 0.85, corner: 0.38, free_kick: 0.62, goal_kick: 0.55}  # UNCALIBRATED - base completion by type
+  pressure_penalty: 0.14               # UNCALIBRATED - completion lost under maximum pressure
+  failure_split: {intercepted: 0.42, incomplete: 0.32, out: 0.26}  # UNCALIBRATED - how failed passes fail
+  speed_ms: {short: [6, 14], forward: [8, 17], lateral: [6, 13], back: [6, 13], long: [16, 28], cross: [14, 24], throw_in: [7, 14], corner: [14, 24], free_kick: [12, 26], goal_kick: [14, 27]}  # UNCALIBRATED - ball speed ranges
+  goalkeeper_long_mult: 3.0            # UNCALIBRATED - goalkeeper preference for long distribution
+  goal_kick_short_prob: 0.45           # UNCALIBRATED - share of goal kicks played short
+
+pressure:
+  base_prob: 0.30                      # UNCALIBRATED - per action chance of a pressure event at pressing 1.0
+  max_prob: 0.90                       # UNCALIBRATED - cap on pressure probability
+  zone_factor: {own_third: 0.7, middle: 1.0, final_third: 1.3}  # UNCALIBRATED - pressing by ball zone (attacker frame)
+  distance_m: [1.0, 6.0]               # UNCALIBRATED - presser distance range
+  duration_ms: [500, 4000]             # UNCALIBRATED - pressure duration range
+  tackle_attempt_prob: 0.165           # UNCALIBRATED - tackle attempt chance given pressure
+  tackle_win_prob: 0.45                # UNCALIBRATED - tackle success
+  quality_weight: 1.0                  # UNCALIBRATED - weight of team quality in tackle success
+
+foul:
+  defender_foul_prob: 0.40             # UNCALIBRATED - foul chance on a tackle attempt
+  box_foul_mult: 0.10                  # UNCALIBRATED - defenders are careful in their own box
+  offensive_foul_prob: 0.009           # UNCALIBRATED - ball carrier foul chance per action
+  yellow_prob: 0.155                   # UNCALIBRATED - yellow card chance per foul
+  second_yellow_mult: 0.17            # UNCALIBRATED - referees are slower to book a player already on a yellow
+  red_prob: 0.0042                     # UNCALIBRATED - straight red chance per foul
+
+shot:
+  max_distance_m: 34.0                 # UNCALIBRATED - furthest distance shots are considered
+  distance_exponent: 2.0               # UNCALIBRATED - how fast shot appetite falls off with distance
+  weight_scale: 0.435                  # UNCALIBRATED - overall shot appetite
+  block_prob: 0.22                     # UNCALIBRATED - blocked share of shots
+  off_target_base: 0.20                # UNCALIBRATED - off target share at point blank
+  off_target_per_m: 0.006              # UNCALIBRATED - extra off target share per metre
+  post_prob: 0.02                      # UNCALIBRATED - hit the woodwork
+  goal_near: 0.455                     # UNCALIBRATED - goal chance of an on-target shot at zero distance
+  goal_decay_m: 15.0                   # UNCALIBRATED - distance decay of goal chance
+  goal_min: 0.03                       # UNCALIBRATED - floor on goal chance
+  goal_max: 0.85                       # UNCALIBRATED - cap on goal chance
+  speed_ms: [14, 34]                   # UNCALIBRATED - shot speed range
+  assist_window_ms: 8000               # UNCALIBRATED - max gap between key pass and shot
+  header_prob: 0.22                    # UNCALIBRATED - chance a shot near goal is a header
+  header_zone_m: 12.0                  # UNCALIBRATED - distance from the byline counted as header range
+  after_saved: {corner: 0.28, keeper: 0.55, rebound: 0.10, defender: 0.07}  # UNCALIBRATED - what follows a save
+  after_blocked: {corner: 0.40, defender: 0.60}  # UNCALIBRATED - what follows a block
+  after_post: {rebound: 0.25, corner: 0.20, defender: 0.55}  # UNCALIBRATED - what follows a post hit
+  after_off_target: {goal_kick: 0.80, corner: 0.20}  # UNCALIBRATED - what follows a shot that misses (deflected misses give corners)
+
+penalty:
+  outcome_weights: {goal: 0.88, saved: 0.08, off_target: 0.02, post: 0.02}  # UNCALIBRATED - penalty outcomes
+
+timing:
+  action_ms: {short: [1600, 4400], forward: [2100, 5200], lateral: [1600, 4400], back: [1400, 4000], long: [2900, 6600], cross: [2200, 4800], goal_kick: [3000, 7000], shot: [3000, 7000], tackle: [1500, 3500]}  # UNCALIBRATED - time consumed per action
+  dead_ball_ms: {throw_in: [10000, 25600], corner: [22000, 50200], free_kick: [12000, 35000], goal_kick: [18000, 42800], keeper_hold: [4000, 12000], kickoff: [8000, 16000], foul: [6000, 15000], card: [15000, 40000], penalty: [110000, 190000], substitution: [50000, 102000], goal: [20000, 45000]}  # UNCALIBRATED - dead time before restarts (throw-in, goal kick, corner, penalty, substitution means follow 2025-26 league figures)
+  event_gap_ms: [200, 900]             # UNCALIBRATED - gap between events of one action
+
+bounds:                                # validator limits (plausibility bounds)
+  pass_speed_ms: [1.0, 40.0]           # UNCALIBRATED - allowed pass ball speed
+  shot_speed_ms: [5.0, 45.0]           # UNCALIBRATED - allowed shot speed
+
+stories:
+  max_attempts: 150                    # UNCALIBRATED - re-simulations allowed to realize planted stories
+  random_max_stories: 2                # UNCALIBRATED - most stories picked by --stories random
+  random_jitter_minutes: 6             # UNCALIBRATED - random shift of default windows
+  defaults:
+    momentum_swing: {start_minute: 15, end_minute: 45, strength: 0.8}  # UNCALIBRATED - default window and strength
+    pressing_spell: {start_minute: 20, end_minute: 34, strength: 0.8}  # UNCALIBRATED - default window and strength
+    late_comeback: {start_minute: 10, end_minute: 90, strength: 0.8}  # UNCALIBRATED - default window and strength
+    red_card_turning_point: {start_minute: 30, end_minute: 90, strength: 0.8}  # UNCALIBRATED - default window and strength
+    star_player_match: {start_minute: 10, end_minute: 85, strength: 0.8}  # UNCALIBRATED - default window and strength
+    quiet_then_chaos: {start_minute: 55, end_minute: 75, strength: 0.8}  # UNCALIBRATED - default window and strength
+  effects:                             # magnitudes, scaled by scenario strength
+    momentum_swing: {completion: 0.08, shot: 0.8, press: 0.5, forward: 0.4}  # UNCALIBRATED - modifier sizes
+    pressing_spell: {press: 1.8, opp_completion: -0.10, tackle_boost: 0.3}  # UNCALIBRATED - modifier sizes
+    late_comeback: {setup_shot: 0.8, setup_finish: 0.15, shot: 1.2, finish: 0.2, completion: 0.05, tempo: 0.25, setup_fraction: 0.35, comeback_fraction: 0.35}  # UNCALIBRATED - modifier sizes
+    red_card_turning_point: {pre_foul: 6.0, completion: -0.06, shot: -0.4, press: -0.4, opp_shot: 0.5, opp_completion: 0.04, opp_press: 0.3}  # UNCALIBRATED - modifier sizes
+    star_player_match: {involvement: 4.0, finish: 0.10, completion: 0.05}  # UNCALIBRATED - modifier sizes
+    quiet_then_chaos: {quiet_tempo: 1.5, quiet_shot: -0.9, quiet_press: -0.5, quiet_forward: -0.4, burst_shot: 2.5, burst_tempo: 0.3, burst_completion: 0.06, burst_press: 0.3, quiet_fraction: 0.6}  # UNCALIBRATED - modifier sizes
+  realization:                         # checks that a planted story actually shows up in the events
+    momentum_min_share_gap: 0.10       # UNCALIBRATED - min possession share gap between the two spells
+    pressing_min_turnovers: 4          # UNCALIBRATED - min ball wins in the opponent half in the window
+    quiet_max_shots: 1                 # UNCALIBRATED - max shots in the quiet stretch
+    chaos_min_shots: 4                 # UNCALIBRATED - min shots by the team in the burst
+    star_min_touch_share: 0.20         # UNCALIBRATED - min share of team touches for the star
+    star_min_goals_plus_key_passes: 2  # UNCALIBRATED - min goals plus key passes for the star
+    red_card_min_minutes_after: 8      # UNCALIBRATED - min minutes played after the red card
+    red_card_min_share_drop: 0.03      # UNCALIBRATED - min drop in pass share after the red card
+
+tracking:                              # 5 Hz positions of 22 players and the ball, built from the events
+  hz: 5                                # frames per second (must divide 1000)
+  max_speed_ms: 10.0                   # UNCALIBRATED - fastest speed a player can reach
+  speed_factor_range: [0.86, 1.0]      # UNCALIBRATED - per-player share of max speed
+  max_accel_ms2: 3.5                   # UNCALIBRATED - largest change of velocity per second
+  slot_speed_ms: 3.0                   # UNCALIBRATED - top speed when just holding formation
+  lead_ms: 5500                        # UNCALIBRATED - minimum time a player starts moving before an event
+  hold_ms: 700                         # UNCALIBRATED - time a player stays at the spot after an event
+  ball_shift: 1.0                      # UNCALIBRATED - how far the team line follows the ball up the pitch
+  attack_push_m: 9.0                   # UNCALIBRATED - extra forward shift of the team in possession
+  defend_drop_m: 10.0                  # UNCALIBRATED - backward shift of the team out of possession
+  wander_m: 1.9                        # UNCALIBRATED - size of small random drift of each player
+  wander_period_s: [9.0, 18.0]         # UNCALIBRATED - seconds per drift cycle (shorter = busier off-ball movement)
+  compact_x: 0.62                      # UNCALIBRATED - squeeze of the formation along the pitch (1 = textbook spacing)
+  compact_y: 0.92                      # UNCALIBRATED - squeeze of the formation across the pitch
+  y_follow: 0.38                       # UNCALIBRATED - how far the team shifts sideways with the ball
+  out_compact_y: 0.62                  # UNCALIBRATED - sideways squeeze of the team without the ball
+  out_compact_x: 0.44                  # UNCALIBRATED - lengthways squeeze of the team without the ball
+  runs_per_match: {W: 56, ST: 56, AM: 48, CM: 38, FB: 38, DM: 24, CB: 12, GK: 0}  # UNCALIBRATED - forward off-ball runs per player in possession
+  run_gain_m: [12.0, 22.0]              # UNCALIBRATED - how far a forward run goes
+  run_dur_s: [3.0, 4.5]                # UNCALIBRATED - how long a run takes
+  carry_touch_m: 2.5                   # UNCALIBRATED - how far the ball drifts from its spot while a player holds it
+
+game:                                  # who attacks harder when, by minute and score
+  home_shot_mult: 1.12                 # UNCALIBRATED - shot appetite multiplier for the home side
+  home_completion_bonus: 0.012         # UNCALIBRATED - pass completion bonus for the home side
+  early_minutes: 15                    # UNCALIBRATED - length of the cautious opening spell
+  early_shot_mult: 0.65                # UNCALIBRATED - shot appetite in the opening spell
+  second_half_shot_mult: 1.90          # UNCALIBRATED - shot appetite in the second half versus the first
+  late_ramp: 0.10                      # UNCALIBRATED - extra shot appetite reached at the end of the second half
+  trailing_boost: 0.28                 # UNCALIBRATED - extra shot appetite per goal behind (up to 2)
+  leading_cut: 0.10                    # UNCALIBRATED - lost shot appetite per goal ahead (up to 2)
+  sub_shot_mult: 0.82                  # UNCALIBRATED - shot appetite of a player who came on as a substitute
+  sub_involvement_mult: 1.00           # UNCALIBRATED - ball involvement of a player who came on

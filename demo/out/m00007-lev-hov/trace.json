@@ -1,0 +1,135 @@
+{
+ "engine": "microsoft-agent-framework",
+ "agents": [
+  {
+   "agent": "Interpret",
+   "step": "find moments",
+   "took_ms": 1.8337889999884283,
+   "inputs": "1622 events",
+   "outputs": "17 moments: {'pressing_spell': 2, 'goal': 7, 'big_save': 2, 'comeback': 1, 'super_sub': 3, 'star_performance': 1, 'full_time': 1}",
+   "notes": [
+    "rule-based; sees only the event stream"
+   ]
+  },
+  {
+   "agent": "Explain",
+   "step": "causes and facts",
+   "took_ms": 603.6422390000098,
+   "inputs": "17 moments",
+   "outputs": "17 fact packets, 5 with a cause",
+   "notes": [
+    "tracking used"
+   ]
+  },
+  {
+   "agent": "Narrate",
+   "step": "write en/ar/es",
+   "took_ms": 11.683527000059257,
+   "inputs": "17 fact packets",
+   "outputs": "204 texts (0 model drafts waiting for Verify)",
+   "notes": [
+    "templates only (no model)"
+   ]
+  },
+  {
+   "agent": "Verify",
+   "step": "fact-check",
+   "took_ms": 10.090335999962008,
+   "inputs": "all texts",
+   "outputs": "{\"templates_ok\": 204, \"templates_failed\": 0, \"llm_accepted\": 0, \"llm_rejected\": 0}",
+   "notes": []
+  },
+  {
+   "agent": "Broadcast desk",
+   "step": "rank for producers",
+   "took_ms": 0.1258580000467191,
+   "inputs": "17 moments",
+   "outputs": "16 cards, tiers {'A': 3, 'B': 10, 'C': 3}",
+   "notes": []
+  },
+  {
+   "agent": "Fan desk",
+   "step": "personalise feeds",
+   "took_ms": 0.2829579999570342,
+   "inputs": "17 moments, 3 profiles",
+   "outputs": "48 cards",
+   "notes": [
+    "fan_ar (ar, follows home): 16 cards, 6 push",
+    "fan_es (es, follows away): 16 cards, 6 push",
+    "fan_en (en, follows None): 16 cards, 5 push"
+   ]
+  }
+ ],
+ "framework_events": [
+  {
+   "event": "executor_invoked",
+   "agent": "interpret",
+   "t_ms": 5.8
+  },
+  {
+   "event": "executor_completed",
+   "agent": "interpret",
+   "t_ms": 5.9
+  },
+  {
+   "event": "executor_invoked",
+   "agent": "explain",
+   "t_ms": 651.2
+  },
+  {
+   "event": "executor_completed",
+   "agent": "explain",
+   "t_ms": 651.3
+  },
+  {
+   "event": "executor_invoked",
+   "agent": "narrate",
+   "t_ms": 664.4
+  },
+  {
+   "event": "executor_completed",
+   "agent": "narrate",
+   "t_ms": 664.5
+  },
+  {
+   "event": "executor_invoked",
+   "agent": "verify",
+   "t_ms": 677.5
+  },
+  {
+   "event": "executor_completed",
+   "agent": "verify",
+   "t_ms": 677.6
+  },
+  {
+   "event": "executor_invoked",
+   "agent": "broadcast_desk",
+   "t_ms": 683.8
+  },
+  {
+   "event": "executor_completed",
+   "agent": "broadcast_desk",
+   "t_ms": 683.9
+  },
+  {
+   "event": "executor_invoked",
+   "agent": "fan_desk",
+   "t_ms": 683.9
+  },
+  {
+   "event": "executor_completed",
+   "agent": "fan_desk",
+   "t_ms": 684.0
+  },
+  {
+   "event": "executor_invoked",
+   "agent": "publish",
+   "t_ms": 691.1
+  },
+  {
+   "event": "executor_completed",
+   "agent": "publish",
+   "t_ms": 691.2
+  }
+ ]
+}

@@ -1,0 +1,1682 @@
+[
+ {
+  "moment_id": "M001",
+  "lang": "en",
+  "voice": "broadcast",
+  "headline": "Gizemi Vinus says no",
+  "body": "Gizemi Vinus (Dasstead City) keeps out Nasenod Bovun's effort from 10 metres in minute 8.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M001",
+  "lang": "en",
+  "voice": "fan_for",
+  "headline": "Gizemi Vinus says no",
+  "body": "Gizemi Vinus (Dasstead City) keeps out Nasenod Bovun's effort from 10 metres in minute 8. Dasstead City supporters, this is the one.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M001",
+  "lang": "en",
+  "voice": "fan_against",
+  "headline": "Gizemi Vinus says no",
+  "body": "Gizemi Vinus (Dasstead City) keeps out Nasenod Bovun's effort from 10 metres in minute 8. Tough moment for Mivwick Rovers.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M001",
+  "lang": "en",
+  "voice": "fan_neutral",
+  "headline": "Gizemi Vinus says no",
+  "body": "Gizemi Vinus (Dasstead City) keeps out Nasenod Bovun's effort from 10 metres in minute 8.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M001",
+  "lang": "ar",
+  "voice": "broadcast",
+  "headline": "جيزيمي فينوس يتصدّى",
+  "body": "تصدى جيزيمي فينوس (داسستيد سيتي) لتسديدة ناسينود بوفون من مسافة 10 متر في الدقيقة 8.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M001",
+  "lang": "ar",
+  "voice": "fan_for",
+  "headline": "جيزيمي فينوس يتصدّى",
+  "body": "تصدى جيزيمي فينوس (داسستيد سيتي) لتسديدة ناسينود بوفون من مسافة 10 متر في الدقيقة 8. يا لها من لحظة لجماهير داسستيد سيتي!",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M001",
+  "lang": "ar",
+  "voice": "fan_against",
+  "headline": "جيزيمي فينوس يتصدّى",
+  "body": "تصدى جيزيمي فينوس (داسستيد سيتي) لتسديدة ناسينود بوفون من مسافة 10 متر في الدقيقة 8. لحظة صعبة على ميفويك روفرز.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M001",
+  "lang": "ar",
+  "voice": "fan_neutral",
+  "headline": "جيزيمي فينوس يتصدّى",
+  "body": "تصدى جيزيمي فينوس (داسستيد سيتي) لتسديدة ناسينود بوفون من مسافة 10 متر في الدقيقة 8.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M001",
+  "lang": "es",
+  "voice": "broadcast",
+  "headline": "Gizemi Vinus dice que no",
+  "body": "Gizemi Vinus (Ciudad Dasstead) detiene el disparo de Nasenod Bovun desde 10 metros en el minuto 8.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M001",
+  "lang": "es",
+  "voice": "fan_for",
+  "headline": "Gizemi Vinus dice que no",
+  "body": "Gizemi Vinus (Ciudad Dasstead) detiene el disparo de Nasenod Bovun desde 10 metros en el minuto 8. ¡Locura en la grada de Ciudad Dasstead!",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M001",
+  "lang": "es",
+  "voice": "fan_against",
+  "headline": "Gizemi Vinus dice que no",
+  "body": "Gizemi Vinus (Ciudad Dasstead) detiene el disparo de Nasenod Bovun desde 10 metros en el minuto 8. Momento duro para Rovers Mivwick.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M001",
+  "lang": "es",
+  "voice": "fan_neutral",
+  "headline": "Gizemi Vinus dice que no",
+  "body": "Gizemi Vinus (Ciudad Dasstead) detiene el disparo de Nasenod Bovun desde 10 metros en el minuto 8.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M002",
+  "lang": "en",
+  "voice": "broadcast",
+  "headline": "Tikere Fukozol says no",
+  "body": "Tikere Fukozol (Mivwick Rovers) keeps out Tubuku Fezos's effort from 8 metres in minute 10.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M002",
+  "lang": "en",
+  "voice": "fan_for",
+  "headline": "Tikere Fukozol says no",
+  "body": "Tikere Fukozol (Mivwick Rovers) keeps out Tubuku Fezos's effort from 8 metres in minute 10. Scenes for Mivwick Rovers!",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M002",
+  "lang": "en",
+  "voice": "fan_against",
+  "headline": "Tikere Fukozol says no",
+  "body": "Tikere Fukozol (Mivwick Rovers) keeps out Tubuku Fezos's effort from 8 metres in minute 10. Tough moment for Dasstead City.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M002",
+  "lang": "en",
+  "voice": "fan_neutral",
+  "headline": "Tikere Fukozol says no",
+  "body": "Tikere Fukozol (Mivwick Rovers) keeps out Tubuku Fezos's effort from 8 metres in minute 10.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M002",
+  "lang": "ar",
+  "voice": "broadcast",
+  "headline": "تيكيري فوكوزول يتصدّى",
+  "body": "تصدى تيكيري فوكوزول (ميفويك روفرز) لتسديدة توبوكو فيزوس من مسافة 8 متر في الدقيقة 10.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M002",
+  "lang": "ar",
+  "voice": "fan_for",
+  "headline": "تيكيري فوكوزول يتصدّى",
+  "body": "تصدى تيكيري فوكوزول (ميفويك روفرز) لتسديدة توبوكو فيزوس من مسافة 8 متر في الدقيقة 10. فرحة كبيرة لجماهير ميفويك روفرز!",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M002",
+  "lang": "ar",
+  "voice": "fan_against",
+  "headline": "تيكيري فوكوزول يتصدّى",
+  "body": "تصدى تيكيري فوكوزول (ميفويك روفرز) لتسديدة توبوكو فيزوس من مسافة 8 متر في الدقيقة 10. داسستيد سيتي يحتاج إلى رد.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M002",
+  "lang": "ar",
+  "voice": "fan_neutral",
+  "headline": "تيكيري فوكوزول يتصدّى",
+  "body": "تصدى تيكيري فوكوزول (ميفويك روفرز) لتسديدة توبوكو فيزوس من مسافة 8 متر في الدقيقة 10.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M002",
+  "lang": "es",
+  "voice": "broadcast",
+  "headline": "Tikere Fukozol dice que no",
+  "body": "Tikere Fukozol (Rovers Mivwick) detiene el disparo de Tubuku Fezos desde 8 metros en el minuto 10.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M002",
+  "lang": "es",
+  "voice": "fan_for",
+  "headline": "Tikere Fukozol dice que no",
+  "body": "Tikere Fukozol (Rovers Mivwick) detiene el disparo de Tubuku Fezos desde 8 metros en el minuto 10. Aficionados de Rovers Mivwick, este es el momento.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M002",
+  "lang": "es",
+  "voice": "fan_against",
+  "headline": "Tikere Fukozol dice que no",
+  "body": "Tikere Fukozol (Rovers Mivwick) detiene el disparo de Tubuku Fezos desde 8 metros en el minuto 10. Momento duro para Ciudad Dasstead.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M002",
+  "lang": "es",
+  "voice": "fan_neutral",
+  "headline": "Tikere Fukozol dice que no",
+  "body": "Tikere Fukozol (Rovers Mivwick) detiene el disparo de Tubuku Fezos desde 8 metros en el minuto 10.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M003",
+  "lang": "en",
+  "voice": "broadcast",
+  "headline": "Gizemi Vinus says no",
+  "body": "Gizemi Vinus (Dasstead City) keeps out Fudahi Vivog's effort from 6 metres in minute 13.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M003",
+  "lang": "en",
+  "voice": "fan_for",
+  "headline": "Gizemi Vinus says no",
+  "body": "Gizemi Vinus (Dasstead City) keeps out Fudahi Vivog's effort from 6 metres in minute 13. What a moment for Dasstead City!",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M003",
+  "lang": "en",
+  "voice": "fan_against",
+  "headline": "Gizemi Vinus says no",
+  "body": "Gizemi Vinus (Dasstead City) keeps out Fudahi Vivog's effort from 6 metres in minute 13. Tough moment for Mivwick Rovers.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M003",
+  "lang": "en",
+  "voice": "fan_neutral",
+  "headline": "Gizemi Vinus says no",
+  "body": "Gizemi Vinus (Dasstead City) keeps out Fudahi Vivog's effort from 6 metres in minute 13.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M003",
+  "lang": "ar",
+  "voice": "broadcast",
+  "headline": "جيزيمي فينوس يتصدّى",
+  "body": "تصدى جيزيمي فينوس (داسستيد سيتي) لتسديدة فوداهي فيفوج من مسافة 6 متر في الدقيقة 13.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M003",
+  "lang": "ar",
+  "voice": "fan_for",
+  "headline": "جيزيمي فينوس يتصدّى",
+  "body": "تصدى جيزيمي فينوس (داسستيد سيتي) لتسديدة فوداهي فيفوج من مسافة 6 متر في الدقيقة 13. يا لها من لحظة لجماهير داسستيد سيتي!",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M003",
+  "lang": "ar",
+  "voice": "fan_against",
+  "headline": "جيزيمي فينوس يتصدّى",
+  "body": "تصدى جيزيمي فينوس (داسستيد سيتي) لتسديدة فوداهي فيفوج من مسافة 6 متر في الدقيقة 13. ضربة لـميفويك روفرز.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M003",
+  "lang": "ar",
+  "voice": "fan_neutral",
+  "headline": "جيزيمي فينوس يتصدّى",
+  "body": "تصدى جيزيمي فينوس (داسستيد سيتي) لتسديدة فوداهي فيفوج من مسافة 6 متر في الدقيقة 13.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M003",
+  "lang": "es",
+  "voice": "broadcast",
+  "headline": "Gizemi Vinus dice que no",
+  "body": "Gizemi Vinus (Ciudad Dasstead) detiene el disparo de Fudahi Vivog desde 6 metros en el minuto 13.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M003",
+  "lang": "es",
+  "voice": "fan_for",
+  "headline": "Gizemi Vinus dice que no",
+  "body": "Gizemi Vinus (Ciudad Dasstead) detiene el disparo de Fudahi Vivog desde 6 metros en el minuto 13. ¡Qué momento para Ciudad Dasstead!",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M003",
+  "lang": "es",
+  "voice": "fan_against",
+  "headline": "Gizemi Vinus dice que no",
+  "body": "Gizemi Vinus (Ciudad Dasstead) detiene el disparo de Fudahi Vivog desde 6 metros en el minuto 13. Un golpe para Rovers Mivwick.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M003",
+  "lang": "es",
+  "voice": "fan_neutral",
+  "headline": "Gizemi Vinus dice que no",
+  "body": "Gizemi Vinus (Ciudad Dasstead) detiene el disparo de Fudahi Vivog desde 6 metros en el minuto 13.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M004",
+  "lang": "en",
+  "voice": "broadcast",
+  "headline": "Dasstead City turn up the pressure",
+  "body": "Between minute 19 and minute 28, Dasstead City won the ball back 8 times in the opposition half.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M004",
+  "lang": "en",
+  "voice": "fan_for",
+  "headline": "Dasstead City turn up the pressure",
+  "body": "Between minute 19 and minute 28, Dasstead City won the ball back 8 times in the opposition half. What a moment for Dasstead City!",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M004",
+  "lang": "en",
+  "voice": "fan_against",
+  "headline": "Dasstead City turn up the pressure",
+  "body": "Between minute 19 and minute 28, Dasstead City won the ball back 8 times in the opposition half. A blow for Mivwick Rovers.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M004",
+  "lang": "en",
+  "voice": "fan_neutral",
+  "headline": "Dasstead City turn up the pressure",
+  "body": "Between minute 19 and minute 28, Dasstead City won the ball back 8 times in the opposition half.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M004",
+  "lang": "ar",
+  "voice": "broadcast",
+  "headline": "داسستيد سيتي يضغط بقوة",
+  "body": "بين الدقيقة 19 والدقيقة 28، استعاد داسستيد سيتي الكرة 8 مرات في نصف ملعب المنافس.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M004",
+  "lang": "ar",
+  "voice": "fan_for",
+  "headline": "داسستيد سيتي يضغط بقوة",
+  "body": "بين الدقيقة 19 والدقيقة 28، استعاد داسستيد سيتي الكرة 8 مرات في نصف ملعب المنافس. فرحة كبيرة لجماهير داسستيد سيتي!",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M004",
+  "lang": "ar",
+  "voice": "fan_against",
+  "headline": "داسستيد سيتي يضغط بقوة",
+  "body": "بين الدقيقة 19 والدقيقة 28، استعاد داسستيد سيتي الكرة 8 مرات في نصف ملعب المنافس. لحظة صعبة على ميفويك روفرز.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M004",
+  "lang": "ar",
+  "voice": "fan_neutral",
+  "headline": "داسستيد سيتي يضغط بقوة",
+  "body": "بين الدقيقة 19 والدقيقة 28، استعاد داسستيد سيتي الكرة 8 مرات في نصف ملعب المنافس.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M004",
+  "lang": "es",
+  "voice": "broadcast",
+  "headline": "Ciudad Dasstead aprieta arriba",
+  "body": "Entre el minuto 19 y el minuto 28, Ciudad Dasstead recuperó el balón 8 veces en campo rival.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M004",
+  "lang": "es",
+  "voice": "fan_for",
+  "headline": "Ciudad Dasstead aprieta arriba",
+  "body": "Entre el minuto 19 y el minuto 28, Ciudad Dasstead recuperó el balón 8 veces en campo rival. ¡Qué momento para Ciudad Dasstead!",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M004",
+  "lang": "es",
+  "voice": "fan_against",
+  "headline": "Ciudad Dasstead aprieta arriba",
+  "body": "Entre el minuto 19 y el minuto 28, Ciudad Dasstead recuperó el balón 8 veces en campo rival. Rovers Mivwick necesita una reacción.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M004",
+  "lang": "es",
+  "voice": "fan_neutral",
+  "headline": "Ciudad Dasstead aprieta arriba",
+  "body": "Entre el minuto 19 y el minuto 28, Ciudad Dasstead recuperó el balón 8 veces en campo rival.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M005",
+  "lang": "en",
+  "voice": "broadcast",
+  "headline": "Gizemi Vinus says no",
+  "body": "Gizemi Vinus (Dasstead City) keeps out Nasenod Bovun's effort from 3 metres in minute 31.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M005",
+  "lang": "en",
+  "voice": "fan_for",
+  "headline": "Gizemi Vinus says no",
+  "body": "Gizemi Vinus (Dasstead City) keeps out Nasenod Bovun's effort from 3 metres in minute 31. Dasstead City supporters, this is the one.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M005",
+  "lang": "en",
+  "voice": "fan_against",
+  "headline": "Gizemi Vinus says no",
+  "body": "Gizemi Vinus (Dasstead City) keeps out Nasenod Bovun's effort from 3 metres in minute 31. Tough moment for Mivwick Rovers.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M005",
+  "lang": "en",
+  "voice": "fan_neutral",
+  "headline": "Gizemi Vinus says no",
+  "body": "Gizemi Vinus (Dasstead City) keeps out Nasenod Bovun's effort from 3 metres in minute 31.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M005",
+  "lang": "ar",
+  "voice": "broadcast",
+  "headline": "جيزيمي فينوس يتصدّى",
+  "body": "تصدى جيزيمي فينوس (داسستيد سيتي) لتسديدة ناسينود بوفون من مسافة 3 متر في الدقيقة 31.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M005",
+  "lang": "ar",
+  "voice": "fan_for",
+  "headline": "جيزيمي فينوس يتصدّى",
+  "body": "تصدى جيزيمي فينوس (داسستيد سيتي) لتسديدة ناسينود بوفون من مسافة 3 متر في الدقيقة 31. فرحة كبيرة لجماهير داسستيد سيتي!",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M005",
+  "lang": "ar",
+  "voice": "fan_against",
+  "headline": "جيزيمي فينوس يتصدّى",
+  "body": "تصدى جيزيمي فينوس (داسستيد سيتي) لتسديدة ناسينود بوفون من مسافة 3 متر في الدقيقة 31. ميفويك روفرز يحتاج إلى رد.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M005",
+  "lang": "ar",
+  "voice": "fan_neutral",
+  "headline": "جيزيمي فينوس يتصدّى",
+  "body": "تصدى جيزيمي فينوس (داسستيد سيتي) لتسديدة ناسينود بوفون من مسافة 3 متر في الدقيقة 31.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M005",
+  "lang": "es",
+  "voice": "broadcast",
+  "headline": "Gizemi Vinus dice que no",
+  "body": "Gizemi Vinus (Ciudad Dasstead) detiene el disparo de Nasenod Bovun desde 3 metros en el minuto 31.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M005",
+  "lang": "es",
+  "voice": "fan_for",
+  "headline": "Gizemi Vinus dice que no",
+  "body": "Gizemi Vinus (Ciudad Dasstead) detiene el disparo de Nasenod Bovun desde 3 metros en el minuto 31. Aficionados de Ciudad Dasstead, este es el momento.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M005",
+  "lang": "es",
+  "voice": "fan_against",
+  "headline": "Gizemi Vinus dice que no",
+  "body": "Gizemi Vinus (Ciudad Dasstead) detiene el disparo de Nasenod Bovun desde 3 metros en el minuto 31. Rovers Mivwick necesita una reacción.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M005",
+  "lang": "es",
+  "voice": "fan_neutral",
+  "headline": "Gizemi Vinus dice que no",
+  "body": "Gizemi Vinus (Ciudad Dasstead) detiene el disparo de Nasenod Bovun desde 3 metros en el minuto 31.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M006",
+  "lang": "en",
+  "voice": "broadcast",
+  "headline": "Mivwick Rovers turn up the pressure",
+  "body": "Between minute 32 and minute 43, Mivwick Rovers won the ball back 12 times in the opposition half.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M006",
+  "lang": "en",
+  "voice": "fan_for",
+  "headline": "Mivwick Rovers turn up the pressure",
+  "body": "Between minute 32 and minute 43, Mivwick Rovers won the ball back 12 times in the opposition half. What a moment for Mivwick Rovers!",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M006",
+  "lang": "en",
+  "voice": "fan_against",
+  "headline": "Mivwick Rovers turn up the pressure",
+  "body": "Between minute 32 and minute 43, Mivwick Rovers won the ball back 12 times in the opposition half. Tough moment for Dasstead City.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M006",
+  "lang": "en",
+  "voice": "fan_neutral",
+  "headline": "Mivwick Rovers turn up the pressure",
+  "body": "Between minute 32 and minute 43, Mivwick Rovers won the ball back 12 times in the opposition half.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M006",
+  "lang": "ar",
+  "voice": "broadcast",
+  "headline": "ميفويك روفرز يضغط بقوة",
+  "body": "بين الدقيقة 32 والدقيقة 43، استعاد ميفويك روفرز الكرة 12 مرة في نصف ملعب المنافس.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M006",
+  "lang": "ar",
+  "voice": "fan_for",
+  "headline": "ميفويك روفرز يضغط بقوة",
+  "body": "بين الدقيقة 32 والدقيقة 43، استعاد ميفويك روفرز الكرة 12 مرة في نصف ملعب المنافس. فرحة كبيرة لجماهير ميفويك روفرز!",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M006",
+  "lang": "ar",
+  "voice": "fan_against",
+  "headline": "ميفويك روفرز يضغط بقوة",
+  "body": "بين الدقيقة 32 والدقيقة 43، استعاد ميفويك روفرز الكرة 12 مرة في نصف ملعب المنافس. داسستيد سيتي يحتاج إلى رد.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M006",
+  "lang": "ar",
+  "voice": "fan_neutral",
+  "headline": "ميفويك روفرز يضغط بقوة",
+  "body": "بين الدقيقة 32 والدقيقة 43، استعاد ميفويك روفرز الكرة 12 مرة في نصف ملعب المنافس.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M006",
+  "lang": "es",
+  "voice": "broadcast",
+  "headline": "Rovers Mivwick aprieta arriba",
+  "body": "Entre el minuto 32 y el minuto 43, Rovers Mivwick recuperó el balón 12 veces en campo rival.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M006",
+  "lang": "es",
+  "voice": "fan_for",
+  "headline": "Rovers Mivwick aprieta arriba",
+  "body": "Entre el minuto 32 y el minuto 43, Rovers Mivwick recuperó el balón 12 veces en campo rival. ¡Locura en la grada de Rovers Mivwick!",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M006",
+  "lang": "es",
+  "voice": "fan_against",
+  "headline": "Rovers Mivwick aprieta arriba",
+  "body": "Entre el minuto 32 y el minuto 43, Rovers Mivwick recuperó el balón 12 veces en campo rival. Un golpe para Ciudad Dasstead.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M006",
+  "lang": "es",
+  "voice": "fan_neutral",
+  "headline": "Rovers Mivwick aprieta arriba",
+  "body": "Entre el minuto 32 y el minuto 43, Rovers Mivwick recuperó el balón 12 veces en campo rival.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M007",
+  "lang": "en",
+  "voice": "broadcast",
+  "headline": "Gizemi Vinus says no",
+  "body": "Gizemi Vinus (Dasstead City) keeps out Fudahi Vivog's effort from 6 metres in minute 35.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M007",
+  "lang": "en",
+  "voice": "fan_for",
+  "headline": "Gizemi Vinus says no",
+  "body": "Gizemi Vinus (Dasstead City) keeps out Fudahi Vivog's effort from 6 metres in minute 35. Dasstead City supporters, this is the one.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M007",
+  "lang": "en",
+  "voice": "fan_against",
+  "headline": "Gizemi Vinus says no",
+  "body": "Gizemi Vinus (Dasstead City) keeps out Fudahi Vivog's effort from 6 metres in minute 35. A blow for Mivwick Rovers.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M007",
+  "lang": "en",
+  "voice": "fan_neutral",
+  "headline": "Gizemi Vinus says no",
+  "body": "Gizemi Vinus (Dasstead City) keeps out Fudahi Vivog's effort from 6 metres in minute 35.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M007",
+  "lang": "ar",
+  "voice": "broadcast",
+  "headline": "جيزيمي فينوس يتصدّى",
+  "body": "تصدى جيزيمي فينوس (داسستيد سيتي) لتسديدة فوداهي فيفوج من مسافة 6 متر في الدقيقة 35.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M007",
+  "lang": "ar",
+  "voice": "fan_for",
+  "headline": "جيزيمي فينوس يتصدّى",
+  "body": "تصدى جيزيمي فينوس (داسستيد سيتي) لتسديدة فوداهي فيفوج من مسافة 6 متر في الدقيقة 35. جماهير داسستيد سيتي، هذه هي اللحظة.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M007",
+  "lang": "ar",
+  "voice": "fan_against",
+  "headline": "جيزيمي فينوس يتصدّى",
+  "body": "تصدى جيزيمي فينوس (داسستيد سيتي) لتسديدة فوداهي فيفوج من مسافة 6 متر في الدقيقة 35. ضربة لـميفويك روفرز.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M007",
+  "lang": "ar",
+  "voice": "fan_neutral",
+  "headline": "جيزيمي فينوس يتصدّى",
+  "body": "تصدى جيزيمي فينوس (داسستيد سيتي) لتسديدة فوداهي فيفوج من مسافة 6 متر في الدقيقة 35.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M007",
+  "lang": "es",
+  "voice": "broadcast",
+  "headline": "Gizemi Vinus dice que no",
+  "body": "Gizemi Vinus (Ciudad Dasstead) detiene el disparo de Fudahi Vivog desde 6 metros en el minuto 35.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M007",
+  "lang": "es",
+  "voice": "fan_for",
+  "headline": "Gizemi Vinus dice que no",
+  "body": "Gizemi Vinus (Ciudad Dasstead) detiene el disparo de Fudahi Vivog desde 6 metros en el minuto 35. ¡Locura en la grada de Ciudad Dasstead!",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M007",
+  "lang": "es",
+  "voice": "fan_against",
+  "headline": "Gizemi Vinus dice que no",
+  "body": "Gizemi Vinus (Ciudad Dasstead) detiene el disparo de Fudahi Vivog desde 6 metros en el minuto 35. Un golpe para Rovers Mivwick.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M007",
+  "lang": "es",
+  "voice": "fan_neutral",
+  "headline": "Gizemi Vinus dice que no",
+  "body": "Gizemi Vinus (Ciudad Dasstead) detiene el disparo de Fudahi Vivog desde 6 metros en el minuto 35.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M008",
+  "lang": "en",
+  "voice": "broadcast",
+  "headline": "Nasenod Bovun puts Mivwick Rovers in front",
+  "body": "Nasenod Bovun scores for Mivwick Rovers in minute 45. It is Mivwick Rovers 1-0 Dasstead City. Nefovas Fomof set it up. A header from 8 metres.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M008",
+  "lang": "en",
+  "voice": "fan_for",
+  "headline": "Nasenod Bovun puts Mivwick Rovers in front",
+  "body": "Nasenod Bovun scores for Mivwick Rovers in minute 45. It is Mivwick Rovers 1-0 Dasstead City. Nefovas Fomof set it up. A header from 8 metres. Mivwick Rovers supporters, this is the one.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M008",
+  "lang": "en",
+  "voice": "fan_against",
+  "headline": "Nasenod Bovun puts Mivwick Rovers in front",
+  "body": "Nasenod Bovun scores for Mivwick Rovers in minute 45. It is Mivwick Rovers 1-0 Dasstead City. Nefovas Fomof set it up. A header from 8 metres. Tough moment for Dasstead City.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M008",
+  "lang": "en",
+  "voice": "fan_neutral",
+  "headline": "Nasenod Bovun puts Mivwick Rovers in front",
+  "body": "Nasenod Bovun scores for Mivwick Rovers in minute 45. It is Mivwick Rovers 1-0 Dasstead City. Nefovas Fomof set it up. A header from 8 metres.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M008",
+  "lang": "ar",
+  "voice": "broadcast",
+  "headline": "ناسينود بوفون يمنح ميفويك روفرز التقدم",
+  "body": "سجّل ناسينود بوفون لصالح ميفويك روفرز في الدقيقة 45. النتيجة: ميفويك روفرز 1-0 داسستيد سيتي. صنع الهدف نيفوفاس فوموف. برأسية من مسافة 8 متر.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M008",
+  "lang": "ar",
+  "voice": "fan_for",
+  "headline": "ناسينود بوفون يمنح ميفويك روفرز التقدم",
+  "body": "سجّل ناسينود بوفون لصالح ميفويك روفرز في الدقيقة 45. النتيجة: ميفويك روفرز 1-0 داسستيد سيتي. صنع الهدف نيفوفاس فوموف. برأسية من مسافة 8 متر. جماهير ميفويك روفرز، هذه هي اللحظة.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M008",
+  "lang": "ar",
+  "voice": "fan_against",
+  "headline": "ناسينود بوفون يمنح ميفويك روفرز التقدم",
+  "body": "سجّل ناسينود بوفون لصالح ميفويك روفرز في الدقيقة 45. النتيجة: ميفويك روفرز 1-0 داسستيد سيتي. صنع الهدف نيفوفاس فوموف. برأسية من مسافة 8 متر. لحظة صعبة على داسستيد سيتي.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M008",
+  "lang": "ar",
+  "voice": "fan_neutral",
+  "headline": "ناسينود بوفون يمنح ميفويك روفرز التقدم",
+  "body": "سجّل ناسينود بوفون لصالح ميفويك روفرز في الدقيقة 45. النتيجة: ميفويك روفرز 1-0 داسستيد سيتي. صنع الهدف نيفوفاس فوموف. برأسية من مسافة 8 متر.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M008",
+  "lang": "es",
+  "voice": "broadcast",
+  "headline": "Nasenod Bovun pone por delante a Rovers Mivwick",
+  "body": "Nasenod Bovun marca para Rovers Mivwick en el minuto 45. El marcador es Rovers Mivwick 1-0 Ciudad Dasstead. Nefovas Fomof dio el pase del gol. Un remate de cabeza desde 8 metros.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M008",
+  "lang": "es",
+  "voice": "fan_for",
+  "headline": "Nasenod Bovun pone por delante a Rovers Mivwick",
+  "body": "Nasenod Bovun marca para Rovers Mivwick en el minuto 45. El marcador es Rovers Mivwick 1-0 Ciudad Dasstead. Nefovas Fomof dio el pase del gol. Un remate de cabeza desde 8 metros. Aficionados de Rovers Mivwick, este es el momento.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M008",
+  "lang": "es",
+  "voice": "fan_against",
+  "headline": "Nasenod Bovun pone por delante a Rovers Mivwick",
+  "body": "Nasenod Bovun marca para Rovers Mivwick en el minuto 45. El marcador es Rovers Mivwick 1-0 Ciudad Dasstead. Nefovas Fomof dio el pase del gol. Un remate de cabeza desde 8 metros. Momento duro para Ciudad Dasstead.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M008",
+  "lang": "es",
+  "voice": "fan_neutral",
+  "headline": "Nasenod Bovun pone por delante a Rovers Mivwick",
+  "body": "Nasenod Bovun marca para Rovers Mivwick en el minuto 45. El marcador es Rovers Mivwick 1-0 Ciudad Dasstead. Nefovas Fomof dio el pase del gol. Un remate de cabeza desde 8 metros.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M009",
+  "lang": "en",
+  "voice": "broadcast",
+  "headline": "Gizemi Vinus says no",
+  "body": "Gizemi Vinus (Dasstead City) keeps out Nasenod Bovun's effort from 8 metres in minute 61.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M009",
+  "lang": "en",
+  "voice": "fan_for",
+  "headline": "Gizemi Vinus says no",
+  "body": "Gizemi Vinus (Dasstead City) keeps out Nasenod Bovun's effort from 8 metres in minute 61. Dasstead City supporters, this is the one.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M009",
+  "lang": "en",
+  "voice": "fan_against",
+  "headline": "Gizemi Vinus says no",
+  "body": "Gizemi Vinus (Dasstead City) keeps out Nasenod Bovun's effort from 8 metres in minute 61. A blow for Mivwick Rovers.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M009",
+  "lang": "en",
+  "voice": "fan_neutral",
+  "headline": "Gizemi Vinus says no",
+  "body": "Gizemi Vinus (Dasstead City) keeps out Nasenod Bovun's effort from 8 metres in minute 61.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M009",
+  "lang": "ar",
+  "voice": "broadcast",
+  "headline": "جيزيمي فينوس يتصدّى",
+  "body": "تصدى جيزيمي فينوس (داسستيد سيتي) لتسديدة ناسينود بوفون من مسافة 8 متر في الدقيقة 61.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M009",
+  "lang": "ar",
+  "voice": "fan_for",
+  "headline": "جيزيمي فينوس يتصدّى",
+  "body": "تصدى جيزيمي فينوس (داسستيد سيتي) لتسديدة ناسينود بوفون من مسافة 8 متر في الدقيقة 61. فرحة كبيرة لجماهير داسستيد سيتي!",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M009",
+  "lang": "ar",
+  "voice": "fan_against",
+  "headline": "جيزيمي فينوس يتصدّى",
+  "body": "تصدى جيزيمي فينوس (داسستيد سيتي) لتسديدة ناسينود بوفون من مسافة 8 متر في الدقيقة 61. ميفويك روفرز يحتاج إلى رد.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M009",
+  "lang": "ar",
+  "voice": "fan_neutral",
+  "headline": "جيزيمي فينوس يتصدّى",
+  "body": "تصدى جيزيمي فينوس (داسستيد سيتي) لتسديدة ناسينود بوفون من مسافة 8 متر في الدقيقة 61.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M009",
+  "lang": "es",
+  "voice": "broadcast",
+  "headline": "Gizemi Vinus dice que no",
+  "body": "Gizemi Vinus (Ciudad Dasstead) detiene el disparo de Nasenod Bovun desde 8 metros en el minuto 61.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M009",
+  "lang": "es",
+  "voice": "fan_for",
+  "headline": "Gizemi Vinus dice que no",
+  "body": "Gizemi Vinus (Ciudad Dasstead) detiene el disparo de Nasenod Bovun desde 8 metros en el minuto 61. ¡Qué momento para Ciudad Dasstead!",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M009",
+  "lang": "es",
+  "voice": "fan_against",
+  "headline": "Gizemi Vinus dice que no",
+  "body": "Gizemi Vinus (Ciudad Dasstead) detiene el disparo de Nasenod Bovun desde 8 metros en el minuto 61. Rovers Mivwick necesita una reacción.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M009",
+  "lang": "es",
+  "voice": "fan_neutral",
+  "headline": "Gizemi Vinus dice que no",
+  "body": "Gizemi Vinus (Ciudad Dasstead) detiene el disparo de Nasenod Bovun desde 8 metros en el minuto 61.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M010",
+  "lang": "en",
+  "voice": "broadcast",
+  "headline": "GOAL! Genahe Tehorel scores for Mivwick Rovers",
+  "body": "Genahe Tehorel scores for Mivwick Rovers in minute 71. It is Mivwick Rovers 2-0 Dasstead City. Hikegem Rodur set it up. 6 Mivwick Rovers players were inside the box.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M010",
+  "lang": "en",
+  "voice": "fan_for",
+  "headline": "GOAL! Genahe Tehorel scores for Mivwick Rovers",
+  "body": "Genahe Tehorel scores for Mivwick Rovers in minute 71. It is Mivwick Rovers 2-0 Dasstead City. Hikegem Rodur set it up. 6 Mivwick Rovers players were inside the box. Mivwick Rovers supporters, this is the one.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M010",
+  "lang": "en",
+  "voice": "fan_against",
+  "headline": "GOAL! Genahe Tehorel scores for Mivwick Rovers",
+  "body": "Genahe Tehorel scores for Mivwick Rovers in minute 71. It is Mivwick Rovers 2-0 Dasstead City. Hikegem Rodur set it up. 6 Mivwick Rovers players were inside the box. Dasstead City need a response.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M010",
+  "lang": "en",
+  "voice": "fan_neutral",
+  "headline": "GOAL! Genahe Tehorel scores for Mivwick Rovers",
+  "body": "Genahe Tehorel scores for Mivwick Rovers in minute 71. It is Mivwick Rovers 2-0 Dasstead City. Hikegem Rodur set it up. 6 Mivwick Rovers players were inside the box.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M010",
+  "lang": "ar",
+  "voice": "broadcast",
+  "headline": "هدف! جيناهي تيهوريل يسجّل لصالح ميفويك روفرز",
+  "body": "سجّل جيناهي تيهوريل لصالح ميفويك روفرز في الدقيقة 71. النتيجة: ميفويك روفرز 2-0 داسستيد سيتي. صنع الهدف هيكيجيم رودور. كان 6 من لاعبي ميفويك روفرز داخل منطقة الجزاء.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M010",
+  "lang": "ar",
+  "voice": "fan_for",
+  "headline": "هدف! جيناهي تيهوريل يسجّل لصالح ميفويك روفرز",
+  "body": "سجّل جيناهي تيهوريل لصالح ميفويك روفرز في الدقيقة 71. النتيجة: ميفويك روفرز 2-0 داسستيد سيتي. صنع الهدف هيكيجيم رودور. كان 6 من لاعبي ميفويك روفرز داخل منطقة الجزاء. جماهير ميفويك روفرز، هذه هي اللحظة.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M010",
+  "lang": "ar",
+  "voice": "fan_against",
+  "headline": "هدف! جيناهي تيهوريل يسجّل لصالح ميفويك روفرز",
+  "body": "سجّل جيناهي تيهوريل لصالح ميفويك روفرز في الدقيقة 71. النتيجة: ميفويك روفرز 2-0 داسستيد سيتي. صنع الهدف هيكيجيم رودور. كان 6 من لاعبي ميفويك روفرز داخل منطقة الجزاء. ضربة لـداسستيد سيتي.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M010",
+  "lang": "ar",
+  "voice": "fan_neutral",
+  "headline": "هدف! جيناهي تيهوريل يسجّل لصالح ميفويك روفرز",
+  "body": "سجّل جيناهي تيهوريل لصالح ميفويك روفرز في الدقيقة 71. النتيجة: ميفويك روفرز 2-0 داسستيد سيتي. صنع الهدف هيكيجيم رودور. كان 6 من لاعبي ميفويك روفرز داخل منطقة الجزاء.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M010",
+  "lang": "es",
+  "voice": "broadcast",
+  "headline": "¡GOL! Genahe Tehorel marca para Rovers Mivwick",
+  "body": "Genahe Tehorel marca para Rovers Mivwick en el minuto 71. El marcador es Rovers Mivwick 2-0 Ciudad Dasstead. Hikegem Rodur dio el pase del gol. 6 jugadores de Rovers Mivwick estaban dentro del área.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M010",
+  "lang": "es",
+  "voice": "fan_for",
+  "headline": "¡GOL! Genahe Tehorel marca para Rovers Mivwick",
+  "body": "Genahe Tehorel marca para Rovers Mivwick en el minuto 71. El marcador es Rovers Mivwick 2-0 Ciudad Dasstead. Hikegem Rodur dio el pase del gol. 6 jugadores de Rovers Mivwick estaban dentro del área. ¡Locura en la grada de Rovers Mivwick!",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M010",
+  "lang": "es",
+  "voice": "fan_against",
+  "headline": "¡GOL! Genahe Tehorel marca para Rovers Mivwick",
+  "body": "Genahe Tehorel marca para Rovers Mivwick en el minuto 71. El marcador es Rovers Mivwick 2-0 Ciudad Dasstead. Hikegem Rodur dio el pase del gol. 6 jugadores de Rovers Mivwick estaban dentro del área. Un golpe para Ciudad Dasstead.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M010",
+  "lang": "es",
+  "voice": "fan_neutral",
+  "headline": "¡GOL! Genahe Tehorel marca para Rovers Mivwick",
+  "body": "Genahe Tehorel marca para Rovers Mivwick en el minuto 71. El marcador es Rovers Mivwick 2-0 Ciudad Dasstead. Hikegem Rodur dio el pase del gol. 6 jugadores de Rovers Mivwick estaban dentro del área.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M011",
+  "lang": "en",
+  "voice": "broadcast",
+  "headline": "Gizemi Vinus says no",
+  "body": "Gizemi Vinus (Dasstead City) keeps out Hikegem Rodur's effort from 8 metres in minute 76.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M011",
+  "lang": "en",
+  "voice": "fan_for",
+  "headline": "Gizemi Vinus says no",
+  "body": "Gizemi Vinus (Dasstead City) keeps out Hikegem Rodur's effort from 8 metres in minute 76. What a moment for Dasstead City!",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M011",
+  "lang": "en",
+  "voice": "fan_against",
+  "headline": "Gizemi Vinus says no",
+  "body": "Gizemi Vinus (Dasstead City) keeps out Hikegem Rodur's effort from 8 metres in minute 76. A blow for Mivwick Rovers.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M011",
+  "lang": "en",
+  "voice": "fan_neutral",
+  "headline": "Gizemi Vinus says no",
+  "body": "Gizemi Vinus (Dasstead City) keeps out Hikegem Rodur's effort from 8 metres in minute 76.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M011",
+  "lang": "ar",
+  "voice": "broadcast",
+  "headline": "جيزيمي فينوس يتصدّى",
+  "body": "تصدى جيزيمي فينوس (داسستيد سيتي) لتسديدة هيكيجيم رودور من مسافة 8 متر في الدقيقة 76.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M011",
+  "lang": "ar",
+  "voice": "fan_for",
+  "headline": "جيزيمي فينوس يتصدّى",
+  "body": "تصدى جيزيمي فينوس (داسستيد سيتي) لتسديدة هيكيجيم رودور من مسافة 8 متر في الدقيقة 76. جماهير داسستيد سيتي، هذه هي اللحظة.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M011",
+  "lang": "ar",
+  "voice": "fan_against",
+  "headline": "جيزيمي فينوس يتصدّى",
+  "body": "تصدى جيزيمي فينوس (داسستيد سيتي) لتسديدة هيكيجيم رودور من مسافة 8 متر في الدقيقة 76. ضربة لـميفويك روفرز.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M011",
+  "lang": "ar",
+  "voice": "fan_neutral",
+  "headline": "جيزيمي فينوس يتصدّى",
+  "body": "تصدى جيزيمي فينوس (داسستيد سيتي) لتسديدة هيكيجيم رودور من مسافة 8 متر في الدقيقة 76.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M011",
+  "lang": "es",
+  "voice": "broadcast",
+  "headline": "Gizemi Vinus dice que no",
+  "body": "Gizemi Vinus (Ciudad Dasstead) detiene el disparo de Hikegem Rodur desde 8 metros en el minuto 76.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M011",
+  "lang": "es",
+  "voice": "fan_for",
+  "headline": "Gizemi Vinus dice que no",
+  "body": "Gizemi Vinus (Ciudad Dasstead) detiene el disparo de Hikegem Rodur desde 8 metros en el minuto 76. Aficionados de Ciudad Dasstead, este es el momento.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M011",
+  "lang": "es",
+  "voice": "fan_against",
+  "headline": "Gizemi Vinus dice que no",
+  "body": "Gizemi Vinus (Ciudad Dasstead) detiene el disparo de Hikegem Rodur desde 8 metros en el minuto 76. Momento duro para Rovers Mivwick.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M011",
+  "lang": "es",
+  "voice": "fan_neutral",
+  "headline": "Gizemi Vinus dice que no",
+  "body": "Gizemi Vinus (Ciudad Dasstead) detiene el disparo de Hikegem Rodur desde 8 metros en el minuto 76.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M012",
+  "lang": "en",
+  "voice": "broadcast",
+  "headline": "Gizemi Vinus says no",
+  "body": "Gizemi Vinus (Dasstead City) keeps out Hikegem Rodur's effort from 11 metres in minute 80.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M012",
+  "lang": "en",
+  "voice": "fan_for",
+  "headline": "Gizemi Vinus says no",
+  "body": "Gizemi Vinus (Dasstead City) keeps out Hikegem Rodur's effort from 11 metres in minute 80. Scenes for Dasstead City!",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M012",
+  "lang": "en",
+  "voice": "fan_against",
+  "headline": "Gizemi Vinus says no",
+  "body": "Gizemi Vinus (Dasstead City) keeps out Hikegem Rodur's effort from 11 metres in minute 80. A blow for Mivwick Rovers.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M012",
+  "lang": "en",
+  "voice": "fan_neutral",
+  "headline": "Gizemi Vinus says no",
+  "body": "Gizemi Vinus (Dasstead City) keeps out Hikegem Rodur's effort from 11 metres in minute 80.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M012",
+  "lang": "ar",
+  "voice": "broadcast",
+  "headline": "جيزيمي فينوس يتصدّى",
+  "body": "تصدى جيزيمي فينوس (داسستيد سيتي) لتسديدة هيكيجيم رودور من مسافة 11 متر في الدقيقة 80.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M012",
+  "lang": "ar",
+  "voice": "fan_for",
+  "headline": "جيزيمي فينوس يتصدّى",
+  "body": "تصدى جيزيمي فينوس (داسستيد سيتي) لتسديدة هيكيجيم رودور من مسافة 11 متر في الدقيقة 80. فرحة كبيرة لجماهير داسستيد سيتي!",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M012",
+  "lang": "ar",
+  "voice": "fan_against",
+  "headline": "جيزيمي فينوس يتصدّى",
+  "body": "تصدى جيزيمي فينوس (داسستيد سيتي) لتسديدة هيكيجيم رودور من مسافة 11 متر في الدقيقة 80. لحظة صعبة على ميفويك روفرز.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M012",
+  "lang": "ar",
+  "voice": "fan_neutral",
+  "headline": "جيزيمي فينوس يتصدّى",
+  "body": "تصدى جيزيمي فينوس (داسستيد سيتي) لتسديدة هيكيجيم رودور من مسافة 11 متر في الدقيقة 80.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M012",
+  "lang": "es",
+  "voice": "broadcast",
+  "headline": "Gizemi Vinus dice que no",
+  "body": "Gizemi Vinus (Ciudad Dasstead) detiene el disparo de Hikegem Rodur desde 11 metros en el minuto 80.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M012",
+  "lang": "es",
+  "voice": "fan_for",
+  "headline": "Gizemi Vinus dice que no",
+  "body": "Gizemi Vinus (Ciudad Dasstead) detiene el disparo de Hikegem Rodur desde 11 metros en el minuto 80. ¡Qué momento para Ciudad Dasstead!",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M012",
+  "lang": "es",
+  "voice": "fan_against",
+  "headline": "Gizemi Vinus dice que no",
+  "body": "Gizemi Vinus (Ciudad Dasstead) detiene el disparo de Hikegem Rodur desde 11 metros en el minuto 80. Rovers Mivwick necesita una reacción.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M012",
+  "lang": "es",
+  "voice": "fan_neutral",
+  "headline": "Gizemi Vinus dice que no",
+  "body": "Gizemi Vinus (Ciudad Dasstead) detiene el disparo de Hikegem Rodur desde 11 metros en el minuto 80.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M013",
+  "lang": "en",
+  "voice": "broadcast",
+  "headline": "Tikere Fukozol says no",
+  "body": "Tikere Fukozol (Mivwick Rovers) keeps out Tubuku Fezos's effort from 6 metres in minute 86.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M013",
+  "lang": "en",
+  "voice": "fan_for",
+  "headline": "Tikere Fukozol says no",
+  "body": "Tikere Fukozol (Mivwick Rovers) keeps out Tubuku Fezos's effort from 6 metres in minute 86. What a moment for Mivwick Rovers!",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M013",
+  "lang": "en",
+  "voice": "fan_against",
+  "headline": "Tikere Fukozol says no",
+  "body": "Tikere Fukozol (Mivwick Rovers) keeps out Tubuku Fezos's effort from 6 metres in minute 86. Dasstead City need a response.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M013",
+  "lang": "en",
+  "voice": "fan_neutral",
+  "headline": "Tikere Fukozol says no",
+  "body": "Tikere Fukozol (Mivwick Rovers) keeps out Tubuku Fezos's effort from 6 metres in minute 86.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M013",
+  "lang": "ar",
+  "voice": "broadcast",
+  "headline": "تيكيري فوكوزول يتصدّى",
+  "body": "تصدى تيكيري فوكوزول (ميفويك روفرز) لتسديدة توبوكو فيزوس من مسافة 6 متر في الدقيقة 86.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M013",
+  "lang": "ar",
+  "voice": "fan_for",
+  "headline": "تيكيري فوكوزول يتصدّى",
+  "body": "تصدى تيكيري فوكوزول (ميفويك روفرز) لتسديدة توبوكو فيزوس من مسافة 6 متر في الدقيقة 86. جماهير ميفويك روفرز، هذه هي اللحظة.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M013",
+  "lang": "ar",
+  "voice": "fan_against",
+  "headline": "تيكيري فوكوزول يتصدّى",
+  "body": "تصدى تيكيري فوكوزول (ميفويك روفرز) لتسديدة توبوكو فيزوس من مسافة 6 متر في الدقيقة 86. داسستيد سيتي يحتاج إلى رد.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M013",
+  "lang": "ar",
+  "voice": "fan_neutral",
+  "headline": "تيكيري فوكوزول يتصدّى",
+  "body": "تصدى تيكيري فوكوزول (ميفويك روفرز) لتسديدة توبوكو فيزوس من مسافة 6 متر في الدقيقة 86.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M013",
+  "lang": "es",
+  "voice": "broadcast",
+  "headline": "Tikere Fukozol dice que no",
+  "body": "Tikere Fukozol (Rovers Mivwick) detiene el disparo de Tubuku Fezos desde 6 metros en el minuto 86.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M013",
+  "lang": "es",
+  "voice": "fan_for",
+  "headline": "Tikere Fukozol dice que no",
+  "body": "Tikere Fukozol (Rovers Mivwick) detiene el disparo de Tubuku Fezos desde 6 metros en el minuto 86. Aficionados de Rovers Mivwick, este es el momento.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M013",
+  "lang": "es",
+  "voice": "fan_against",
+  "headline": "Tikere Fukozol dice que no",
+  "body": "Tikere Fukozol (Rovers Mivwick) detiene el disparo de Tubuku Fezos desde 6 metros en el minuto 86. Momento duro para Ciudad Dasstead.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M013",
+  "lang": "es",
+  "voice": "fan_neutral",
+  "headline": "Tikere Fukozol dice que no",
+  "body": "Tikere Fukozol (Rovers Mivwick) detiene el disparo de Tubuku Fezos desde 6 metros en el minuto 86.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M014",
+  "lang": "en",
+  "voice": "broadcast",
+  "headline": "FULL TIME: Mivwick Rovers 2-0 Dasstead City",
+  "body": "Mivwick Rovers beat Dasstead City at Mivwick Arena. Shots: 17-11.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M014",
+  "lang": "en",
+  "voice": "fan_for",
+  "headline": "FULL TIME: Mivwick Rovers 2-0 Dasstead City",
+  "body": "Mivwick Rovers beat Dasstead City at Mivwick Arena. Shots: 17-11. Scenes for Mivwick Rovers!",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M014",
+  "lang": "en",
+  "voice": "fan_against",
+  "headline": "FULL TIME: Mivwick Rovers 2-0 Dasstead City",
+  "body": "Mivwick Rovers beat Dasstead City at Mivwick Arena. Shots: 17-11. Tough moment for Dasstead City.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M014",
+  "lang": "en",
+  "voice": "fan_neutral",
+  "headline": "FULL TIME: Mivwick Rovers 2-0 Dasstead City",
+  "body": "Mivwick Rovers beat Dasstead City at Mivwick Arena. Shots: 17-11.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M014",
+  "lang": "ar",
+  "voice": "broadcast",
+  "headline": "نهاية المباراة: ميفويك روفرز 2-0 داسستيد سيتي",
+  "body": "فاز ميفويك روفرز على داسستيد سيتي في Mivwick Arena. التسديدات: 17-11.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M014",
+  "lang": "ar",
+  "voice": "fan_for",
+  "headline": "نهاية المباراة: ميفويك روفرز 2-0 داسستيد سيتي",
+  "body": "فاز ميفويك روفرز على داسستيد سيتي في Mivwick Arena. التسديدات: 17-11. يا لها من لحظة لجماهير ميفويك روفرز!",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M014",
+  "lang": "ar",
+  "voice": "fan_against",
+  "headline": "نهاية المباراة: ميفويك روفرز 2-0 داسستيد سيتي",
+  "body": "فاز ميفويك روفرز على داسستيد سيتي في Mivwick Arena. التسديدات: 17-11. داسستيد سيتي يحتاج إلى رد.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M014",
+  "lang": "ar",
+  "voice": "fan_neutral",
+  "headline": "نهاية المباراة: ميفويك روفرز 2-0 داسستيد سيتي",
+  "body": "فاز ميفويك روفرز على داسستيد سيتي في Mivwick Arena. التسديدات: 17-11.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M014",
+  "lang": "es",
+  "voice": "broadcast",
+  "headline": "FINAL DEL PARTIDO: Rovers Mivwick 2-0 Ciudad Dasstead",
+  "body": "Rovers Mivwick vence a Ciudad Dasstead en Mivwick Arena. Disparos: 17-11.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M014",
+  "lang": "es",
+  "voice": "fan_for",
+  "headline": "FINAL DEL PARTIDO: Rovers Mivwick 2-0 Ciudad Dasstead",
+  "body": "Rovers Mivwick vence a Ciudad Dasstead en Mivwick Arena. Disparos: 17-11. Aficionados de Rovers Mivwick, este es el momento.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M014",
+  "lang": "es",
+  "voice": "fan_against",
+  "headline": "FINAL DEL PARTIDO: Rovers Mivwick 2-0 Ciudad Dasstead",
+  "body": "Rovers Mivwick vence a Ciudad Dasstead en Mivwick Arena. Disparos: 17-11. Momento duro para Ciudad Dasstead.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M014",
+  "lang": "es",
+  "voice": "fan_neutral",
+  "headline": "FINAL DEL PARTIDO: Rovers Mivwick 2-0 Ciudad Dasstead",
+  "body": "Rovers Mivwick vence a Ciudad Dasstead en Mivwick Arena. Disparos: 17-11.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ }
+]

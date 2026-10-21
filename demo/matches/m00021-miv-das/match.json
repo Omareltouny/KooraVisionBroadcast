@@ -1,0 +1,40 @@
+{
+  "match_id": "m00021-miv-das",
+  "competition": "Meridian Federation League",
+  "season": "2026/27",
+  "matchday": 1,
+  "kickoff_utc": "2026-11-07T15:00:00Z",
+  "venue": "Mivwick Arena",
+  "home_team_id": "T01",
+  "away_team_id": "T06",
+  "seed": 21,
+  "generator_version": "1.1.0",
+  "periods": [
+    {
+      "period": 1,
+      "start_match_clock_ms": 0,
+      "end_match_clock_ms": 2898749,
+      "scheduled_duration_ms": 2700000,
+      "stoppage_ms": 198749,
+      "attacking_direction": {
+        "T01": "left_to_right",
+        "T06": "right_to_left"
+      }
+    },
+    {
+      "period": 2,
+      "start_match_clock_ms": 2898749,
+      "end_match_clock_ms": 6106824,
+      "scheduled_duration_ms": 2700000,
+      "stoppage_ms": 508075,
+      "attacking_direction": {
+        "T01": "right_to_left",
+        "T06": "left_to_right"
+      }
+    }
+  ],
+  "final_score": {
+    "home": 2,
+    "away": 0
+  }
+}

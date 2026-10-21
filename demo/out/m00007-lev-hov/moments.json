@@ -1,0 +1,434 @@
+[
+ {
+  "moment_id": "M001",
+  "kind": "pressing_spell",
+  "seq": 338,
+  "end_seq": 547,
+  "match_clock_ms": 973302,
+  "period": 1,
+  "team_id": "T06",
+  "player_ids": [
+   "T06-P06",
+   "T06-P07",
+   "T06-P09"
+  ],
+  "importance": 0.609,
+  "detail": {
+   "turnovers": 12,
+   "start_ms": 973302,
+   "end_ms": 1617862,
+   "rate_per_min": 1.12,
+   "match_avg_rate_per_min": 0.35,
+   "start_label": "17",
+   "end_label": "27"
+  }
+ },
+ {
+  "moment_id": "M002",
+  "kind": "goal",
+  "seq": 469,
+  "end_seq": 469,
+  "match_clock_ms": 1355797,
+  "period": 1,
+  "team_id": "T06",
+  "player_ids": [
+   "T06-P11"
+  ],
+  "importance": 0.73,
+  "detail": {
+   "score_before": {
+    "T01": 0,
+    "T06": 0
+   },
+   "score_after": {
+    "T01": 0,
+    "T06": 1
+   },
+   "flags": {
+    "is_penalty": false,
+    "first": true,
+    "equaliser": false,
+    "go_ahead": true,
+    "late": false,
+    "comeback": false,
+    "winner": false
+   },
+   "scorer": "T06-P11"
+  }
+ },
+ {
+  "moment_id": "M003",
+  "kind": "big_save",
+  "seq": 661,
+  "end_seq": 661,
+  "match_clock_ms": 1953940,
+  "period": 1,
+  "team_id": "T01",
+  "player_ids": [
+   "T01-P01",
+   "T06-P09"
+  ],
+  "importance": 0.414,
+  "detail": {
+   "shot_event": 660,
+   "shot_distance_m": 12.4,
+   "shooter": "T06-P09"
+  }
+ },
+ {
+  "moment_id": "M004",
+  "kind": "goal",
+  "seq": 729,
+  "end_seq": 729,
+  "match_clock_ms": 2175821,
+  "period": 1,
+  "team_id": "T06",
+  "player_ids": [
+   "T06-P09"
+  ],
+  "importance": 0.6,
+  "detail": {
+   "score_before": {
+    "T01": 0,
+    "T06": 1
+   },
+   "score_after": {
+    "T01": 0,
+    "T06": 2
+   },
+   "flags": {
+    "is_penalty": false,
+    "first": false,
+    "equaliser": false,
+    "go_ahead": false,
+    "late": false,
+    "comeback": false,
+    "winner": false
+   },
+   "scorer": "T06-P09"
+  }
+ },
+ {
+  "moment_id": "M005",
+  "kind": "goal",
+  "seq": 906,
+  "end_seq": 906,
+  "match_clock_ms": 2865148,
+  "period": 1,
+  "team_id": "T01",
+  "player_ids": [
+   "T01-P09"
+  ],
+  "importance": 0.6,
+  "detail": {
+   "score_before": {
+    "T01": 0,
+    "T06": 2
+   },
+   "score_after": {
+    "T01": 1,
+    "T06": 2
+   },
+   "flags": {
+    "is_penalty": false,
+    "first": false,
+    "equaliser": false,
+    "go_ahead": false,
+    "late": false,
+    "comeback": false,
+    "winner": false
+   },
+   "scorer": "T01-P09"
+  }
+ },
+ {
+  "moment_id": "M006",
+  "kind": "comeback",
+  "seq": 1077,
+  "end_seq": 1077,
+  "match_clock_ms": 4177230,
+  "period": 2,
+  "team_id": "T01",
+  "player_ids": [
+   "T01-P07"
+  ],
+  "importance": 0.87,
+  "detail": {
+   "score_before": {
+    "T01": 1,
+    "T06": 2
+   },
+   "score_after": {
+    "T01": 2,
+    "T06": 2
+   },
+   "late": false,
+   "goal_seq": 1077
+  }
+ },
+ {
+  "moment_id": "M007",
+  "kind": "goal",
+  "seq": 1077,
+  "end_seq": 1077,
+  "match_clock_ms": 4177230,
+  "period": 2,
+  "team_id": "T01",
+  "player_ids": [
+   "T01-P07"
+  ],
+  "importance": 0.82,
+  "detail": {
+   "score_before": {
+    "T01": 1,
+    "T06": 2
+   },
+   "score_after": {
+    "T01": 2,
+    "T06": 2
+   },
+   "flags": {
+    "is_penalty": true,
+    "first": false,
+    "equaliser": true,
+    "go_ahead": false,
+    "late": false,
+    "comeback": true,
+    "winner": false
+   },
+   "scorer": "T01-P07"
+  }
+ },
+ {
+  "moment_id": "M008",
+  "kind": "goal",
+  "seq": 1259,
+  "end_seq": 1259,
+  "match_clock_ms": 4820313,
+  "period": 2,
+  "team_id": "T01",
+  "player_ids": [
+   "T01-P18"
+  ],
+  "importance": 0.78,
+  "detail": {
+   "score_before": {
+    "T01": 2,
+    "T06": 2
+   },
+   "score_after": {
+    "T01": 3,
+    "T06": 2
+   },
+   "flags": {
+    "is_penalty": false,
+    "first": false,
+    "equaliser": false,
+    "go_ahead": true,
+    "late": true,
+    "comeback": false,
+    "winner": false
+   },
+   "scorer": "T01-P18"
+  }
+ },
+ {
+  "moment_id": "M009",
+  "kind": "super_sub",
+  "seq": 1259,
+  "end_seq": 1259,
+  "match_clock_ms": 4820313,
+  "period": 2,
+  "team_id": "T01",
+  "player_ids": [
+   "T01-P18"
+  ],
+  "importance": 0.62,
+  "detail": {
+   "sub_label": "71",
+   "goal_seq": 1259
+  }
+ },
+ {
+  "moment_id": "M010",
+  "kind": "big_save",
+  "seq": 1359,
+  "end_seq": 1359,
+  "match_clock_ms": 5224571,
+  "period": 2,
+  "team_id": "T06",
+  "player_ids": [
+   "T06-P01",
+   "T01-P09"
+  ],
+  "importance": 0.429,
+  "detail": {
+   "shot_event": 1358,
+   "shot_distance_m": 10.7,
+   "shooter": "T01-P09"
+  }
+ },
+ {
+  "moment_id": "M011",
+  "kind": "goal",
+  "seq": 1362,
+  "end_seq": 1362,
+  "match_clock_ms": 5234286,
+  "period": 2,
+  "team_id": "T01",
+  "player_ids": [
+   "T01-P18"
+  ],
+  "importance": 0.8,
+  "detail": {
+   "score_before": {
+    "T01": 3,
+    "T06": 2
+   },
+   "score_after": {
+    "T01": 4,
+    "T06": 2
+   },
+   "flags": {
+    "is_penalty": false,
+    "first": false,
+    "equaliser": false,
+    "go_ahead": false,
+    "late": true,
+    "comeback": false,
+    "winner": true
+   },
+   "scorer": "T01-P18"
+  }
+ },
+ {
+  "moment_id": "M012",
+  "kind": "super_sub",
+  "seq": 1362,
+  "end_seq": 1362,
+  "match_clock_ms": 5234286,
+  "period": 2,
+  "team_id": "T01",
+  "player_ids": [
+   "T01-P18"
+  ],
+  "importance": 0.62,
+  "detail": {
+   "sub_label": "71",
+   "goal_seq": 1362
+  }
+ },
+ {
+  "moment_id": "M013",
+  "kind": "pressing_spell",
+  "seq": 1388,
+  "end_seq": 1590,
+  "match_clock_ms": 5342967,
+  "period": 2,
+  "team_id": "T01",
+  "player_ids": [
+   "T01-P07",
+   "T01-P15",
+   "T01-P17"
+  ],
+  "importance": 0.567,
+  "detail": {
+   "turnovers": 9,
+   "start_ms": 5342967,
+   "end_ms": 6040699,
+   "rate_per_min": 0.77,
+   "match_avg_rate_per_min": 0.29,
+   "start_label": "86",
+   "end_label": "90+7"
+  }
+ },
+ {
+  "moment_id": "M014",
+  "kind": "goal",
+  "seq": 1451,
+  "end_seq": 1451,
+  "match_clock_ms": 5524925,
+  "period": 2,
+  "team_id": "T06",
+  "player_ids": [
+   "T06-P18"
+  ],
+  "importance": 0.68,
+  "detail": {
+   "score_before": {
+    "T01": 4,
+    "T06": 2
+   },
+   "score_after": {
+    "T01": 4,
+    "T06": 3
+   },
+   "flags": {
+    "is_penalty": false,
+    "first": false,
+    "equaliser": false,
+    "go_ahead": false,
+    "late": true,
+    "comeback": false,
+    "winner": false
+   },
+   "scorer": "T06-P18"
+  }
+ },
+ {
+  "moment_id": "M015",
+  "kind": "super_sub",
+  "seq": 1451,
+  "end_seq": 1451,
+  "match_clock_ms": 5524925,
+  "period": 2,
+  "team_id": "T06",
+  "player_ids": [
+   "T06-P18"
+  ],
+  "importance": 0.62,
+  "detail": {
+   "sub_label": "54",
+   "goal_seq": 1451
+  }
+ },
+ {
+  "moment_id": "M016",
+  "kind": "star_performance",
+  "seq": 1571,
+  "end_seq": 1571,
+  "match_clock_ms": 5988873,
+  "period": 2,
+  "team_id": "T01",
+  "player_ids": [
+   "T01-P09"
+  ],
+  "importance": 0.613,
+  "detail": {
+   "touches": 62,
+   "touch_share_pct": 11,
+   "shot_share_pct": 62,
+   "shots": 10,
+   "goals": 1,
+   "key_passes": 2
+  }
+ },
+ {
+  "moment_id": "M017",
+  "kind": "full_time",
+  "seq": 1622,
+  "end_seq": 1622,
+  "match_clock_ms": 6124037,
+  "period": 2,
+  "team_id": "T01",
+  "player_ids": [],
+  "importance": 0.9,
+  "detail": {
+   "score": {
+    "T01": 4,
+    "T06": 3
+   },
+   "winner": "T01"
+  }
+ }
+]

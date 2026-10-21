@@ -1,0 +1,293 @@
+{
+  "$defs": {
+    "Score": {
+      "additionalProperties": false,
+      "properties": {
+        "away": {
+          "title": "Away",
+          "type": "integer"
+        },
+        "home": {
+          "title": "Home",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "home",
+        "away"
+      ],
+      "title": "Score",
+      "type": "object"
+    },
+    "StoryTruth": {
+      "additionalProperties": false,
+      "properties": {
+        "description": {
+          "title": "Description",
+          "type": "string"
+        },
+        "details": {
+          "additionalProperties": true,
+          "title": "Details",
+          "type": "object"
+        },
+        "end_seq": {
+          "title": "End Seq",
+          "type": "integer"
+        },
+        "players_involved": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Players Involved",
+          "type": "array"
+        },
+        "start_seq": {
+          "title": "Start Seq",
+          "type": "integer"
+        },
+        "story_id": {
+          "title": "Story Id",
+          "type": "string"
+        },
+        "strength": {
+          "title": "Strength",
+          "type": "number"
+        },
+        "team_id": {
+          "title": "Team Id",
+          "type": "string"
+        },
+        "type": {
+          "title": "Type",
+          "type": "string"
+        },
+        "window_end_ms": {
+          "title": "Window End Ms",
+          "type": "integer"
+        },
+        "window_start_ms": {
+          "title": "Window Start Ms",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "story_id",
+        "type",
+        "start_seq",
+        "end_seq",
+        "team_id",
+        "players_involved",
+        "description",
+        "strength",
+        "window_start_ms",
+        "window_end_ms",
+        "details"
+      ],
+      "title": "StoryTruth",
+      "type": "object"
+    },
+    "TeamStats": {
+      "additionalProperties": false,
+      "properties": {
+        "corners": {
+          "title": "Corners",
+          "type": "integer"
+        },
+        "fouls": {
+          "title": "Fouls",
+          "type": "integer"
+        },
+        "free_kicks": {
+          "title": "Free Kicks",
+          "type": "integer"
+        },
+        "goal_kicks": {
+          "title": "Goal Kicks",
+          "type": "integer"
+        },
+        "goals": {
+          "title": "Goals",
+          "type": "integer"
+        },
+        "pass_completion": {
+          "title": "Pass Completion",
+          "type": "number"
+        },
+        "passes": {
+          "title": "Passes",
+          "type": "integer"
+        },
+        "passes_complete": {
+          "title": "Passes Complete",
+          "type": "integer"
+        },
+        "penalties": {
+          "title": "Penalties",
+          "type": "integer"
+        },
+        "possession_pct": {
+          "title": "Possession Pct",
+          "type": "number"
+        },
+        "pressures": {
+          "title": "Pressures",
+          "type": "integer"
+        },
+        "red_cards": {
+          "title": "Red Cards",
+          "type": "integer"
+        },
+        "saves": {
+          "title": "Saves",
+          "type": "integer"
+        },
+        "shots": {
+          "title": "Shots",
+          "type": "integer"
+        },
+        "shots_on_target": {
+          "title": "Shots On Target",
+          "type": "integer"
+        },
+        "substitutions": {
+          "title": "Substitutions",
+          "type": "integer"
+        },
+        "tackles": {
+          "title": "Tackles",
+          "type": "integer"
+        },
+        "tackles_won": {
+          "title": "Tackles Won",
+          "type": "integer"
+        },
+        "throw_ins": {
+          "title": "Throw Ins",
+          "type": "integer"
+        },
+        "turnovers_won": {
+          "title": "Turnovers Won",
+          "type": "integer"
+        },
+        "yellow_cards": {
+          "title": "Yellow Cards",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "goals",
+        "shots",
+        "shots_on_target",
+        "passes",
+        "passes_complete",
+        "pass_completion",
+        "possession_pct",
+        "tackles",
+        "tackles_won",
+        "pressures",
+        "fouls",
+        "yellow_cards",
+        "red_cards",
+        "corners",
+        "goal_kicks",
+        "saves",
+        "throw_ins",
+        "free_kicks",
+        "penalties",
+        "substitutions",
+        "turnovers_won"
+      ],
+      "title": "TeamStats",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "final_score": {
+      "$ref": "#/$defs/Score"
+    },
+    "final_stats": {
+      "additionalProperties": {
+        "$ref": "#/$defs/TeamStats"
+      },
+      "title": "Final Stats",
+      "type": "object"
+    },
+    "generation_attempt": {
+      "title": "Generation Attempt",
+      "type": "integer"
+    },
+    "generator_version": {
+      "title": "Generator Version",
+      "type": "string"
+    },
+    "goals": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Goals",
+      "type": "array"
+    },
+    "match_id": {
+      "title": "Match Id",
+      "type": "string"
+    },
+    "note": {
+      "title": "Note",
+      "type": "string"
+    },
+    "seed": {
+      "title": "Seed",
+      "type": "integer"
+    },
+    "stories": {
+      "items": {
+        "$ref": "#/$defs/StoryTruth"
+      },
+      "title": "Stories",
+      "type": "array"
+    },
+    "team_params": {
+      "additionalProperties": {
+        "additionalProperties": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "type": "object"
+      },
+      "title": "Team Params",
+      "type": "object"
+    },
+    "unrealized_stories": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Unrealized Stories",
+      "type": "array"
+    }
+  },
+  "required": [
+    "match_id",
+    "generator_version",
+    "seed",
+    "generation_attempt",
+    "note",
+    "stories",
+    "unrealized_stories",
+    "team_params",
+    "final_score",
+    "final_stats",
+    "goals"
+  ],
+  "title": "GroundTruth",
+  "type": "object"
+}

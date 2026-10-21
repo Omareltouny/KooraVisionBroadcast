@@ -1,0 +1,49 @@
+{
+  "additionalProperties": false,
+  "description": "One line of tracking.jsonl after the header.\n\n`p` lists only players on the pitch: [index into header.players, x, y].",
+  "properties": {
+    "ball": {
+      "items": {
+        "type": "number"
+      },
+      "maxItems": 2,
+      "minItems": 2,
+      "title": "Ball",
+      "type": "array"
+    },
+    "p": {
+      "items": {
+        "items": {
+          "type": "number"
+        },
+        "type": "array"
+      },
+      "title": "P",
+      "type": "array"
+    },
+    "period": {
+      "title": "Period",
+      "type": "integer"
+    },
+    "t": {
+      "description": "match clock in ms",
+      "minimum": 0,
+      "title": "T",
+      "type": "integer"
+    },
+    "type": {
+      "const": "frame",
+      "title": "Type",
+      "type": "string"
+    }
+  },
+  "required": [
+    "type",
+    "t",
+    "period",
+    "ball",
+    "p"
+  ],
+  "title": "TrackingFrame",
+  "type": "object"
+}

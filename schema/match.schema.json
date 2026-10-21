@@ -1,0 +1,138 @@
+{
+  "$defs": {
+    "PeriodMeta": {
+      "additionalProperties": false,
+      "properties": {
+        "attacking_direction": {
+          "additionalProperties": {
+            "enum": [
+              "left_to_right",
+              "right_to_left"
+            ],
+            "type": "string"
+          },
+          "title": "Attacking Direction",
+          "type": "object"
+        },
+        "end_match_clock_ms": {
+          "title": "End Match Clock Ms",
+          "type": "integer"
+        },
+        "period": {
+          "title": "Period",
+          "type": "integer"
+        },
+        "scheduled_duration_ms": {
+          "title": "Scheduled Duration Ms",
+          "type": "integer"
+        },
+        "start_match_clock_ms": {
+          "title": "Start Match Clock Ms",
+          "type": "integer"
+        },
+        "stoppage_ms": {
+          "title": "Stoppage Ms",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "period",
+        "start_match_clock_ms",
+        "end_match_clock_ms",
+        "scheduled_duration_ms",
+        "stoppage_ms",
+        "attacking_direction"
+      ],
+      "title": "PeriodMeta",
+      "type": "object"
+    },
+    "Score": {
+      "additionalProperties": false,
+      "properties": {
+        "away": {
+          "title": "Away",
+          "type": "integer"
+        },
+        "home": {
+          "title": "Home",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "home",
+        "away"
+      ],
+      "title": "Score",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "away_team_id": {
+      "title": "Away Team Id",
+      "type": "string"
+    },
+    "competition": {
+      "title": "Competition",
+      "type": "string"
+    },
+    "final_score": {
+      "$ref": "#/$defs/Score"
+    },
+    "generator_version": {
+      "title": "Generator Version",
+      "type": "string"
+    },
+    "home_team_id": {
+      "title": "Home Team Id",
+      "type": "string"
+    },
+    "kickoff_utc": {
+      "title": "Kickoff Utc",
+      "type": "string"
+    },
+    "match_id": {
+      "title": "Match Id",
+      "type": "string"
+    },
+    "matchday": {
+      "title": "Matchday",
+      "type": "integer"
+    },
+    "periods": {
+      "items": {
+        "$ref": "#/$defs/PeriodMeta"
+      },
+      "title": "Periods",
+      "type": "array"
+    },
+    "season": {
+      "title": "Season",
+      "type": "string"
+    },
+    "seed": {
+      "title": "Seed",
+      "type": "integer"
+    },
+    "venue": {
+      "title": "Venue",
+      "type": "string"
+    }
+  },
+  "required": [
+    "match_id",
+    "competition",
+    "season",
+    "matchday",
+    "kickoff_utc",
+    "venue",
+    "home_team_id",
+    "away_team_id",
+    "seed",
+    "generator_version",
+    "periods",
+    "final_score"
+  ],
+  "title": "MatchMeta",
+  "type": "object"
+}

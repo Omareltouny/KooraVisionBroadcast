@@ -1,0 +1,141 @@
+{
+  "$defs": {
+    "Player": {
+      "additionalProperties": false,
+      "properties": {
+        "bio_tags": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Bio Tags",
+          "type": "array"
+        },
+        "jersey_number": {
+          "maximum": 99,
+          "minimum": 1,
+          "title": "Jersey Number",
+          "type": "integer"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "name_i18n": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "title": "Name I18N",
+          "type": "object"
+        },
+        "player_id": {
+          "title": "Player Id",
+          "type": "string"
+        },
+        "position": {
+          "enum": [
+            "GK",
+            "CB",
+            "FB",
+            "DM",
+            "CM",
+            "AM",
+            "W",
+            "ST"
+          ],
+          "title": "Position",
+          "type": "string"
+        },
+        "starter": {
+          "title": "Starter",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "player_id",
+        "name",
+        "name_i18n",
+        "jersey_number",
+        "position",
+        "starter",
+        "bio_tags"
+      ],
+      "title": "Player",
+      "type": "object"
+    },
+    "Team": {
+      "additionalProperties": false,
+      "properties": {
+        "formation": {
+          "title": "Formation",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "name_i18n": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "title": "Name I18N",
+          "type": "object"
+        },
+        "players": {
+          "items": {
+            "$ref": "#/$defs/Player"
+          },
+          "title": "Players",
+          "type": "array"
+        },
+        "primary_color": {
+          "title": "Primary Color",
+          "type": "string"
+        },
+        "secondary_color": {
+          "title": "Secondary Color",
+          "type": "string"
+        },
+        "short_name": {
+          "title": "Short Name",
+          "type": "string"
+        },
+        "team_id": {
+          "title": "Team Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "team_id",
+        "name",
+        "name_i18n",
+        "short_name",
+        "primary_color",
+        "secondary_color",
+        "formation",
+        "players"
+      ],
+      "title": "Team",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "match_id": {
+      "title": "Match Id",
+      "type": "string"
+    },
+    "teams": {
+      "items": {
+        "$ref": "#/$defs/Team"
+      },
+      "title": "Teams",
+      "type": "array"
+    }
+  },
+  "required": [
+    "match_id",
+    "teams"
+  ],
+  "title": "TeamsFile",
+  "type": "object"
+}

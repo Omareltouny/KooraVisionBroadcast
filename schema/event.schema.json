@@ -1,0 +1,1918 @@
+{
+  "$defs": {
+    "CardEvent": {
+      "additionalProperties": false,
+      "properties": {
+        "clock_ms": {
+          "minimum": 0,
+          "title": "Clock Ms",
+          "type": "integer"
+        },
+        "color": {
+          "enum": [
+            "yellow",
+            "red"
+          ],
+          "title": "Color",
+          "type": "string"
+        },
+        "event_id": {
+          "title": "Event Id",
+          "type": "string"
+        },
+        "match_clock_ms": {
+          "minimum": 0,
+          "title": "Match Clock Ms",
+          "type": "integer"
+        },
+        "match_id": {
+          "title": "Match Id",
+          "type": "string"
+        },
+        "period": {
+          "maximum": 2,
+          "minimum": 1,
+          "title": "Period",
+          "type": "integer"
+        },
+        "player_id": {
+          "title": "Player Id",
+          "type": "string"
+        },
+        "possession_id": {
+          "title": "Possession Id",
+          "type": "integer"
+        },
+        "reason": {
+          "title": "Reason",
+          "type": "string"
+        },
+        "score_away": {
+          "title": "Score Away",
+          "type": "integer"
+        },
+        "score_home": {
+          "title": "Score Home",
+          "type": "integer"
+        },
+        "seq": {
+          "minimum": 1,
+          "title": "Seq",
+          "type": "integer"
+        },
+        "team_id": {
+          "title": "Team Id",
+          "type": "string"
+        },
+        "type": {
+          "const": "card",
+          "title": "Type",
+          "type": "string"
+        },
+        "x": {
+          "title": "X",
+          "type": "number"
+        },
+        "y": {
+          "title": "Y",
+          "type": "number"
+        }
+      },
+      "required": [
+        "event_id",
+        "match_id",
+        "seq",
+        "period",
+        "clock_ms",
+        "match_clock_ms",
+        "type",
+        "team_id",
+        "player_id",
+        "x",
+        "y",
+        "possession_id",
+        "score_home",
+        "score_away",
+        "color",
+        "reason"
+      ],
+      "title": "CardEvent",
+      "type": "object"
+    },
+    "CornerEvent": {
+      "additionalProperties": false,
+      "properties": {
+        "ball_speed_ms": {
+          "title": "Ball Speed Ms",
+          "type": "number"
+        },
+        "body_part": {
+          "enum": [
+            "right_foot",
+            "left_foot",
+            "head",
+            "hands"
+          ],
+          "title": "Body Part",
+          "type": "string"
+        },
+        "clock_ms": {
+          "minimum": 0,
+          "title": "Clock Ms",
+          "type": "integer"
+        },
+        "end_x": {
+          "title": "End X",
+          "type": "number"
+        },
+        "end_y": {
+          "title": "End Y",
+          "type": "number"
+        },
+        "event_id": {
+          "title": "Event Id",
+          "type": "string"
+        },
+        "match_clock_ms": {
+          "minimum": 0,
+          "title": "Match Clock Ms",
+          "type": "integer"
+        },
+        "match_id": {
+          "title": "Match Id",
+          "type": "string"
+        },
+        "outcome": {
+          "enum": [
+            "complete",
+            "incomplete",
+            "intercepted",
+            "out"
+          ],
+          "title": "Outcome",
+          "type": "string"
+        },
+        "pass_length_m": {
+          "title": "Pass Length M",
+          "type": "number"
+        },
+        "period": {
+          "maximum": 2,
+          "minimum": 1,
+          "title": "Period",
+          "type": "integer"
+        },
+        "player_id": {
+          "title": "Player Id",
+          "type": "string"
+        },
+        "possession_id": {
+          "title": "Possession Id",
+          "type": "integer"
+        },
+        "receiver_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Receiver Id"
+        },
+        "score_away": {
+          "title": "Score Away",
+          "type": "integer"
+        },
+        "score_home": {
+          "title": "Score Home",
+          "type": "integer"
+        },
+        "seq": {
+          "minimum": 1,
+          "title": "Seq",
+          "type": "integer"
+        },
+        "team_id": {
+          "title": "Team Id",
+          "type": "string"
+        },
+        "type": {
+          "const": "corner",
+          "title": "Type",
+          "type": "string"
+        },
+        "x": {
+          "title": "X",
+          "type": "number"
+        },
+        "y": {
+          "title": "Y",
+          "type": "number"
+        }
+      },
+      "required": [
+        "event_id",
+        "match_id",
+        "seq",
+        "period",
+        "clock_ms",
+        "match_clock_ms",
+        "type",
+        "team_id",
+        "player_id",
+        "x",
+        "y",
+        "possession_id",
+        "score_home",
+        "score_away",
+        "end_x",
+        "end_y",
+        "receiver_id",
+        "outcome",
+        "ball_speed_ms",
+        "pass_length_m",
+        "body_part"
+      ],
+      "title": "CornerEvent",
+      "type": "object"
+    },
+    "FoulEvent": {
+      "additionalProperties": false,
+      "properties": {
+        "card": {
+          "anyOf": [
+            {
+              "enum": [
+                "yellow",
+                "red"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Card"
+        },
+        "clock_ms": {
+          "minimum": 0,
+          "title": "Clock Ms",
+          "type": "integer"
+        },
+        "event_id": {
+          "title": "Event Id",
+          "type": "string"
+        },
+        "fouled_player_id": {
+          "title": "Fouled Player Id",
+          "type": "string"
+        },
+        "match_clock_ms": {
+          "minimum": 0,
+          "title": "Match Clock Ms",
+          "type": "integer"
+        },
+        "match_id": {
+          "title": "Match Id",
+          "type": "string"
+        },
+        "period": {
+          "maximum": 2,
+          "minimum": 1,
+          "title": "Period",
+          "type": "integer"
+        },
+        "player_id": {
+          "title": "Player Id",
+          "type": "string"
+        },
+        "possession_id": {
+          "title": "Possession Id",
+          "type": "integer"
+        },
+        "score_away": {
+          "title": "Score Away",
+          "type": "integer"
+        },
+        "score_home": {
+          "title": "Score Home",
+          "type": "integer"
+        },
+        "seq": {
+          "minimum": 1,
+          "title": "Seq",
+          "type": "integer"
+        },
+        "team_id": {
+          "title": "Team Id",
+          "type": "string"
+        },
+        "type": {
+          "const": "foul",
+          "title": "Type",
+          "type": "string"
+        },
+        "x": {
+          "title": "X",
+          "type": "number"
+        },
+        "y": {
+          "title": "Y",
+          "type": "number"
+        }
+      },
+      "required": [
+        "event_id",
+        "match_id",
+        "seq",
+        "period",
+        "clock_ms",
+        "match_clock_ms",
+        "type",
+        "team_id",
+        "player_id",
+        "x",
+        "y",
+        "possession_id",
+        "score_home",
+        "score_away",
+        "fouled_player_id",
+        "card"
+      ],
+      "title": "FoulEvent",
+      "type": "object"
+    },
+    "FreeKickEvent": {
+      "additionalProperties": false,
+      "properties": {
+        "ball_speed_ms": {
+          "title": "Ball Speed Ms",
+          "type": "number"
+        },
+        "body_part": {
+          "enum": [
+            "right_foot",
+            "left_foot",
+            "head",
+            "hands"
+          ],
+          "title": "Body Part",
+          "type": "string"
+        },
+        "clock_ms": {
+          "minimum": 0,
+          "title": "Clock Ms",
+          "type": "integer"
+        },
+        "end_x": {
+          "title": "End X",
+          "type": "number"
+        },
+        "end_y": {
+          "title": "End Y",
+          "type": "number"
+        },
+        "event_id": {
+          "title": "Event Id",
+          "type": "string"
+        },
+        "match_clock_ms": {
+          "minimum": 0,
+          "title": "Match Clock Ms",
+          "type": "integer"
+        },
+        "match_id": {
+          "title": "Match Id",
+          "type": "string"
+        },
+        "outcome": {
+          "enum": [
+            "complete",
+            "incomplete",
+            "intercepted",
+            "out"
+          ],
+          "title": "Outcome",
+          "type": "string"
+        },
+        "pass_length_m": {
+          "title": "Pass Length M",
+          "type": "number"
+        },
+        "period": {
+          "maximum": 2,
+          "minimum": 1,
+          "title": "Period",
+          "type": "integer"
+        },
+        "player_id": {
+          "title": "Player Id",
+          "type": "string"
+        },
+        "possession_id": {
+          "title": "Possession Id",
+          "type": "integer"
+        },
+        "receiver_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Receiver Id"
+        },
+        "score_away": {
+          "title": "Score Away",
+          "type": "integer"
+        },
+        "score_home": {
+          "title": "Score Home",
+          "type": "integer"
+        },
+        "seq": {
+          "minimum": 1,
+          "title": "Seq",
+          "type": "integer"
+        },
+        "team_id": {
+          "title": "Team Id",
+          "type": "string"
+        },
+        "type": {
+          "const": "free_kick",
+          "title": "Type",
+          "type": "string"
+        },
+        "x": {
+          "title": "X",
+          "type": "number"
+        },
+        "y": {
+          "title": "Y",
+          "type": "number"
+        }
+      },
+      "required": [
+        "event_id",
+        "match_id",
+        "seq",
+        "period",
+        "clock_ms",
+        "match_clock_ms",
+        "type",
+        "team_id",
+        "player_id",
+        "x",
+        "y",
+        "possession_id",
+        "score_home",
+        "score_away",
+        "end_x",
+        "end_y",
+        "receiver_id",
+        "outcome",
+        "ball_speed_ms",
+        "pass_length_m",
+        "body_part"
+      ],
+      "title": "FreeKickEvent",
+      "type": "object"
+    },
+    "GoalKickEvent": {
+      "additionalProperties": false,
+      "properties": {
+        "ball_speed_ms": {
+          "title": "Ball Speed Ms",
+          "type": "number"
+        },
+        "body_part": {
+          "enum": [
+            "right_foot",
+            "left_foot",
+            "head",
+            "hands"
+          ],
+          "title": "Body Part",
+          "type": "string"
+        },
+        "clock_ms": {
+          "minimum": 0,
+          "title": "Clock Ms",
+          "type": "integer"
+        },
+        "end_x": {
+          "title": "End X",
+          "type": "number"
+        },
+        "end_y": {
+          "title": "End Y",
+          "type": "number"
+        },
+        "event_id": {
+          "title": "Event Id",
+          "type": "string"
+        },
+        "match_clock_ms": {
+          "minimum": 0,
+          "title": "Match Clock Ms",
+          "type": "integer"
+        },
+        "match_id": {
+          "title": "Match Id",
+          "type": "string"
+        },
+        "outcome": {
+          "enum": [
+            "complete",
+            "incomplete",
+            "intercepted",
+            "out"
+          ],
+          "title": "Outcome",
+          "type": "string"
+        },
+        "pass_length_m": {
+          "title": "Pass Length M",
+          "type": "number"
+        },
+        "period": {
+          "maximum": 2,
+          "minimum": 1,
+          "title": "Period",
+          "type": "integer"
+        },
+        "player_id": {
+          "title": "Player Id",
+          "type": "string"
+        },
+        "possession_id": {
+          "title": "Possession Id",
+          "type": "integer"
+        },
+        "receiver_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Receiver Id"
+        },
+        "score_away": {
+          "title": "Score Away",
+          "type": "integer"
+        },
+        "score_home": {
+          "title": "Score Home",
+          "type": "integer"
+        },
+        "seq": {
+          "minimum": 1,
+          "title": "Seq",
+          "type": "integer"
+        },
+        "team_id": {
+          "title": "Team Id",
+          "type": "string"
+        },
+        "type": {
+          "const": "goal_kick",
+          "title": "Type",
+          "type": "string"
+        },
+        "x": {
+          "title": "X",
+          "type": "number"
+        },
+        "y": {
+          "title": "Y",
+          "type": "number"
+        }
+      },
+      "required": [
+        "event_id",
+        "match_id",
+        "seq",
+        "period",
+        "clock_ms",
+        "match_clock_ms",
+        "type",
+        "team_id",
+        "player_id",
+        "x",
+        "y",
+        "possession_id",
+        "score_home",
+        "score_away",
+        "end_x",
+        "end_y",
+        "receiver_id",
+        "outcome",
+        "ball_speed_ms",
+        "pass_length_m",
+        "body_part"
+      ],
+      "title": "GoalKickEvent",
+      "type": "object"
+    },
+    "PassEvent": {
+      "additionalProperties": false,
+      "properties": {
+        "ball_speed_ms": {
+          "title": "Ball Speed Ms",
+          "type": "number"
+        },
+        "body_part": {
+          "enum": [
+            "right_foot",
+            "left_foot",
+            "head",
+            "hands"
+          ],
+          "title": "Body Part",
+          "type": "string"
+        },
+        "clock_ms": {
+          "minimum": 0,
+          "title": "Clock Ms",
+          "type": "integer"
+        },
+        "end_x": {
+          "title": "End X",
+          "type": "number"
+        },
+        "end_y": {
+          "title": "End Y",
+          "type": "number"
+        },
+        "event_id": {
+          "title": "Event Id",
+          "type": "string"
+        },
+        "match_clock_ms": {
+          "minimum": 0,
+          "title": "Match Clock Ms",
+          "type": "integer"
+        },
+        "match_id": {
+          "title": "Match Id",
+          "type": "string"
+        },
+        "outcome": {
+          "enum": [
+            "complete",
+            "incomplete",
+            "intercepted",
+            "out"
+          ],
+          "title": "Outcome",
+          "type": "string"
+        },
+        "pass_length_m": {
+          "title": "Pass Length M",
+          "type": "number"
+        },
+        "period": {
+          "maximum": 2,
+          "minimum": 1,
+          "title": "Period",
+          "type": "integer"
+        },
+        "player_id": {
+          "title": "Player Id",
+          "type": "string"
+        },
+        "possession_id": {
+          "title": "Possession Id",
+          "type": "integer"
+        },
+        "receiver_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Receiver Id"
+        },
+        "score_away": {
+          "title": "Score Away",
+          "type": "integer"
+        },
+        "score_home": {
+          "title": "Score Home",
+          "type": "integer"
+        },
+        "seq": {
+          "minimum": 1,
+          "title": "Seq",
+          "type": "integer"
+        },
+        "team_id": {
+          "title": "Team Id",
+          "type": "string"
+        },
+        "type": {
+          "const": "pass",
+          "title": "Type",
+          "type": "string"
+        },
+        "x": {
+          "title": "X",
+          "type": "number"
+        },
+        "y": {
+          "title": "Y",
+          "type": "number"
+        }
+      },
+      "required": [
+        "event_id",
+        "match_id",
+        "seq",
+        "period",
+        "clock_ms",
+        "match_clock_ms",
+        "type",
+        "team_id",
+        "player_id",
+        "x",
+        "y",
+        "possession_id",
+        "score_home",
+        "score_away",
+        "end_x",
+        "end_y",
+        "receiver_id",
+        "outcome",
+        "ball_speed_ms",
+        "pass_length_m",
+        "body_part"
+      ],
+      "title": "PassEvent",
+      "type": "object"
+    },
+    "PenaltyEvent": {
+      "additionalProperties": false,
+      "properties": {
+        "assist_event_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Assist Event Id"
+        },
+        "body_part": {
+          "enum": [
+            "right_foot",
+            "left_foot",
+            "head",
+            "hands"
+          ],
+          "title": "Body Part",
+          "type": "string"
+        },
+        "clock_ms": {
+          "minimum": 0,
+          "title": "Clock Ms",
+          "type": "integer"
+        },
+        "end_x": {
+          "title": "End X",
+          "type": "number"
+        },
+        "end_y": {
+          "title": "End Y",
+          "type": "number"
+        },
+        "event_id": {
+          "title": "Event Id",
+          "type": "string"
+        },
+        "match_clock_ms": {
+          "minimum": 0,
+          "title": "Match Clock Ms",
+          "type": "integer"
+        },
+        "match_id": {
+          "title": "Match Id",
+          "type": "string"
+        },
+        "outcome": {
+          "enum": [
+            "goal",
+            "saved",
+            "off_target",
+            "blocked",
+            "post"
+          ],
+          "title": "Outcome",
+          "type": "string"
+        },
+        "period": {
+          "maximum": 2,
+          "minimum": 1,
+          "title": "Period",
+          "type": "integer"
+        },
+        "player_id": {
+          "title": "Player Id",
+          "type": "string"
+        },
+        "possession_id": {
+          "title": "Possession Id",
+          "type": "integer"
+        },
+        "score_away": {
+          "title": "Score Away",
+          "type": "integer"
+        },
+        "score_home": {
+          "title": "Score Home",
+          "type": "integer"
+        },
+        "seq": {
+          "minimum": 1,
+          "title": "Seq",
+          "type": "integer"
+        },
+        "shot_speed_ms": {
+          "title": "Shot Speed Ms",
+          "type": "number"
+        },
+        "team_id": {
+          "title": "Team Id",
+          "type": "string"
+        },
+        "type": {
+          "const": "penalty",
+          "title": "Type",
+          "type": "string"
+        },
+        "x": {
+          "title": "X",
+          "type": "number"
+        },
+        "y": {
+          "title": "Y",
+          "type": "number"
+        }
+      },
+      "required": [
+        "event_id",
+        "match_id",
+        "seq",
+        "period",
+        "clock_ms",
+        "match_clock_ms",
+        "type",
+        "team_id",
+        "player_id",
+        "x",
+        "y",
+        "possession_id",
+        "score_home",
+        "score_away",
+        "end_x",
+        "end_y",
+        "outcome",
+        "shot_speed_ms",
+        "body_part",
+        "assist_event_id"
+      ],
+      "title": "PenaltyEvent",
+      "type": "object"
+    },
+    "PeriodEndEvent": {
+      "additionalProperties": false,
+      "properties": {
+        "clock_ms": {
+          "minimum": 0,
+          "title": "Clock Ms",
+          "type": "integer"
+        },
+        "event_id": {
+          "title": "Event Id",
+          "type": "string"
+        },
+        "match_clock_ms": {
+          "minimum": 0,
+          "title": "Match Clock Ms",
+          "type": "integer"
+        },
+        "match_id": {
+          "title": "Match Id",
+          "type": "string"
+        },
+        "period": {
+          "maximum": 2,
+          "minimum": 1,
+          "title": "Period",
+          "type": "integer"
+        },
+        "player_id": {
+          "title": "Player Id",
+          "type": "string"
+        },
+        "possession_id": {
+          "title": "Possession Id",
+          "type": "integer"
+        },
+        "score_away": {
+          "title": "Score Away",
+          "type": "integer"
+        },
+        "score_home": {
+          "title": "Score Home",
+          "type": "integer"
+        },
+        "seq": {
+          "minimum": 1,
+          "title": "Seq",
+          "type": "integer"
+        },
+        "team_id": {
+          "title": "Team Id",
+          "type": "string"
+        },
+        "type": {
+          "const": "period_end",
+          "title": "Type",
+          "type": "string"
+        },
+        "x": {
+          "title": "X",
+          "type": "number"
+        },
+        "y": {
+          "title": "Y",
+          "type": "number"
+        }
+      },
+      "required": [
+        "event_id",
+        "match_id",
+        "seq",
+        "period",
+        "clock_ms",
+        "match_clock_ms",
+        "type",
+        "team_id",
+        "player_id",
+        "x",
+        "y",
+        "possession_id",
+        "score_home",
+        "score_away"
+      ],
+      "title": "PeriodEndEvent",
+      "type": "object"
+    },
+    "PeriodStartEvent": {
+      "additionalProperties": false,
+      "properties": {
+        "clock_ms": {
+          "minimum": 0,
+          "title": "Clock Ms",
+          "type": "integer"
+        },
+        "event_id": {
+          "title": "Event Id",
+          "type": "string"
+        },
+        "match_clock_ms": {
+          "minimum": 0,
+          "title": "Match Clock Ms",
+          "type": "integer"
+        },
+        "match_id": {
+          "title": "Match Id",
+          "type": "string"
+        },
+        "period": {
+          "maximum": 2,
+          "minimum": 1,
+          "title": "Period",
+          "type": "integer"
+        },
+        "player_id": {
+          "title": "Player Id",
+          "type": "string"
+        },
+        "possession_id": {
+          "title": "Possession Id",
+          "type": "integer"
+        },
+        "score_away": {
+          "title": "Score Away",
+          "type": "integer"
+        },
+        "score_home": {
+          "title": "Score Home",
+          "type": "integer"
+        },
+        "seq": {
+          "minimum": 1,
+          "title": "Seq",
+          "type": "integer"
+        },
+        "team_id": {
+          "title": "Team Id",
+          "type": "string"
+        },
+        "type": {
+          "const": "period_start",
+          "title": "Type",
+          "type": "string"
+        },
+        "x": {
+          "title": "X",
+          "type": "number"
+        },
+        "y": {
+          "title": "Y",
+          "type": "number"
+        }
+      },
+      "required": [
+        "event_id",
+        "match_id",
+        "seq",
+        "period",
+        "clock_ms",
+        "match_clock_ms",
+        "type",
+        "team_id",
+        "player_id",
+        "x",
+        "y",
+        "possession_id",
+        "score_home",
+        "score_away"
+      ],
+      "title": "PeriodStartEvent",
+      "type": "object"
+    },
+    "PossessionChangeEvent": {
+      "additionalProperties": false,
+      "properties": {
+        "clock_ms": {
+          "minimum": 0,
+          "title": "Clock Ms",
+          "type": "integer"
+        },
+        "event_id": {
+          "title": "Event Id",
+          "type": "string"
+        },
+        "from_team_id": {
+          "title": "From Team Id",
+          "type": "string"
+        },
+        "match_clock_ms": {
+          "minimum": 0,
+          "title": "Match Clock Ms",
+          "type": "integer"
+        },
+        "match_id": {
+          "title": "Match Id",
+          "type": "string"
+        },
+        "period": {
+          "maximum": 2,
+          "minimum": 1,
+          "title": "Period",
+          "type": "integer"
+        },
+        "player_id": {
+          "title": "Player Id",
+          "type": "string"
+        },
+        "possession_id": {
+          "title": "Possession Id",
+          "type": "integer"
+        },
+        "reason": {
+          "enum": [
+            "tackle",
+            "interception",
+            "out_of_play",
+            "foul",
+            "shot_result",
+            "miscontrol"
+          ],
+          "title": "Reason",
+          "type": "string"
+        },
+        "score_away": {
+          "title": "Score Away",
+          "type": "integer"
+        },
+        "score_home": {
+          "title": "Score Home",
+          "type": "integer"
+        },
+        "seq": {
+          "minimum": 1,
+          "title": "Seq",
+          "type": "integer"
+        },
+        "team_id": {
+          "title": "Team Id",
+          "type": "string"
+        },
+        "to_team_id": {
+          "title": "To Team Id",
+          "type": "string"
+        },
+        "type": {
+          "const": "possession_change",
+          "title": "Type",
+          "type": "string"
+        },
+        "x": {
+          "title": "X",
+          "type": "number"
+        },
+        "y": {
+          "title": "Y",
+          "type": "number"
+        }
+      },
+      "required": [
+        "event_id",
+        "match_id",
+        "seq",
+        "period",
+        "clock_ms",
+        "match_clock_ms",
+        "type",
+        "team_id",
+        "player_id",
+        "x",
+        "y",
+        "possession_id",
+        "score_home",
+        "score_away",
+        "from_team_id",
+        "to_team_id",
+        "reason"
+      ],
+      "title": "PossessionChangeEvent",
+      "type": "object"
+    },
+    "PressureEvent": {
+      "additionalProperties": false,
+      "properties": {
+        "clock_ms": {
+          "minimum": 0,
+          "title": "Clock Ms",
+          "type": "integer"
+        },
+        "distance_m": {
+          "title": "Distance M",
+          "type": "number"
+        },
+        "duration_ms": {
+          "title": "Duration Ms",
+          "type": "integer"
+        },
+        "event_id": {
+          "title": "Event Id",
+          "type": "string"
+        },
+        "match_clock_ms": {
+          "minimum": 0,
+          "title": "Match Clock Ms",
+          "type": "integer"
+        },
+        "match_id": {
+          "title": "Match Id",
+          "type": "string"
+        },
+        "period": {
+          "maximum": 2,
+          "minimum": 1,
+          "title": "Period",
+          "type": "integer"
+        },
+        "player_id": {
+          "title": "Player Id",
+          "type": "string"
+        },
+        "possession_id": {
+          "title": "Possession Id",
+          "type": "integer"
+        },
+        "pressed_player_id": {
+          "title": "Pressed Player Id",
+          "type": "string"
+        },
+        "score_away": {
+          "title": "Score Away",
+          "type": "integer"
+        },
+        "score_home": {
+          "title": "Score Home",
+          "type": "integer"
+        },
+        "seq": {
+          "minimum": 1,
+          "title": "Seq",
+          "type": "integer"
+        },
+        "team_id": {
+          "title": "Team Id",
+          "type": "string"
+        },
+        "type": {
+          "const": "pressure",
+          "title": "Type",
+          "type": "string"
+        },
+        "x": {
+          "title": "X",
+          "type": "number"
+        },
+        "y": {
+          "title": "Y",
+          "type": "number"
+        }
+      },
+      "required": [
+        "event_id",
+        "match_id",
+        "seq",
+        "period",
+        "clock_ms",
+        "match_clock_ms",
+        "type",
+        "team_id",
+        "player_id",
+        "x",
+        "y",
+        "possession_id",
+        "score_home",
+        "score_away",
+        "pressed_player_id",
+        "distance_m",
+        "duration_ms"
+      ],
+      "title": "PressureEvent",
+      "type": "object"
+    },
+    "SaveEvent": {
+      "additionalProperties": false,
+      "description": "Goalkeeper stops an on-target shot. `team_id` is the keeper's team.",
+      "properties": {
+        "clock_ms": {
+          "minimum": 0,
+          "title": "Clock Ms",
+          "type": "integer"
+        },
+        "event_id": {
+          "title": "Event Id",
+          "type": "string"
+        },
+        "match_clock_ms": {
+          "minimum": 0,
+          "title": "Match Clock Ms",
+          "type": "integer"
+        },
+        "match_id": {
+          "title": "Match Id",
+          "type": "string"
+        },
+        "outcome": {
+          "enum": [
+            "caught",
+            "parried",
+            "tipped"
+          ],
+          "title": "Outcome",
+          "type": "string"
+        },
+        "period": {
+          "maximum": 2,
+          "minimum": 1,
+          "title": "Period",
+          "type": "integer"
+        },
+        "player_id": {
+          "title": "Player Id",
+          "type": "string"
+        },
+        "possession_id": {
+          "title": "Possession Id",
+          "type": "integer"
+        },
+        "score_away": {
+          "title": "Score Away",
+          "type": "integer"
+        },
+        "score_home": {
+          "title": "Score Home",
+          "type": "integer"
+        },
+        "seq": {
+          "minimum": 1,
+          "title": "Seq",
+          "type": "integer"
+        },
+        "shot_event_id": {
+          "title": "Shot Event Id",
+          "type": "string"
+        },
+        "team_id": {
+          "title": "Team Id",
+          "type": "string"
+        },
+        "type": {
+          "const": "save",
+          "title": "Type",
+          "type": "string"
+        },
+        "x": {
+          "title": "X",
+          "type": "number"
+        },
+        "y": {
+          "title": "Y",
+          "type": "number"
+        }
+      },
+      "required": [
+        "event_id",
+        "match_id",
+        "seq",
+        "period",
+        "clock_ms",
+        "match_clock_ms",
+        "type",
+        "team_id",
+        "player_id",
+        "x",
+        "y",
+        "possession_id",
+        "score_home",
+        "score_away",
+        "shot_event_id",
+        "outcome"
+      ],
+      "title": "SaveEvent",
+      "type": "object"
+    },
+    "ShotEvent": {
+      "additionalProperties": false,
+      "properties": {
+        "assist_event_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Assist Event Id"
+        },
+        "body_part": {
+          "enum": [
+            "right_foot",
+            "left_foot",
+            "head",
+            "hands"
+          ],
+          "title": "Body Part",
+          "type": "string"
+        },
+        "clock_ms": {
+          "minimum": 0,
+          "title": "Clock Ms",
+          "type": "integer"
+        },
+        "end_x": {
+          "title": "End X",
+          "type": "number"
+        },
+        "end_y": {
+          "title": "End Y",
+          "type": "number"
+        },
+        "event_id": {
+          "title": "Event Id",
+          "type": "string"
+        },
+        "match_clock_ms": {
+          "minimum": 0,
+          "title": "Match Clock Ms",
+          "type": "integer"
+        },
+        "match_id": {
+          "title": "Match Id",
+          "type": "string"
+        },
+        "outcome": {
+          "enum": [
+            "goal",
+            "saved",
+            "off_target",
+            "blocked",
+            "post"
+          ],
+          "title": "Outcome",
+          "type": "string"
+        },
+        "period": {
+          "maximum": 2,
+          "minimum": 1,
+          "title": "Period",
+          "type": "integer"
+        },
+        "player_id": {
+          "title": "Player Id",
+          "type": "string"
+        },
+        "possession_id": {
+          "title": "Possession Id",
+          "type": "integer"
+        },
+        "score_away": {
+          "title": "Score Away",
+          "type": "integer"
+        },
+        "score_home": {
+          "title": "Score Home",
+          "type": "integer"
+        },
+        "seq": {
+          "minimum": 1,
+          "title": "Seq",
+          "type": "integer"
+        },
+        "shot_speed_ms": {
+          "title": "Shot Speed Ms",
+          "type": "number"
+        },
+        "team_id": {
+          "title": "Team Id",
+          "type": "string"
+        },
+        "type": {
+          "const": "shot",
+          "title": "Type",
+          "type": "string"
+        },
+        "x": {
+          "title": "X",
+          "type": "number"
+        },
+        "y": {
+          "title": "Y",
+          "type": "number"
+        }
+      },
+      "required": [
+        "event_id",
+        "match_id",
+        "seq",
+        "period",
+        "clock_ms",
+        "match_clock_ms",
+        "type",
+        "team_id",
+        "player_id",
+        "x",
+        "y",
+        "possession_id",
+        "score_home",
+        "score_away",
+        "end_x",
+        "end_y",
+        "outcome",
+        "shot_speed_ms",
+        "body_part",
+        "assist_event_id"
+      ],
+      "title": "ShotEvent",
+      "type": "object"
+    },
+    "SubstitutionEvent": {
+      "additionalProperties": false,
+      "properties": {
+        "clock_ms": {
+          "minimum": 0,
+          "title": "Clock Ms",
+          "type": "integer"
+        },
+        "event_id": {
+          "title": "Event Id",
+          "type": "string"
+        },
+        "match_clock_ms": {
+          "minimum": 0,
+          "title": "Match Clock Ms",
+          "type": "integer"
+        },
+        "match_id": {
+          "title": "Match Id",
+          "type": "string"
+        },
+        "period": {
+          "maximum": 2,
+          "minimum": 1,
+          "title": "Period",
+          "type": "integer"
+        },
+        "player_id": {
+          "title": "Player Id",
+          "type": "string"
+        },
+        "player_off_id": {
+          "title": "Player Off Id",
+          "type": "string"
+        },
+        "player_on_id": {
+          "title": "Player On Id",
+          "type": "string"
+        },
+        "possession_id": {
+          "title": "Possession Id",
+          "type": "integer"
+        },
+        "score_away": {
+          "title": "Score Away",
+          "type": "integer"
+        },
+        "score_home": {
+          "title": "Score Home",
+          "type": "integer"
+        },
+        "seq": {
+          "minimum": 1,
+          "title": "Seq",
+          "type": "integer"
+        },
+        "team_id": {
+          "title": "Team Id",
+          "type": "string"
+        },
+        "type": {
+          "const": "substitution",
+          "title": "Type",
+          "type": "string"
+        },
+        "x": {
+          "title": "X",
+          "type": "number"
+        },
+        "y": {
+          "title": "Y",
+          "type": "number"
+        }
+      },
+      "required": [
+        "event_id",
+        "match_id",
+        "seq",
+        "period",
+        "clock_ms",
+        "match_clock_ms",
+        "type",
+        "team_id",
+        "player_id",
+        "x",
+        "y",
+        "possession_id",
+        "score_home",
+        "score_away",
+        "player_off_id",
+        "player_on_id"
+      ],
+      "title": "SubstitutionEvent",
+      "type": "object"
+    },
+    "TackleEvent": {
+      "additionalProperties": false,
+      "properties": {
+        "clock_ms": {
+          "minimum": 0,
+          "title": "Clock Ms",
+          "type": "integer"
+        },
+        "event_id": {
+          "title": "Event Id",
+          "type": "string"
+        },
+        "match_clock_ms": {
+          "minimum": 0,
+          "title": "Match Clock Ms",
+          "type": "integer"
+        },
+        "match_id": {
+          "title": "Match Id",
+          "type": "string"
+        },
+        "opponent_id": {
+          "title": "Opponent Id",
+          "type": "string"
+        },
+        "outcome": {
+          "enum": [
+            "won",
+            "lost"
+          ],
+          "title": "Outcome",
+          "type": "string"
+        },
+        "period": {
+          "maximum": 2,
+          "minimum": 1,
+          "title": "Period",
+          "type": "integer"
+        },
+        "player_id": {
+          "title": "Player Id",
+          "type": "string"
+        },
+        "possession_id": {
+          "title": "Possession Id",
+          "type": "integer"
+        },
+        "score_away": {
+          "title": "Score Away",
+          "type": "integer"
+        },
+        "score_home": {
+          "title": "Score Home",
+          "type": "integer"
+        },
+        "seq": {
+          "minimum": 1,
+          "title": "Seq",
+          "type": "integer"
+        },
+        "team_id": {
+          "title": "Team Id",
+          "type": "string"
+        },
+        "type": {
+          "const": "tackle",
+          "title": "Type",
+          "type": "string"
+        },
+        "x": {
+          "title": "X",
+          "type": "number"
+        },
+        "y": {
+          "title": "Y",
+          "type": "number"
+        }
+      },
+      "required": [
+        "event_id",
+        "match_id",
+        "seq",
+        "period",
+        "clock_ms",
+        "match_clock_ms",
+        "type",
+        "team_id",
+        "player_id",
+        "x",
+        "y",
+        "possession_id",
+        "score_home",
+        "score_away",
+        "opponent_id",
+        "outcome"
+      ],
+      "title": "TackleEvent",
+      "type": "object"
+    },
+    "ThrowInEvent": {
+      "additionalProperties": false,
+      "properties": {
+        "ball_speed_ms": {
+          "title": "Ball Speed Ms",
+          "type": "number"
+        },
+        "body_part": {
+          "enum": [
+            "right_foot",
+            "left_foot",
+            "head",
+            "hands"
+          ],
+          "title": "Body Part",
+          "type": "string"
+        },
+        "clock_ms": {
+          "minimum": 0,
+          "title": "Clock Ms",
+          "type": "integer"
+        },
+        "end_x": {
+          "title": "End X",
+          "type": "number"
+        },
+        "end_y": {
+          "title": "End Y",
+          "type": "number"
+        },
+        "event_id": {
+          "title": "Event Id",
+          "type": "string"
+        },
+        "match_clock_ms": {
+          "minimum": 0,
+          "title": "Match Clock Ms",
+          "type": "integer"
+        },
+        "match_id": {
+          "title": "Match Id",
+          "type": "string"
+        },
+        "outcome": {
+          "enum": [
+            "complete",
+            "incomplete",
+            "intercepted",
+            "out"
+          ],
+          "title": "Outcome",
+          "type": "string"
+        },
+        "pass_length_m": {
+          "title": "Pass Length M",
+          "type": "number"
+        },
+        "period": {
+          "maximum": 2,
+          "minimum": 1,
+          "title": "Period",
+          "type": "integer"
+        },
+        "player_id": {
+          "title": "Player Id",
+          "type": "string"
+        },
+        "possession_id": {
+          "title": "Possession Id",
+          "type": "integer"
+        },
+        "receiver_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Receiver Id"
+        },
+        "score_away": {
+          "title": "Score Away",
+          "type": "integer"
+        },
+        "score_home": {
+          "title": "Score Home",
+          "type": "integer"
+        },
+        "seq": {
+          "minimum": 1,
+          "title": "Seq",
+          "type": "integer"
+        },
+        "team_id": {
+          "title": "Team Id",
+          "type": "string"
+        },
+        "type": {
+          "const": "throw_in",
+          "title": "Type",
+          "type": "string"
+        },
+        "x": {
+          "title": "X",
+          "type": "number"
+        },
+        "y": {
+          "title": "Y",
+          "type": "number"
+        }
+      },
+      "required": [
+        "event_id",
+        "match_id",
+        "seq",
+        "period",
+        "clock_ms",
+        "match_clock_ms",
+        "type",
+        "team_id",
+        "player_id",
+        "x",
+        "y",
+        "possession_id",
+        "score_home",
+        "score_away",
+        "end_x",
+        "end_y",
+        "receiver_id",
+        "outcome",
+        "ball_speed_ms",
+        "pass_length_m",
+        "body_part"
+      ],
+      "title": "ThrowInEvent",
+      "type": "object"
+    }
+  },
+  "discriminator": {
+    "mapping": {
+      "card": "#/$defs/CardEvent",
+      "corner": "#/$defs/CornerEvent",
+      "foul": "#/$defs/FoulEvent",
+      "free_kick": "#/$defs/FreeKickEvent",
+      "goal_kick": "#/$defs/GoalKickEvent",
+      "pass": "#/$defs/PassEvent",
+      "penalty": "#/$defs/PenaltyEvent",
+      "period_end": "#/$defs/PeriodEndEvent",
+      "period_start": "#/$defs/PeriodStartEvent",
+      "possession_change": "#/$defs/PossessionChangeEvent",
+      "pressure": "#/$defs/PressureEvent",
+      "save": "#/$defs/SaveEvent",
+      "shot": "#/$defs/ShotEvent",
+      "substitution": "#/$defs/SubstitutionEvent",
+      "tackle": "#/$defs/TackleEvent",
+      "throw_in": "#/$defs/ThrowInEvent"
+    },
+    "propertyName": "type"
+  },
+  "oneOf": [
+    {
+      "$ref": "#/$defs/PassEvent"
+    },
+    {
+      "$ref": "#/$defs/ThrowInEvent"
+    },
+    {
+      "$ref": "#/$defs/CornerEvent"
+    },
+    {
+      "$ref": "#/$defs/FreeKickEvent"
+    },
+    {
+      "$ref": "#/$defs/GoalKickEvent"
+    },
+    {
+      "$ref": "#/$defs/ShotEvent"
+    },
+    {
+      "$ref": "#/$defs/PenaltyEvent"
+    },
+    {
+      "$ref": "#/$defs/SaveEvent"
+    },
+    {
+      "$ref": "#/$defs/TackleEvent"
+    },
+    {
+      "$ref": "#/$defs/PossessionChangeEvent"
+    },
+    {
+      "$ref": "#/$defs/PressureEvent"
+    },
+    {
+      "$ref": "#/$defs/FoulEvent"
+    },
+    {
+      "$ref": "#/$defs/CardEvent"
+    },
+    {
+      "$ref": "#/$defs/SubstitutionEvent"
+    },
+    {
+      "$ref": "#/$defs/PeriodStartEvent"
+    },
+    {
+      "$ref": "#/$defs/PeriodEndEvent"
+    }
+  ]
+}

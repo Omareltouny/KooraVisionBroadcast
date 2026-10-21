@@ -1,0 +1,41 @@
+{
+ "match_id": "m00007-lev-hov",
+ "home": "Levmoor Wanderers",
+ "away": "Hovstead United",
+ "score": "4-3",
+ "mode": "templates",
+ "engine": "microsoft-agent-framework",
+ "model": null,
+ "language_status": {
+  "en": "source",
+  "ar": "needs_native_review",
+  "es": "machine_assisted_needs_review"
+ },
+ "profiles": [
+  {
+   "id": "fan_ar",
+   "lang": "ar",
+   "follows": "home",
+   "push_min": 0.7,
+   "feed_min": 0.4,
+   "label": "Arabic-speaking fan of the home club"
+  },
+  {
+   "id": "fan_es",
+   "lang": "es",
+   "follows": "away",
+   "push_min": 0.7,
+   "feed_min": 0.4,
+   "label": "Spanish-speaking fan of the away club"
+  },
+  {
+   "id": "fan_en",
+   "lang": "en",
+   "follows": null,
+   "push_min": 0.7,
+   "feed_min": 0.4,
+   "label": "Neutral English-speaking fan"
+  }
+ ],
+ "note": "Synthetic match from a fictional league. Text is template- or model-written and fact-checked by the Verify agent."
+}

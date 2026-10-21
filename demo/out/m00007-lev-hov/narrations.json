@@ -1,0 +1,2042 @@
+[
+ {
+  "moment_id": "M001",
+  "lang": "en",
+  "voice": "broadcast",
+  "headline": "Hovstead United turn up the pressure",
+  "body": "Between minute 17 and minute 27, Hovstead United won the ball back 12 times in the opposition half.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M001",
+  "lang": "en",
+  "voice": "fan_for",
+  "headline": "Hovstead United turn up the pressure",
+  "body": "Between minute 17 and minute 27, Hovstead United won the ball back 12 times in the opposition half. Hovstead United supporters, this is the one.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M001",
+  "lang": "en",
+  "voice": "fan_against",
+  "headline": "Hovstead United turn up the pressure",
+  "body": "Between minute 17 and minute 27, Hovstead United won the ball back 12 times in the opposition half. Tough moment for Levmoor Wanderers.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M001",
+  "lang": "en",
+  "voice": "fan_neutral",
+  "headline": "Hovstead United turn up the pressure",
+  "body": "Between minute 17 and minute 27, Hovstead United won the ball back 12 times in the opposition half.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M001",
+  "lang": "ar",
+  "voice": "broadcast",
+  "headline": "هوفستيد يونايتد يضغط بقوة",
+  "body": "بين الدقيقة 17 والدقيقة 27، استعاد هوفستيد يونايتد الكرة 12 مرة في نصف ملعب المنافس.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M001",
+  "lang": "ar",
+  "voice": "fan_for",
+  "headline": "هوفستيد يونايتد يضغط بقوة",
+  "body": "بين الدقيقة 17 والدقيقة 27، استعاد هوفستيد يونايتد الكرة 12 مرة في نصف ملعب المنافس. يا لها من لحظة لجماهير هوفستيد يونايتد!",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M001",
+  "lang": "ar",
+  "voice": "fan_against",
+  "headline": "هوفستيد يونايتد يضغط بقوة",
+  "body": "بين الدقيقة 17 والدقيقة 27، استعاد هوفستيد يونايتد الكرة 12 مرة في نصف ملعب المنافس. لحظة صعبة على ليفمور واندرارز.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M001",
+  "lang": "ar",
+  "voice": "fan_neutral",
+  "headline": "هوفستيد يونايتد يضغط بقوة",
+  "body": "بين الدقيقة 17 والدقيقة 27، استعاد هوفستيد يونايتد الكرة 12 مرة في نصف ملعب المنافس.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M001",
+  "lang": "es",
+  "voice": "broadcast",
+  "headline": "Unido Hovstead aprieta arriba",
+  "body": "Entre el minuto 17 y el minuto 27, Unido Hovstead recuperó el balón 12 veces en campo rival.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M001",
+  "lang": "es",
+  "voice": "fan_for",
+  "headline": "Unido Hovstead aprieta arriba",
+  "body": "Entre el minuto 17 y el minuto 27, Unido Hovstead recuperó el balón 12 veces en campo rival. ¡Locura en la grada de Unido Hovstead!",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M001",
+  "lang": "es",
+  "voice": "fan_against",
+  "headline": "Unido Hovstead aprieta arriba",
+  "body": "Entre el minuto 17 y el minuto 27, Unido Hovstead recuperó el balón 12 veces en campo rival. Momento duro para Errantes Levmoor.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M001",
+  "lang": "es",
+  "voice": "fan_neutral",
+  "headline": "Unido Hovstead aprieta arriba",
+  "body": "Entre el minuto 17 y el minuto 27, Unido Hovstead recuperó el balón 12 veces en campo rival.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M002",
+  "lang": "en",
+  "voice": "broadcast",
+  "headline": "Gosibof Vokafet puts Hovstead United in front",
+  "body": "Gosibof Vokafet scores for Hovstead United in minute 23. It is Levmoor Wanderers 0-1 Hovstead United. Beheti Bidoguk set it up. 4 Hovstead United players were inside the box.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M002",
+  "lang": "en",
+  "voice": "fan_for",
+  "headline": "Gosibof Vokafet puts Hovstead United in front",
+  "body": "Gosibof Vokafet scores for Hovstead United in minute 23. It is Levmoor Wanderers 0-1 Hovstead United. Beheti Bidoguk set it up. 4 Hovstead United players were inside the box. Scenes for Hovstead United!",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M002",
+  "lang": "en",
+  "voice": "fan_against",
+  "headline": "Gosibof Vokafet puts Hovstead United in front",
+  "body": "Gosibof Vokafet scores for Hovstead United in minute 23. It is Levmoor Wanderers 0-1 Hovstead United. Beheti Bidoguk set it up. 4 Hovstead United players were inside the box. Tough moment for Levmoor Wanderers.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M002",
+  "lang": "en",
+  "voice": "fan_neutral",
+  "headline": "Gosibof Vokafet puts Hovstead United in front",
+  "body": "Gosibof Vokafet scores for Hovstead United in minute 23. It is Levmoor Wanderers 0-1 Hovstead United. Beheti Bidoguk set it up. 4 Hovstead United players were inside the box.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M002",
+  "lang": "ar",
+  "voice": "broadcast",
+  "headline": "جوسيبوف فوكافيت يمنح هوفستيد يونايتد التقدم",
+  "body": "سجّل جوسيبوف فوكافيت لصالح هوفستيد يونايتد في الدقيقة 23. النتيجة: ليفمور واندرارز 0-1 هوفستيد يونايتد. صنع الهدف بيهيتي بيدوجوك. كان 4 من لاعبي هوفستيد يونايتد داخل منطقة الجزاء.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M002",
+  "lang": "ar",
+  "voice": "fan_for",
+  "headline": "جوسيبوف فوكافيت يمنح هوفستيد يونايتد التقدم",
+  "body": "سجّل جوسيبوف فوكافيت لصالح هوفستيد يونايتد في الدقيقة 23. النتيجة: ليفمور واندرارز 0-1 هوفستيد يونايتد. صنع الهدف بيهيتي بيدوجوك. كان 4 من لاعبي هوفستيد يونايتد داخل منطقة الجزاء. فرحة كبيرة لجماهير هوفستيد يونايتد!",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M002",
+  "lang": "ar",
+  "voice": "fan_against",
+  "headline": "جوسيبوف فوكافيت يمنح هوفستيد يونايتد التقدم",
+  "body": "سجّل جوسيبوف فوكافيت لصالح هوفستيد يونايتد في الدقيقة 23. النتيجة: ليفمور واندرارز 0-1 هوفستيد يونايتد. صنع الهدف بيهيتي بيدوجوك. كان 4 من لاعبي هوفستيد يونايتد داخل منطقة الجزاء. ليفمور واندرارز يحتاج إلى رد.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M002",
+  "lang": "ar",
+  "voice": "fan_neutral",
+  "headline": "جوسيبوف فوكافيت يمنح هوفستيد يونايتد التقدم",
+  "body": "سجّل جوسيبوف فوكافيت لصالح هوفستيد يونايتد في الدقيقة 23. النتيجة: ليفمور واندرارز 0-1 هوفستيد يونايتد. صنع الهدف بيهيتي بيدوجوك. كان 4 من لاعبي هوفستيد يونايتد داخل منطقة الجزاء.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M002",
+  "lang": "es",
+  "voice": "broadcast",
+  "headline": "Gosibof Vokafet pone por delante a Unido Hovstead",
+  "body": "Gosibof Vokafet marca para Unido Hovstead en el minuto 23. El marcador es Errantes Levmoor 0-1 Unido Hovstead. Beheti Bidoguk dio el pase del gol. 4 jugadores de Unido Hovstead estaban dentro del área.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M002",
+  "lang": "es",
+  "voice": "fan_for",
+  "headline": "Gosibof Vokafet pone por delante a Unido Hovstead",
+  "body": "Gosibof Vokafet marca para Unido Hovstead en el minuto 23. El marcador es Errantes Levmoor 0-1 Unido Hovstead. Beheti Bidoguk dio el pase del gol. 4 jugadores de Unido Hovstead estaban dentro del área. Aficionados de Unido Hovstead, este es el momento.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M002",
+  "lang": "es",
+  "voice": "fan_against",
+  "headline": "Gosibof Vokafet pone por delante a Unido Hovstead",
+  "body": "Gosibof Vokafet marca para Unido Hovstead en el minuto 23. El marcador es Errantes Levmoor 0-1 Unido Hovstead. Beheti Bidoguk dio el pase del gol. 4 jugadores de Unido Hovstead estaban dentro del área. Momento duro para Errantes Levmoor.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M002",
+  "lang": "es",
+  "voice": "fan_neutral",
+  "headline": "Gosibof Vokafet pone por delante a Unido Hovstead",
+  "body": "Gosibof Vokafet marca para Unido Hovstead en el minuto 23. El marcador es Errantes Levmoor 0-1 Unido Hovstead. Beheti Bidoguk dio el pase del gol. 4 jugadores de Unido Hovstead estaban dentro del área.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M003",
+  "lang": "en",
+  "voice": "broadcast",
+  "headline": "Hatidus Fadifig says no",
+  "body": "Hatidus Fadifig (Levmoor Wanderers) keeps out Beheti Bidoguk's effort from 12 metres in minute 33.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M003",
+  "lang": "en",
+  "voice": "fan_for",
+  "headline": "Hatidus Fadifig says no",
+  "body": "Hatidus Fadifig (Levmoor Wanderers) keeps out Beheti Bidoguk's effort from 12 metres in minute 33. What a moment for Levmoor Wanderers!",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M003",
+  "lang": "en",
+  "voice": "fan_against",
+  "headline": "Hatidus Fadifig says no",
+  "body": "Hatidus Fadifig (Levmoor Wanderers) keeps out Beheti Bidoguk's effort from 12 metres in minute 33. Tough moment for Hovstead United.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M003",
+  "lang": "en",
+  "voice": "fan_neutral",
+  "headline": "Hatidus Fadifig says no",
+  "body": "Hatidus Fadifig (Levmoor Wanderers) keeps out Beheti Bidoguk's effort from 12 metres in minute 33.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M003",
+  "lang": "ar",
+  "voice": "broadcast",
+  "headline": "هاتيدوس فاديفيج يتصدّى",
+  "body": "تصدى هاتيدوس فاديفيج (ليفمور واندرارز) لتسديدة بيهيتي بيدوجوك من مسافة 12 متر في الدقيقة 33.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M003",
+  "lang": "ar",
+  "voice": "fan_for",
+  "headline": "هاتيدوس فاديفيج يتصدّى",
+  "body": "تصدى هاتيدوس فاديفيج (ليفمور واندرارز) لتسديدة بيهيتي بيدوجوك من مسافة 12 متر في الدقيقة 33. يا لها من لحظة لجماهير ليفمور واندرارز!",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M003",
+  "lang": "ar",
+  "voice": "fan_against",
+  "headline": "هاتيدوس فاديفيج يتصدّى",
+  "body": "تصدى هاتيدوس فاديفيج (ليفمور واندرارز) لتسديدة بيهيتي بيدوجوك من مسافة 12 متر في الدقيقة 33. ضربة لـهوفستيد يونايتد.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M003",
+  "lang": "ar",
+  "voice": "fan_neutral",
+  "headline": "هاتيدوس فاديفيج يتصدّى",
+  "body": "تصدى هاتيدوس فاديفيج (ليفمور واندرارز) لتسديدة بيهيتي بيدوجوك من مسافة 12 متر في الدقيقة 33.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M003",
+  "lang": "es",
+  "voice": "broadcast",
+  "headline": "Hatidus Fadifig dice que no",
+  "body": "Hatidus Fadifig (Errantes Levmoor) detiene el disparo de Beheti Bidoguk desde 12 metros en el minuto 33.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M003",
+  "lang": "es",
+  "voice": "fan_for",
+  "headline": "Hatidus Fadifig dice que no",
+  "body": "Hatidus Fadifig (Errantes Levmoor) detiene el disparo de Beheti Bidoguk desde 12 metros en el minuto 33. ¡Qué momento para Errantes Levmoor!",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M003",
+  "lang": "es",
+  "voice": "fan_against",
+  "headline": "Hatidus Fadifig dice que no",
+  "body": "Hatidus Fadifig (Errantes Levmoor) detiene el disparo de Beheti Bidoguk desde 12 metros en el minuto 33. Un golpe para Unido Hovstead.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M003",
+  "lang": "es",
+  "voice": "fan_neutral",
+  "headline": "Hatidus Fadifig dice que no",
+  "body": "Hatidus Fadifig (Errantes Levmoor) detiene el disparo de Beheti Bidoguk desde 12 metros en el minuto 33.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M004",
+  "lang": "en",
+  "voice": "broadcast",
+  "headline": "GOAL! Beheti Bidoguk scores for Hovstead United",
+  "body": "Beheti Bidoguk scores for Hovstead United in minute 37. It is Levmoor Wanderers 0-2 Hovstead United. Ragusi Zatig set it up. It came straight from winning the ball high up the pitch. 4 Hovstead United players were inside the box.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M004",
+  "lang": "en",
+  "voice": "fan_for",
+  "headline": "GOAL! Beheti Bidoguk scores for Hovstead United",
+  "body": "Beheti Bidoguk scores for Hovstead United in minute 37. It is Levmoor Wanderers 0-2 Hovstead United. Ragusi Zatig set it up. It came straight from winning the ball high up the pitch. 4 Hovstead United players were inside the box. What a moment for Hovstead United!",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M004",
+  "lang": "en",
+  "voice": "fan_against",
+  "headline": "GOAL! Beheti Bidoguk scores for Hovstead United",
+  "body": "Beheti Bidoguk scores for Hovstead United in minute 37. It is Levmoor Wanderers 0-2 Hovstead United. Ragusi Zatig set it up. It came straight from winning the ball high up the pitch. 4 Hovstead United players were inside the box. A blow for Levmoor Wanderers.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M004",
+  "lang": "en",
+  "voice": "fan_neutral",
+  "headline": "GOAL! Beheti Bidoguk scores for Hovstead United",
+  "body": "Beheti Bidoguk scores for Hovstead United in minute 37. It is Levmoor Wanderers 0-2 Hovstead United. Ragusi Zatig set it up. It came straight from winning the ball high up the pitch. 4 Hovstead United players were inside the box.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M004",
+  "lang": "ar",
+  "voice": "broadcast",
+  "headline": "هدف! بيهيتي بيدوجوك يسجّل لصالح هوفستيد يونايتد",
+  "body": "سجّل بيهيتي بيدوجوك لصالح هوفستيد يونايتد في الدقيقة 37. النتيجة: ليفمور واندرارز 0-2 هوفستيد يونايتد. صنع الهدف راجوسي زاتيج. جاء الهدف مباشرة بعد استعادة الكرة في مناطق متقدمة. كان 4 من لاعبي هوفستيد يونايتد داخل منطقة الجزاء.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M004",
+  "lang": "ar",
+  "voice": "fan_for",
+  "headline": "هدف! بيهيتي بيدوجوك يسجّل لصالح هوفستيد يونايتد",
+  "body": "سجّل بيهيتي بيدوجوك لصالح هوفستيد يونايتد في الدقيقة 37. النتيجة: ليفمور واندرارز 0-2 هوفستيد يونايتد. صنع الهدف راجوسي زاتيج. جاء الهدف مباشرة بعد استعادة الكرة في مناطق متقدمة. كان 4 من لاعبي هوفستيد يونايتد داخل منطقة الجزاء. فرحة كبيرة لجماهير هوفستيد يونايتد!",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M004",
+  "lang": "ar",
+  "voice": "fan_against",
+  "headline": "هدف! بيهيتي بيدوجوك يسجّل لصالح هوفستيد يونايتد",
+  "body": "سجّل بيهيتي بيدوجوك لصالح هوفستيد يونايتد في الدقيقة 37. النتيجة: ليفمور واندرارز 0-2 هوفستيد يونايتد. صنع الهدف راجوسي زاتيج. جاء الهدف مباشرة بعد استعادة الكرة في مناطق متقدمة. كان 4 من لاعبي هوفستيد يونايتد داخل منطقة الجزاء. لحظة صعبة على ليفمور واندرارز.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M004",
+  "lang": "ar",
+  "voice": "fan_neutral",
+  "headline": "هدف! بيهيتي بيدوجوك يسجّل لصالح هوفستيد يونايتد",
+  "body": "سجّل بيهيتي بيدوجوك لصالح هوفستيد يونايتد في الدقيقة 37. النتيجة: ليفمور واندرارز 0-2 هوفستيد يونايتد. صنع الهدف راجوسي زاتيج. جاء الهدف مباشرة بعد استعادة الكرة في مناطق متقدمة. كان 4 من لاعبي هوفستيد يونايتد داخل منطقة الجزاء.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M004",
+  "lang": "es",
+  "voice": "broadcast",
+  "headline": "¡GOL! Beheti Bidoguk marca para Unido Hovstead",
+  "body": "Beheti Bidoguk marca para Unido Hovstead en el minuto 37. El marcador es Errantes Levmoor 0-2 Unido Hovstead. Ragusi Zatig dio el pase del gol. Llegó justo después de recuperar el balón en campo rival. 4 jugadores de Unido Hovstead estaban dentro del área.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M004",
+  "lang": "es",
+  "voice": "fan_for",
+  "headline": "¡GOL! Beheti Bidoguk marca para Unido Hovstead",
+  "body": "Beheti Bidoguk marca para Unido Hovstead en el minuto 37. El marcador es Errantes Levmoor 0-2 Unido Hovstead. Ragusi Zatig dio el pase del gol. Llegó justo después de recuperar el balón en campo rival. 4 jugadores de Unido Hovstead estaban dentro del área. ¡Qué momento para Unido Hovstead!",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M004",
+  "lang": "es",
+  "voice": "fan_against",
+  "headline": "¡GOL! Beheti Bidoguk marca para Unido Hovstead",
+  "body": "Beheti Bidoguk marca para Unido Hovstead en el minuto 37. El marcador es Errantes Levmoor 0-2 Unido Hovstead. Ragusi Zatig dio el pase del gol. Llegó justo después de recuperar el balón en campo rival. 4 jugadores de Unido Hovstead estaban dentro del área. Errantes Levmoor necesita una reacción.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M004",
+  "lang": "es",
+  "voice": "fan_neutral",
+  "headline": "¡GOL! Beheti Bidoguk marca para Unido Hovstead",
+  "body": "Beheti Bidoguk marca para Unido Hovstead en el minuto 37. El marcador es Errantes Levmoor 0-2 Unido Hovstead. Ragusi Zatig dio el pase del gol. Llegó justo después de recuperar el balón en campo rival. 4 jugadores de Unido Hovstead estaban dentro del área.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M005",
+  "lang": "en",
+  "voice": "broadcast",
+  "headline": "GOAL! Bagisu Kosezov scores for Levmoor Wanderers",
+  "body": "Bagisu Kosezov scores for Levmoor Wanderers in minute 45+3. It is Levmoor Wanderers 1-2 Hovstead United. It came straight from winning the ball high up the pitch. 3 Levmoor Wanderers players were inside the box.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M005",
+  "lang": "en",
+  "voice": "fan_for",
+  "headline": "GOAL! Bagisu Kosezov scores for Levmoor Wanderers",
+  "body": "Bagisu Kosezov scores for Levmoor Wanderers in minute 45+3. It is Levmoor Wanderers 1-2 Hovstead United. It came straight from winning the ball high up the pitch. 3 Levmoor Wanderers players were inside the box. Levmoor Wanderers supporters, this is the one.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M005",
+  "lang": "en",
+  "voice": "fan_against",
+  "headline": "GOAL! Bagisu Kosezov scores for Levmoor Wanderers",
+  "body": "Bagisu Kosezov scores for Levmoor Wanderers in minute 45+3. It is Levmoor Wanderers 1-2 Hovstead United. It came straight from winning the ball high up the pitch. 3 Levmoor Wanderers players were inside the box. Tough moment for Hovstead United.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M005",
+  "lang": "en",
+  "voice": "fan_neutral",
+  "headline": "GOAL! Bagisu Kosezov scores for Levmoor Wanderers",
+  "body": "Bagisu Kosezov scores for Levmoor Wanderers in minute 45+3. It is Levmoor Wanderers 1-2 Hovstead United. It came straight from winning the ball high up the pitch. 3 Levmoor Wanderers players were inside the box.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M005",
+  "lang": "ar",
+  "voice": "broadcast",
+  "headline": "هدف! باجيسو كوسيزوف يسجّل لصالح ليفمور واندرارز",
+  "body": "سجّل باجيسو كوسيزوف لصالح ليفمور واندرارز في الدقيقة 45+3. النتيجة: ليفمور واندرارز 1-2 هوفستيد يونايتد. جاء الهدف مباشرة بعد استعادة الكرة في مناطق متقدمة. كان 3 من لاعبي ليفمور واندرارز داخل منطقة الجزاء.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M005",
+  "lang": "ar",
+  "voice": "fan_for",
+  "headline": "هدف! باجيسو كوسيزوف يسجّل لصالح ليفمور واندرارز",
+  "body": "سجّل باجيسو كوسيزوف لصالح ليفمور واندرارز في الدقيقة 45+3. النتيجة: ليفمور واندرارز 1-2 هوفستيد يونايتد. جاء الهدف مباشرة بعد استعادة الكرة في مناطق متقدمة. كان 3 من لاعبي ليفمور واندرارز داخل منطقة الجزاء. فرحة كبيرة لجماهير ليفمور واندرارز!",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M005",
+  "lang": "ar",
+  "voice": "fan_against",
+  "headline": "هدف! باجيسو كوسيزوف يسجّل لصالح ليفمور واندرارز",
+  "body": "سجّل باجيسو كوسيزوف لصالح ليفمور واندرارز في الدقيقة 45+3. النتيجة: ليفمور واندرارز 1-2 هوفستيد يونايتد. جاء الهدف مباشرة بعد استعادة الكرة في مناطق متقدمة. كان 3 من لاعبي ليفمور واندرارز داخل منطقة الجزاء. هوفستيد يونايتد يحتاج إلى رد.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M005",
+  "lang": "ar",
+  "voice": "fan_neutral",
+  "headline": "هدف! باجيسو كوسيزوف يسجّل لصالح ليفمور واندرارز",
+  "body": "سجّل باجيسو كوسيزوف لصالح ليفمور واندرارز في الدقيقة 45+3. النتيجة: ليفمور واندرارز 1-2 هوفستيد يونايتد. جاء الهدف مباشرة بعد استعادة الكرة في مناطق متقدمة. كان 3 من لاعبي ليفمور واندرارز داخل منطقة الجزاء.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M005",
+  "lang": "es",
+  "voice": "broadcast",
+  "headline": "¡GOL! Bagisu Kosezov marca para Errantes Levmoor",
+  "body": "Bagisu Kosezov marca para Errantes Levmoor en el minuto 45+3. El marcador es Errantes Levmoor 1-2 Unido Hovstead. Llegó justo después de recuperar el balón en campo rival. 3 jugadores de Errantes Levmoor estaban dentro del área.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M005",
+  "lang": "es",
+  "voice": "fan_for",
+  "headline": "¡GOL! Bagisu Kosezov marca para Errantes Levmoor",
+  "body": "Bagisu Kosezov marca para Errantes Levmoor en el minuto 45+3. El marcador es Errantes Levmoor 1-2 Unido Hovstead. Llegó justo después de recuperar el balón en campo rival. 3 jugadores de Errantes Levmoor estaban dentro del área. Aficionados de Errantes Levmoor, este es el momento.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M005",
+  "lang": "es",
+  "voice": "fan_against",
+  "headline": "¡GOL! Bagisu Kosezov marca para Errantes Levmoor",
+  "body": "Bagisu Kosezov marca para Errantes Levmoor en el minuto 45+3. El marcador es Errantes Levmoor 1-2 Unido Hovstead. Llegó justo después de recuperar el balón en campo rival. 3 jugadores de Errantes Levmoor estaban dentro del área. Unido Hovstead necesita una reacción.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M005",
+  "lang": "es",
+  "voice": "fan_neutral",
+  "headline": "¡GOL! Bagisu Kosezov marca para Errantes Levmoor",
+  "body": "Bagisu Kosezov marca para Errantes Levmoor en el minuto 45+3. El marcador es Errantes Levmoor 1-2 Unido Hovstead. Llegó justo después de recuperar el balón en campo rival. 3 jugadores de Errantes Levmoor estaban dentro del área.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M006",
+  "lang": "en",
+  "voice": "broadcast",
+  "headline": "Levmoor Wanderers fight back",
+  "body": "Levmoor Wanderers fell behind in minute 23, but Honeka Zevatas levels it in minute 66. It is Levmoor Wanderers 2-2 Hovstead United.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M006",
+  "lang": "en",
+  "voice": "fan_for",
+  "headline": "Levmoor Wanderers fight back",
+  "body": "Levmoor Wanderers fell behind in minute 23, but Honeka Zevatas levels it in minute 66. It is Levmoor Wanderers 2-2 Hovstead United. What a moment for Levmoor Wanderers!",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M006",
+  "lang": "en",
+  "voice": "fan_against",
+  "headline": "Levmoor Wanderers fight back",
+  "body": "Levmoor Wanderers fell behind in minute 23, but Honeka Zevatas levels it in minute 66. It is Levmoor Wanderers 2-2 Hovstead United. Tough moment for Hovstead United.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M006",
+  "lang": "en",
+  "voice": "fan_neutral",
+  "headline": "Levmoor Wanderers fight back",
+  "body": "Levmoor Wanderers fell behind in minute 23, but Honeka Zevatas levels it in minute 66. It is Levmoor Wanderers 2-2 Hovstead United.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M006",
+  "lang": "ar",
+  "voice": "broadcast",
+  "headline": "ليفمور واندرارز يعود إلى المباراة",
+  "body": "تأخر ليفمور واندرارز في الدقيقة 23، لكن هونيكا زيفاتاس يدرك التعادل في الدقيقة 66. النتيجة: ليفمور واندرارز 2-2 هوفستيد يونايتد.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M006",
+  "lang": "ar",
+  "voice": "fan_for",
+  "headline": "ليفمور واندرارز يعود إلى المباراة",
+  "body": "تأخر ليفمور واندرارز في الدقيقة 23، لكن هونيكا زيفاتاس يدرك التعادل في الدقيقة 66. النتيجة: ليفمور واندرارز 2-2 هوفستيد يونايتد. فرحة كبيرة لجماهير ليفمور واندرارز!",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M006",
+  "lang": "ar",
+  "voice": "fan_against",
+  "headline": "ليفمور واندرارز يعود إلى المباراة",
+  "body": "تأخر ليفمور واندرارز في الدقيقة 23، لكن هونيكا زيفاتاس يدرك التعادل في الدقيقة 66. النتيجة: ليفمور واندرارز 2-2 هوفستيد يونايتد. هوفستيد يونايتد يحتاج إلى رد.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M006",
+  "lang": "ar",
+  "voice": "fan_neutral",
+  "headline": "ليفمور واندرارز يعود إلى المباراة",
+  "body": "تأخر ليفمور واندرارز في الدقيقة 23، لكن هونيكا زيفاتاس يدرك التعادل في الدقيقة 66. النتيجة: ليفمور واندرارز 2-2 هوفستيد يونايتد.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M006",
+  "lang": "es",
+  "voice": "broadcast",
+  "headline": "Errantes Levmoor reacciona",
+  "body": "Errantes Levmoor se quedó atrás en el minuto 23, pero Honeka Zevatas iguala en el minuto 66. El marcador es Errantes Levmoor 2-2 Unido Hovstead.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M006",
+  "lang": "es",
+  "voice": "fan_for",
+  "headline": "Errantes Levmoor reacciona",
+  "body": "Errantes Levmoor se quedó atrás en el minuto 23, pero Honeka Zevatas iguala en el minuto 66. El marcador es Errantes Levmoor 2-2 Unido Hovstead. ¡Locura en la grada de Errantes Levmoor!",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M006",
+  "lang": "es",
+  "voice": "fan_against",
+  "headline": "Errantes Levmoor reacciona",
+  "body": "Errantes Levmoor se quedó atrás en el minuto 23, pero Honeka Zevatas iguala en el minuto 66. El marcador es Errantes Levmoor 2-2 Unido Hovstead. Un golpe para Unido Hovstead.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M006",
+  "lang": "es",
+  "voice": "fan_neutral",
+  "headline": "Errantes Levmoor reacciona",
+  "body": "Errantes Levmoor se quedó atrás en el minuto 23, pero Honeka Zevatas iguala en el minuto 66. El marcador es Errantes Levmoor 2-2 Unido Hovstead.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M007",
+  "lang": "en",
+  "voice": "broadcast",
+  "headline": "PENALTY SCORED! Honeka Zevatas converts for Levmoor Wanderers",
+  "body": "Honeka Zevatas scores for Levmoor Wanderers in minute 66. It is Levmoor Wanderers 2-2 Hovstead United.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M007",
+  "lang": "en",
+  "voice": "fan_for",
+  "headline": "PENALTY SCORED! Honeka Zevatas converts for Levmoor Wanderers",
+  "body": "Honeka Zevatas scores for Levmoor Wanderers in minute 66. It is Levmoor Wanderers 2-2 Hovstead United. Levmoor Wanderers supporters, this is the one.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M007",
+  "lang": "en",
+  "voice": "fan_against",
+  "headline": "PENALTY SCORED! Honeka Zevatas converts for Levmoor Wanderers",
+  "body": "Honeka Zevatas scores for Levmoor Wanderers in minute 66. It is Levmoor Wanderers 2-2 Hovstead United. A blow for Hovstead United.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M007",
+  "lang": "en",
+  "voice": "fan_neutral",
+  "headline": "PENALTY SCORED! Honeka Zevatas converts for Levmoor Wanderers",
+  "body": "Honeka Zevatas scores for Levmoor Wanderers in minute 66. It is Levmoor Wanderers 2-2 Hovstead United.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M007",
+  "lang": "ar",
+  "voice": "broadcast",
+  "headline": "ركلة جزاء ناجحة! هونيكا زيفاتاس يسجّل لصالح ليفمور واندرارز",
+  "body": "سجّل هونيكا زيفاتاس لصالح ليفمور واندرارز في الدقيقة 66. النتيجة: ليفمور واندرارز 2-2 هوفستيد يونايتد.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M007",
+  "lang": "ar",
+  "voice": "fan_for",
+  "headline": "ركلة جزاء ناجحة! هونيكا زيفاتاس يسجّل لصالح ليفمور واندرارز",
+  "body": "سجّل هونيكا زيفاتاس لصالح ليفمور واندرارز في الدقيقة 66. النتيجة: ليفمور واندرارز 2-2 هوفستيد يونايتد. جماهير ليفمور واندرارز، هذه هي اللحظة.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M007",
+  "lang": "ar",
+  "voice": "fan_against",
+  "headline": "ركلة جزاء ناجحة! هونيكا زيفاتاس يسجّل لصالح ليفمور واندرارز",
+  "body": "سجّل هونيكا زيفاتاس لصالح ليفمور واندرارز في الدقيقة 66. النتيجة: ليفمور واندرارز 2-2 هوفستيد يونايتد. ضربة لـهوفستيد يونايتد.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M007",
+  "lang": "ar",
+  "voice": "fan_neutral",
+  "headline": "ركلة جزاء ناجحة! هونيكا زيفاتاس يسجّل لصالح ليفمور واندرارز",
+  "body": "سجّل هونيكا زيفاتاس لصالح ليفمور واندرارز في الدقيقة 66. النتيجة: ليفمور واندرارز 2-2 هوفستيد يونايتد.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M007",
+  "lang": "es",
+  "voice": "broadcast",
+  "headline": "¡PENAL CONVERTIDO! Honeka Zevatas marca para Errantes Levmoor",
+  "body": "Honeka Zevatas marca para Errantes Levmoor en el minuto 66. El marcador es Errantes Levmoor 2-2 Unido Hovstead.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M007",
+  "lang": "es",
+  "voice": "fan_for",
+  "headline": "¡PENAL CONVERTIDO! Honeka Zevatas marca para Errantes Levmoor",
+  "body": "Honeka Zevatas marca para Errantes Levmoor en el minuto 66. El marcador es Errantes Levmoor 2-2 Unido Hovstead. ¡Locura en la grada de Errantes Levmoor!",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M007",
+  "lang": "es",
+  "voice": "fan_against",
+  "headline": "¡PENAL CONVERTIDO! Honeka Zevatas marca para Errantes Levmoor",
+  "body": "Honeka Zevatas marca para Errantes Levmoor en el minuto 66. El marcador es Errantes Levmoor 2-2 Unido Hovstead. Un golpe para Unido Hovstead.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M007",
+  "lang": "es",
+  "voice": "fan_neutral",
+  "headline": "¡PENAL CONVERTIDO! Honeka Zevatas marca para Errantes Levmoor",
+  "body": "Honeka Zevatas marca para Errantes Levmoor en el minuto 66. El marcador es Errantes Levmoor 2-2 Unido Hovstead.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M008",
+  "lang": "en",
+  "voice": "broadcast",
+  "headline": "Horeri Hobit puts Levmoor Wanderers in front",
+  "body": "Horeri Hobit scores for Levmoor Wanderers in minute 77. It is Levmoor Wanderers 3-2 Hovstead United. Bagisu Kosezov set it up. It came straight from winning the ball high up the pitch.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M008",
+  "lang": "en",
+  "voice": "fan_for",
+  "headline": "Horeri Hobit puts Levmoor Wanderers in front",
+  "body": "Horeri Hobit scores for Levmoor Wanderers in minute 77. It is Levmoor Wanderers 3-2 Hovstead United. Bagisu Kosezov set it up. It came straight from winning the ball high up the pitch. Levmoor Wanderers supporters, this is the one.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M008",
+  "lang": "en",
+  "voice": "fan_against",
+  "headline": "Horeri Hobit puts Levmoor Wanderers in front",
+  "body": "Horeri Hobit scores for Levmoor Wanderers in minute 77. It is Levmoor Wanderers 3-2 Hovstead United. Bagisu Kosezov set it up. It came straight from winning the ball high up the pitch. Tough moment for Hovstead United.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M008",
+  "lang": "en",
+  "voice": "fan_neutral",
+  "headline": "Horeri Hobit puts Levmoor Wanderers in front",
+  "body": "Horeri Hobit scores for Levmoor Wanderers in minute 77. It is Levmoor Wanderers 3-2 Hovstead United. Bagisu Kosezov set it up. It came straight from winning the ball high up the pitch.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M008",
+  "lang": "ar",
+  "voice": "broadcast",
+  "headline": "هوريري هوبيت يمنح ليفمور واندرارز التقدم",
+  "body": "سجّل هوريري هوبيت لصالح ليفمور واندرارز في الدقيقة 77. النتيجة: ليفمور واندرارز 3-2 هوفستيد يونايتد. صنع الهدف باجيسو كوسيزوف. جاء الهدف مباشرة بعد استعادة الكرة في مناطق متقدمة.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M008",
+  "lang": "ar",
+  "voice": "fan_for",
+  "headline": "هوريري هوبيت يمنح ليفمور واندرارز التقدم",
+  "body": "سجّل هوريري هوبيت لصالح ليفمور واندرارز في الدقيقة 77. النتيجة: ليفمور واندرارز 3-2 هوفستيد يونايتد. صنع الهدف باجيسو كوسيزوف. جاء الهدف مباشرة بعد استعادة الكرة في مناطق متقدمة. جماهير ليفمور واندرارز، هذه هي اللحظة.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M008",
+  "lang": "ar",
+  "voice": "fan_against",
+  "headline": "هوريري هوبيت يمنح ليفمور واندرارز التقدم",
+  "body": "سجّل هوريري هوبيت لصالح ليفمور واندرارز في الدقيقة 77. النتيجة: ليفمور واندرارز 3-2 هوفستيد يونايتد. صنع الهدف باجيسو كوسيزوف. جاء الهدف مباشرة بعد استعادة الكرة في مناطق متقدمة. لحظة صعبة على هوفستيد يونايتد.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M008",
+  "lang": "ar",
+  "voice": "fan_neutral",
+  "headline": "هوريري هوبيت يمنح ليفمور واندرارز التقدم",
+  "body": "سجّل هوريري هوبيت لصالح ليفمور واندرارز في الدقيقة 77. النتيجة: ليفمور واندرارز 3-2 هوفستيد يونايتد. صنع الهدف باجيسو كوسيزوف. جاء الهدف مباشرة بعد استعادة الكرة في مناطق متقدمة.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M008",
+  "lang": "es",
+  "voice": "broadcast",
+  "headline": "Horeri Hobit pone por delante a Errantes Levmoor",
+  "body": "Horeri Hobit marca para Errantes Levmoor en el minuto 77. El marcador es Errantes Levmoor 3-2 Unido Hovstead. Bagisu Kosezov dio el pase del gol. Llegó justo después de recuperar el balón en campo rival.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M008",
+  "lang": "es",
+  "voice": "fan_for",
+  "headline": "Horeri Hobit pone por delante a Errantes Levmoor",
+  "body": "Horeri Hobit marca para Errantes Levmoor en el minuto 77. El marcador es Errantes Levmoor 3-2 Unido Hovstead. Bagisu Kosezov dio el pase del gol. Llegó justo después de recuperar el balón en campo rival. Aficionados de Errantes Levmoor, este es el momento.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M008",
+  "lang": "es",
+  "voice": "fan_against",
+  "headline": "Horeri Hobit pone por delante a Errantes Levmoor",
+  "body": "Horeri Hobit marca para Errantes Levmoor en el minuto 77. El marcador es Errantes Levmoor 3-2 Unido Hovstead. Bagisu Kosezov dio el pase del gol. Llegó justo después de recuperar el balón en campo rival. Momento duro para Unido Hovstead.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M008",
+  "lang": "es",
+  "voice": "fan_neutral",
+  "headline": "Horeri Hobit pone por delante a Errantes Levmoor",
+  "body": "Horeri Hobit marca para Errantes Levmoor en el minuto 77. El marcador es Errantes Levmoor 3-2 Unido Hovstead. Bagisu Kosezov dio el pase del gol. Llegó justo después de recuperar el balón en campo rival.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M009",
+  "lang": "en",
+  "voice": "broadcast",
+  "headline": "Horeri Hobit makes the difference off the bench",
+  "body": "Horeri Hobit came on in minute 71 for Levmoor Wanderers and scored in minute 77. It is Levmoor Wanderers 3-2 Hovstead United.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M009",
+  "lang": "en",
+  "voice": "fan_for",
+  "headline": "Horeri Hobit makes the difference off the bench",
+  "body": "Horeri Hobit came on in minute 71 for Levmoor Wanderers and scored in minute 77. It is Levmoor Wanderers 3-2 Hovstead United. Levmoor Wanderers supporters, this is the one.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M009",
+  "lang": "en",
+  "voice": "fan_against",
+  "headline": "Horeri Hobit makes the difference off the bench",
+  "body": "Horeri Hobit came on in minute 71 for Levmoor Wanderers and scored in minute 77. It is Levmoor Wanderers 3-2 Hovstead United. A blow for Hovstead United.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M009",
+  "lang": "en",
+  "voice": "fan_neutral",
+  "headline": "Horeri Hobit makes the difference off the bench",
+  "body": "Horeri Hobit came on in minute 71 for Levmoor Wanderers and scored in minute 77. It is Levmoor Wanderers 3-2 Hovstead United.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M009",
+  "lang": "ar",
+  "voice": "broadcast",
+  "headline": "هوريري هوبيت يصنع الفارق من على الدكة",
+  "body": "دخل هوريري هوبيت في الدقيقة 71 لصالح ليفمور واندرارز وسجّل في الدقيقة 77. النتيجة: ليفمور واندرارز 3-2 هوفستيد يونايتد.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M009",
+  "lang": "ar",
+  "voice": "fan_for",
+  "headline": "هوريري هوبيت يصنع الفارق من على الدكة",
+  "body": "دخل هوريري هوبيت في الدقيقة 71 لصالح ليفمور واندرارز وسجّل في الدقيقة 77. النتيجة: ليفمور واندرارز 3-2 هوفستيد يونايتد. فرحة كبيرة لجماهير ليفمور واندرارز!",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M009",
+  "lang": "ar",
+  "voice": "fan_against",
+  "headline": "هوريري هوبيت يصنع الفارق من على الدكة",
+  "body": "دخل هوريري هوبيت في الدقيقة 71 لصالح ليفمور واندرارز وسجّل في الدقيقة 77. النتيجة: ليفمور واندرارز 3-2 هوفستيد يونايتد. هوفستيد يونايتد يحتاج إلى رد.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M009",
+  "lang": "ar",
+  "voice": "fan_neutral",
+  "headline": "هوريري هوبيت يصنع الفارق من على الدكة",
+  "body": "دخل هوريري هوبيت في الدقيقة 71 لصالح ليفمور واندرارز وسجّل في الدقيقة 77. النتيجة: ليفمور واندرارز 3-2 هوفستيد يونايتد.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M009",
+  "lang": "es",
+  "voice": "broadcast",
+  "headline": "Horeri Hobit marca la diferencia desde el banquillo",
+  "body": "Horeri Hobit entró en el minuto 71 por Errantes Levmoor y marcó en el minuto 77. El marcador es Errantes Levmoor 3-2 Unido Hovstead.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M009",
+  "lang": "es",
+  "voice": "fan_for",
+  "headline": "Horeri Hobit marca la diferencia desde el banquillo",
+  "body": "Horeri Hobit entró en el minuto 71 por Errantes Levmoor y marcó en el minuto 77. El marcador es Errantes Levmoor 3-2 Unido Hovstead. ¡Qué momento para Errantes Levmoor!",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M009",
+  "lang": "es",
+  "voice": "fan_against",
+  "headline": "Horeri Hobit marca la diferencia desde el banquillo",
+  "body": "Horeri Hobit entró en el minuto 71 por Errantes Levmoor y marcó en el minuto 77. El marcador es Errantes Levmoor 3-2 Unido Hovstead. Unido Hovstead necesita una reacción.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M009",
+  "lang": "es",
+  "voice": "fan_neutral",
+  "headline": "Horeri Hobit marca la diferencia desde el banquillo",
+  "body": "Horeri Hobit entró en el minuto 71 por Errantes Levmoor y marcó en el minuto 77. El marcador es Errantes Levmoor 3-2 Unido Hovstead.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M010",
+  "lang": "en",
+  "voice": "broadcast",
+  "headline": "Hotabu Rerager says no",
+  "body": "Hotabu Rerager (Hovstead United) keeps out Bagisu Kosezov's effort from 11 metres in minute 84.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M010",
+  "lang": "en",
+  "voice": "fan_for",
+  "headline": "Hotabu Rerager says no",
+  "body": "Hotabu Rerager (Hovstead United) keeps out Bagisu Kosezov's effort from 11 metres in minute 84. Hovstead United supporters, this is the one.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M010",
+  "lang": "en",
+  "voice": "fan_against",
+  "headline": "Hotabu Rerager says no",
+  "body": "Hotabu Rerager (Hovstead United) keeps out Bagisu Kosezov's effort from 11 metres in minute 84. Levmoor Wanderers need a response.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M010",
+  "lang": "en",
+  "voice": "fan_neutral",
+  "headline": "Hotabu Rerager says no",
+  "body": "Hotabu Rerager (Hovstead United) keeps out Bagisu Kosezov's effort from 11 metres in minute 84.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M010",
+  "lang": "ar",
+  "voice": "broadcast",
+  "headline": "هوتابو ريراجير يتصدّى",
+  "body": "تصدى هوتابو ريراجير (هوفستيد يونايتد) لتسديدة باجيسو كوسيزوف من مسافة 11 متر في الدقيقة 84.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M010",
+  "lang": "ar",
+  "voice": "fan_for",
+  "headline": "هوتابو ريراجير يتصدّى",
+  "body": "تصدى هوتابو ريراجير (هوفستيد يونايتد) لتسديدة باجيسو كوسيزوف من مسافة 11 متر في الدقيقة 84. جماهير هوفستيد يونايتد، هذه هي اللحظة.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M010",
+  "lang": "ar",
+  "voice": "fan_against",
+  "headline": "هوتابو ريراجير يتصدّى",
+  "body": "تصدى هوتابو ريراجير (هوفستيد يونايتد) لتسديدة باجيسو كوسيزوف من مسافة 11 متر في الدقيقة 84. ضربة لـليفمور واندرارز.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M010",
+  "lang": "ar",
+  "voice": "fan_neutral",
+  "headline": "هوتابو ريراجير يتصدّى",
+  "body": "تصدى هوتابو ريراجير (هوفستيد يونايتد) لتسديدة باجيسو كوسيزوف من مسافة 11 متر في الدقيقة 84.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M010",
+  "lang": "es",
+  "voice": "broadcast",
+  "headline": "Hotabu Rerager dice que no",
+  "body": "Hotabu Rerager (Unido Hovstead) detiene el disparo de Bagisu Kosezov desde 11 metros en el minuto 84.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M010",
+  "lang": "es",
+  "voice": "fan_for",
+  "headline": "Hotabu Rerager dice que no",
+  "body": "Hotabu Rerager (Unido Hovstead) detiene el disparo de Bagisu Kosezov desde 11 metros en el minuto 84. ¡Locura en la grada de Unido Hovstead!",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M010",
+  "lang": "es",
+  "voice": "fan_against",
+  "headline": "Hotabu Rerager dice que no",
+  "body": "Hotabu Rerager (Unido Hovstead) detiene el disparo de Bagisu Kosezov desde 11 metros en el minuto 84. Un golpe para Errantes Levmoor.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M010",
+  "lang": "es",
+  "voice": "fan_neutral",
+  "headline": "Hotabu Rerager dice que no",
+  "body": "Hotabu Rerager (Unido Hovstead) detiene el disparo de Bagisu Kosezov desde 11 metros en el minuto 84.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M011",
+  "lang": "en",
+  "voice": "broadcast",
+  "headline": "WINNER! Horeri Hobit scores for Levmoor Wanderers",
+  "body": "Horeri Hobit scores for Levmoor Wanderers in minute 84. It is Levmoor Wanderers 4-2 Hovstead United. Kubahi Memem set it up. 5 Levmoor Wanderers players were inside the box.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M011",
+  "lang": "en",
+  "voice": "fan_for",
+  "headline": "WINNER! Horeri Hobit scores for Levmoor Wanderers",
+  "body": "Horeri Hobit scores for Levmoor Wanderers in minute 84. It is Levmoor Wanderers 4-2 Hovstead United. Kubahi Memem set it up. 5 Levmoor Wanderers players were inside the box. What a moment for Levmoor Wanderers!",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M011",
+  "lang": "en",
+  "voice": "fan_against",
+  "headline": "WINNER! Horeri Hobit scores for Levmoor Wanderers",
+  "body": "Horeri Hobit scores for Levmoor Wanderers in minute 84. It is Levmoor Wanderers 4-2 Hovstead United. Kubahi Memem set it up. 5 Levmoor Wanderers players were inside the box. A blow for Hovstead United.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M011",
+  "lang": "en",
+  "voice": "fan_neutral",
+  "headline": "WINNER! Horeri Hobit scores for Levmoor Wanderers",
+  "body": "Horeri Hobit scores for Levmoor Wanderers in minute 84. It is Levmoor Wanderers 4-2 Hovstead United. Kubahi Memem set it up. 5 Levmoor Wanderers players were inside the box.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M011",
+  "lang": "ar",
+  "voice": "broadcast",
+  "headline": "هدف الفوز! هوريري هوبيت يسجّل لصالح ليفمور واندرارز",
+  "body": "سجّل هوريري هوبيت لصالح ليفمور واندرارز في الدقيقة 84. النتيجة: ليفمور واندرارز 4-2 هوفستيد يونايتد. صنع الهدف كوباهي ميميم. كان 5 من لاعبي ليفمور واندرارز داخل منطقة الجزاء.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M011",
+  "lang": "ar",
+  "voice": "fan_for",
+  "headline": "هدف الفوز! هوريري هوبيت يسجّل لصالح ليفمور واندرارز",
+  "body": "سجّل هوريري هوبيت لصالح ليفمور واندرارز في الدقيقة 84. النتيجة: ليفمور واندرارز 4-2 هوفستيد يونايتد. صنع الهدف كوباهي ميميم. كان 5 من لاعبي ليفمور واندرارز داخل منطقة الجزاء. جماهير ليفمور واندرارز، هذه هي اللحظة.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M011",
+  "lang": "ar",
+  "voice": "fan_against",
+  "headline": "هدف الفوز! هوريري هوبيت يسجّل لصالح ليفمور واندرارز",
+  "body": "سجّل هوريري هوبيت لصالح ليفمور واندرارز في الدقيقة 84. النتيجة: ليفمور واندرارز 4-2 هوفستيد يونايتد. صنع الهدف كوباهي ميميم. كان 5 من لاعبي ليفمور واندرارز داخل منطقة الجزاء. ضربة لـهوفستيد يونايتد.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M011",
+  "lang": "ar",
+  "voice": "fan_neutral",
+  "headline": "هدف الفوز! هوريري هوبيت يسجّل لصالح ليفمور واندرارز",
+  "body": "سجّل هوريري هوبيت لصالح ليفمور واندرارز في الدقيقة 84. النتيجة: ليفمور واندرارز 4-2 هوفستيد يونايتد. صنع الهدف كوباهي ميميم. كان 5 من لاعبي ليفمور واندرارز داخل منطقة الجزاء.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M011",
+  "lang": "es",
+  "voice": "broadcast",
+  "headline": "¡GOL DE LA VICTORIA! Horeri Hobit marca para Errantes Levmoor",
+  "body": "Horeri Hobit marca para Errantes Levmoor en el minuto 84. El marcador es Errantes Levmoor 4-2 Unido Hovstead. Kubahi Memem dio el pase del gol. 5 jugadores de Errantes Levmoor estaban dentro del área.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M011",
+  "lang": "es",
+  "voice": "fan_for",
+  "headline": "¡GOL DE LA VICTORIA! Horeri Hobit marca para Errantes Levmoor",
+  "body": "Horeri Hobit marca para Errantes Levmoor en el minuto 84. El marcador es Errantes Levmoor 4-2 Unido Hovstead. Kubahi Memem dio el pase del gol. 5 jugadores de Errantes Levmoor estaban dentro del área. Aficionados de Errantes Levmoor, este es el momento.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M011",
+  "lang": "es",
+  "voice": "fan_against",
+  "headline": "¡GOL DE LA VICTORIA! Horeri Hobit marca para Errantes Levmoor",
+  "body": "Horeri Hobit marca para Errantes Levmoor en el minuto 84. El marcador es Errantes Levmoor 4-2 Unido Hovstead. Kubahi Memem dio el pase del gol. 5 jugadores de Errantes Levmoor estaban dentro del área. Momento duro para Unido Hovstead.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M011",
+  "lang": "es",
+  "voice": "fan_neutral",
+  "headline": "¡GOL DE LA VICTORIA! Horeri Hobit marca para Errantes Levmoor",
+  "body": "Horeri Hobit marca para Errantes Levmoor en el minuto 84. El marcador es Errantes Levmoor 4-2 Unido Hovstead. Kubahi Memem dio el pase del gol. 5 jugadores de Errantes Levmoor estaban dentro del área.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M012",
+  "lang": "en",
+  "voice": "broadcast",
+  "headline": "Horeri Hobit makes the difference off the bench",
+  "body": "Horeri Hobit came on in minute 71 for Levmoor Wanderers and scored in minute 84. It is Levmoor Wanderers 4-2 Hovstead United.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M012",
+  "lang": "en",
+  "voice": "fan_for",
+  "headline": "Horeri Hobit makes the difference off the bench",
+  "body": "Horeri Hobit came on in minute 71 for Levmoor Wanderers and scored in minute 84. It is Levmoor Wanderers 4-2 Hovstead United. Scenes for Levmoor Wanderers!",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M012",
+  "lang": "en",
+  "voice": "fan_against",
+  "headline": "Horeri Hobit makes the difference off the bench",
+  "body": "Horeri Hobit came on in minute 71 for Levmoor Wanderers and scored in minute 84. It is Levmoor Wanderers 4-2 Hovstead United. A blow for Hovstead United.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M012",
+  "lang": "en",
+  "voice": "fan_neutral",
+  "headline": "Horeri Hobit makes the difference off the bench",
+  "body": "Horeri Hobit came on in minute 71 for Levmoor Wanderers and scored in minute 84. It is Levmoor Wanderers 4-2 Hovstead United.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M012",
+  "lang": "ar",
+  "voice": "broadcast",
+  "headline": "هوريري هوبيت يصنع الفارق من على الدكة",
+  "body": "دخل هوريري هوبيت في الدقيقة 71 لصالح ليفمور واندرارز وسجّل في الدقيقة 84. النتيجة: ليفمور واندرارز 4-2 هوفستيد يونايتد.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M012",
+  "lang": "ar",
+  "voice": "fan_for",
+  "headline": "هوريري هوبيت يصنع الفارق من على الدكة",
+  "body": "دخل هوريري هوبيت في الدقيقة 71 لصالح ليفمور واندرارز وسجّل في الدقيقة 84. النتيجة: ليفمور واندرارز 4-2 هوفستيد يونايتد. فرحة كبيرة لجماهير ليفمور واندرارز!",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M012",
+  "lang": "ar",
+  "voice": "fan_against",
+  "headline": "هوريري هوبيت يصنع الفارق من على الدكة",
+  "body": "دخل هوريري هوبيت في الدقيقة 71 لصالح ليفمور واندرارز وسجّل في الدقيقة 84. النتيجة: ليفمور واندرارز 4-2 هوفستيد يونايتد. لحظة صعبة على هوفستيد يونايتد.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M012",
+  "lang": "ar",
+  "voice": "fan_neutral",
+  "headline": "هوريري هوبيت يصنع الفارق من على الدكة",
+  "body": "دخل هوريري هوبيت في الدقيقة 71 لصالح ليفمور واندرارز وسجّل في الدقيقة 84. النتيجة: ليفمور واندرارز 4-2 هوفستيد يونايتد.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M012",
+  "lang": "es",
+  "voice": "broadcast",
+  "headline": "Horeri Hobit marca la diferencia desde el banquillo",
+  "body": "Horeri Hobit entró en el minuto 71 por Errantes Levmoor y marcó en el minuto 84. El marcador es Errantes Levmoor 4-2 Unido Hovstead.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M012",
+  "lang": "es",
+  "voice": "fan_for",
+  "headline": "Horeri Hobit marca la diferencia desde el banquillo",
+  "body": "Horeri Hobit entró en el minuto 71 por Errantes Levmoor y marcó en el minuto 84. El marcador es Errantes Levmoor 4-2 Unido Hovstead. ¡Qué momento para Errantes Levmoor!",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M012",
+  "lang": "es",
+  "voice": "fan_against",
+  "headline": "Horeri Hobit marca la diferencia desde el banquillo",
+  "body": "Horeri Hobit entró en el minuto 71 por Errantes Levmoor y marcó en el minuto 84. El marcador es Errantes Levmoor 4-2 Unido Hovstead. Unido Hovstead necesita una reacción.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M012",
+  "lang": "es",
+  "voice": "fan_neutral",
+  "headline": "Horeri Hobit marca la diferencia desde el banquillo",
+  "body": "Horeri Hobit entró en el minuto 71 por Errantes Levmoor y marcó en el minuto 84. El marcador es Errantes Levmoor 4-2 Unido Hovstead.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M013",
+  "lang": "en",
+  "voice": "broadcast",
+  "headline": "Levmoor Wanderers turn up the pressure",
+  "body": "Between minute 86 and minute 90+7, Levmoor Wanderers won the ball back 9 times in the opposition half.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M013",
+  "lang": "en",
+  "voice": "fan_for",
+  "headline": "Levmoor Wanderers turn up the pressure",
+  "body": "Between minute 86 and minute 90+7, Levmoor Wanderers won the ball back 9 times in the opposition half. What a moment for Levmoor Wanderers!",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M013",
+  "lang": "en",
+  "voice": "fan_against",
+  "headline": "Levmoor Wanderers turn up the pressure",
+  "body": "Between minute 86 and minute 90+7, Levmoor Wanderers won the ball back 9 times in the opposition half. Hovstead United need a response.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M013",
+  "lang": "en",
+  "voice": "fan_neutral",
+  "headline": "Levmoor Wanderers turn up the pressure",
+  "body": "Between minute 86 and minute 90+7, Levmoor Wanderers won the ball back 9 times in the opposition half.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M013",
+  "lang": "ar",
+  "voice": "broadcast",
+  "headline": "ليفمور واندرارز يضغط بقوة",
+  "body": "بين الدقيقة 86 والدقيقة 90+7، استعاد ليفمور واندرارز الكرة 9 مرات في نصف ملعب المنافس.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M013",
+  "lang": "ar",
+  "voice": "fan_for",
+  "headline": "ليفمور واندرارز يضغط بقوة",
+  "body": "بين الدقيقة 86 والدقيقة 90+7، استعاد ليفمور واندرارز الكرة 9 مرات في نصف ملعب المنافس. جماهير ليفمور واندرارز، هذه هي اللحظة.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M013",
+  "lang": "ar",
+  "voice": "fan_against",
+  "headline": "ليفمور واندرارز يضغط بقوة",
+  "body": "بين الدقيقة 86 والدقيقة 90+7، استعاد ليفمور واندرارز الكرة 9 مرات في نصف ملعب المنافس. هوفستيد يونايتد يحتاج إلى رد.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M013",
+  "lang": "ar",
+  "voice": "fan_neutral",
+  "headline": "ليفمور واندرارز يضغط بقوة",
+  "body": "بين الدقيقة 86 والدقيقة 90+7، استعاد ليفمور واندرارز الكرة 9 مرات في نصف ملعب المنافس.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M013",
+  "lang": "es",
+  "voice": "broadcast",
+  "headline": "Errantes Levmoor aprieta arriba",
+  "body": "Entre el minuto 86 y el minuto 90+7, Errantes Levmoor recuperó el balón 9 veces en campo rival.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M013",
+  "lang": "es",
+  "voice": "fan_for",
+  "headline": "Errantes Levmoor aprieta arriba",
+  "body": "Entre el minuto 86 y el minuto 90+7, Errantes Levmoor recuperó el balón 9 veces en campo rival. Aficionados de Errantes Levmoor, este es el momento.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M013",
+  "lang": "es",
+  "voice": "fan_against",
+  "headline": "Errantes Levmoor aprieta arriba",
+  "body": "Entre el minuto 86 y el minuto 90+7, Errantes Levmoor recuperó el balón 9 veces en campo rival. Momento duro para Unido Hovstead.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M013",
+  "lang": "es",
+  "voice": "fan_neutral",
+  "headline": "Errantes Levmoor aprieta arriba",
+  "body": "Entre el minuto 86 y el minuto 90+7, Errantes Levmoor recuperó el balón 9 veces en campo rival.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M014",
+  "lang": "en",
+  "voice": "broadcast",
+  "headline": "GOAL! Rurohov Higodut scores for Hovstead United",
+  "body": "Rurohov Higodut scores for Hovstead United in minute 89. It is Levmoor Wanderers 4-3 Hovstead United. Gosibof Vokafet set it up. It came straight from winning the ball high up the pitch.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M014",
+  "lang": "en",
+  "voice": "fan_for",
+  "headline": "GOAL! Rurohov Higodut scores for Hovstead United",
+  "body": "Rurohov Higodut scores for Hovstead United in minute 89. It is Levmoor Wanderers 4-3 Hovstead United. Gosibof Vokafet set it up. It came straight from winning the ball high up the pitch. Scenes for Hovstead United!",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M014",
+  "lang": "en",
+  "voice": "fan_against",
+  "headline": "GOAL! Rurohov Higodut scores for Hovstead United",
+  "body": "Rurohov Higodut scores for Hovstead United in minute 89. It is Levmoor Wanderers 4-3 Hovstead United. Gosibof Vokafet set it up. It came straight from winning the ball high up the pitch. Tough moment for Levmoor Wanderers.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M014",
+  "lang": "en",
+  "voice": "fan_neutral",
+  "headline": "GOAL! Rurohov Higodut scores for Hovstead United",
+  "body": "Rurohov Higodut scores for Hovstead United in minute 89. It is Levmoor Wanderers 4-3 Hovstead United. Gosibof Vokafet set it up. It came straight from winning the ball high up the pitch.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M014",
+  "lang": "ar",
+  "voice": "broadcast",
+  "headline": "هدف! روروهوف هيجودوت يسجّل لصالح هوفستيد يونايتد",
+  "body": "سجّل روروهوف هيجودوت لصالح هوفستيد يونايتد في الدقيقة 89. النتيجة: ليفمور واندرارز 4-3 هوفستيد يونايتد. صنع الهدف جوسيبوف فوكافيت. جاء الهدف مباشرة بعد استعادة الكرة في مناطق متقدمة.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M014",
+  "lang": "ar",
+  "voice": "fan_for",
+  "headline": "هدف! روروهوف هيجودوت يسجّل لصالح هوفستيد يونايتد",
+  "body": "سجّل روروهوف هيجودوت لصالح هوفستيد يونايتد في الدقيقة 89. النتيجة: ليفمور واندرارز 4-3 هوفستيد يونايتد. صنع الهدف جوسيبوف فوكافيت. جاء الهدف مباشرة بعد استعادة الكرة في مناطق متقدمة. يا لها من لحظة لجماهير هوفستيد يونايتد!",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M014",
+  "lang": "ar",
+  "voice": "fan_against",
+  "headline": "هدف! روروهوف هيجودوت يسجّل لصالح هوفستيد يونايتد",
+  "body": "سجّل روروهوف هيجودوت لصالح هوفستيد يونايتد في الدقيقة 89. النتيجة: ليفمور واندرارز 4-3 هوفستيد يونايتد. صنع الهدف جوسيبوف فوكافيت. جاء الهدف مباشرة بعد استعادة الكرة في مناطق متقدمة. ليفمور واندرارز يحتاج إلى رد.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M014",
+  "lang": "ar",
+  "voice": "fan_neutral",
+  "headline": "هدف! روروهوف هيجودوت يسجّل لصالح هوفستيد يونايتد",
+  "body": "سجّل روروهوف هيجودوت لصالح هوفستيد يونايتد في الدقيقة 89. النتيجة: ليفمور واندرارز 4-3 هوفستيد يونايتد. صنع الهدف جوسيبوف فوكافيت. جاء الهدف مباشرة بعد استعادة الكرة في مناطق متقدمة.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M014",
+  "lang": "es",
+  "voice": "broadcast",
+  "headline": "¡GOL! Rurohov Higodut marca para Unido Hovstead",
+  "body": "Rurohov Higodut marca para Unido Hovstead en el minuto 89. El marcador es Errantes Levmoor 4-3 Unido Hovstead. Gosibof Vokafet dio el pase del gol. Llegó justo después de recuperar el balón en campo rival.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M014",
+  "lang": "es",
+  "voice": "fan_for",
+  "headline": "¡GOL! Rurohov Higodut marca para Unido Hovstead",
+  "body": "Rurohov Higodut marca para Unido Hovstead en el minuto 89. El marcador es Errantes Levmoor 4-3 Unido Hovstead. Gosibof Vokafet dio el pase del gol. Llegó justo después de recuperar el balón en campo rival. Aficionados de Unido Hovstead, este es el momento.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M014",
+  "lang": "es",
+  "voice": "fan_against",
+  "headline": "¡GOL! Rurohov Higodut marca para Unido Hovstead",
+  "body": "Rurohov Higodut marca para Unido Hovstead en el minuto 89. El marcador es Errantes Levmoor 4-3 Unido Hovstead. Gosibof Vokafet dio el pase del gol. Llegó justo después de recuperar el balón en campo rival. Momento duro para Errantes Levmoor.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M014",
+  "lang": "es",
+  "voice": "fan_neutral",
+  "headline": "¡GOL! Rurohov Higodut marca para Unido Hovstead",
+  "body": "Rurohov Higodut marca para Unido Hovstead en el minuto 89. El marcador es Errantes Levmoor 4-3 Unido Hovstead. Gosibof Vokafet dio el pase del gol. Llegó justo después de recuperar el balón en campo rival.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M015",
+  "lang": "en",
+  "voice": "broadcast",
+  "headline": "Rurohov Higodut makes the difference off the bench",
+  "body": "Rurohov Higodut came on in minute 54 for Hovstead United and scored in minute 89. It is Levmoor Wanderers 4-3 Hovstead United.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M015",
+  "lang": "en",
+  "voice": "fan_for",
+  "headline": "Rurohov Higodut makes the difference off the bench",
+  "body": "Rurohov Higodut came on in minute 54 for Hovstead United and scored in minute 89. It is Levmoor Wanderers 4-3 Hovstead United. What a moment for Hovstead United!",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M015",
+  "lang": "en",
+  "voice": "fan_against",
+  "headline": "Rurohov Higodut makes the difference off the bench",
+  "body": "Rurohov Higodut came on in minute 54 for Hovstead United and scored in minute 89. It is Levmoor Wanderers 4-3 Hovstead United. Tough moment for Levmoor Wanderers.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M015",
+  "lang": "en",
+  "voice": "fan_neutral",
+  "headline": "Rurohov Higodut makes the difference off the bench",
+  "body": "Rurohov Higodut came on in minute 54 for Hovstead United and scored in minute 89. It is Levmoor Wanderers 4-3 Hovstead United.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M015",
+  "lang": "ar",
+  "voice": "broadcast",
+  "headline": "روروهوف هيجودوت يصنع الفارق من على الدكة",
+  "body": "دخل روروهوف هيجودوت في الدقيقة 54 لصالح هوفستيد يونايتد وسجّل في الدقيقة 89. النتيجة: ليفمور واندرارز 4-3 هوفستيد يونايتد.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M015",
+  "lang": "ar",
+  "voice": "fan_for",
+  "headline": "روروهوف هيجودوت يصنع الفارق من على الدكة",
+  "body": "دخل روروهوف هيجودوت في الدقيقة 54 لصالح هوفستيد يونايتد وسجّل في الدقيقة 89. النتيجة: ليفمور واندرارز 4-3 هوفستيد يونايتد. فرحة كبيرة لجماهير هوفستيد يونايتد!",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M015",
+  "lang": "ar",
+  "voice": "fan_against",
+  "headline": "روروهوف هيجودوت يصنع الفارق من على الدكة",
+  "body": "دخل روروهوف هيجودوت في الدقيقة 54 لصالح هوفستيد يونايتد وسجّل في الدقيقة 89. النتيجة: ليفمور واندرارز 4-3 هوفستيد يونايتد. ليفمور واندرارز يحتاج إلى رد.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M015",
+  "lang": "ar",
+  "voice": "fan_neutral",
+  "headline": "روروهوف هيجودوت يصنع الفارق من على الدكة",
+  "body": "دخل روروهوف هيجودوت في الدقيقة 54 لصالح هوفستيد يونايتد وسجّل في الدقيقة 89. النتيجة: ليفمور واندرارز 4-3 هوفستيد يونايتد.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M015",
+  "lang": "es",
+  "voice": "broadcast",
+  "headline": "Rurohov Higodut marca la diferencia desde el banquillo",
+  "body": "Rurohov Higodut entró en el minuto 54 por Unido Hovstead y marcó en el minuto 89. El marcador es Errantes Levmoor 4-3 Unido Hovstead.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M015",
+  "lang": "es",
+  "voice": "fan_for",
+  "headline": "Rurohov Higodut marca la diferencia desde el banquillo",
+  "body": "Rurohov Higodut entró en el minuto 54 por Unido Hovstead y marcó en el minuto 89. El marcador es Errantes Levmoor 4-3 Unido Hovstead. ¡Qué momento para Unido Hovstead!",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M015",
+  "lang": "es",
+  "voice": "fan_against",
+  "headline": "Rurohov Higodut marca la diferencia desde el banquillo",
+  "body": "Rurohov Higodut entró en el minuto 54 por Unido Hovstead y marcó en el minuto 89. El marcador es Errantes Levmoor 4-3 Unido Hovstead. Un golpe para Errantes Levmoor.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M015",
+  "lang": "es",
+  "voice": "fan_neutral",
+  "headline": "Rurohov Higodut marca la diferencia desde el banquillo",
+  "body": "Rurohov Higodut entró en el minuto 54 por Unido Hovstead y marcó en el minuto 89. El marcador es Errantes Levmoor 4-3 Unido Hovstead.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M016",
+  "lang": "en",
+  "voice": "broadcast",
+  "headline": "Bagisu Kosezov is running the show",
+  "body": "Bagisu Kosezov (Levmoor Wanderers) has taken 62% of his team's shots: 10 in total, from 62 touches. Goals scored: 1.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M016",
+  "lang": "en",
+  "voice": "fan_for",
+  "headline": "Bagisu Kosezov is running the show",
+  "body": "Bagisu Kosezov (Levmoor Wanderers) has taken 62% of his team's shots: 10 in total, from 62 touches. Goals scored: 1. Levmoor Wanderers supporters, this is the one.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M016",
+  "lang": "en",
+  "voice": "fan_against",
+  "headline": "Bagisu Kosezov is running the show",
+  "body": "Bagisu Kosezov (Levmoor Wanderers) has taken 62% of his team's shots: 10 in total, from 62 touches. Goals scored: 1. A blow for Hovstead United.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M016",
+  "lang": "en",
+  "voice": "fan_neutral",
+  "headline": "Bagisu Kosezov is running the show",
+  "body": "Bagisu Kosezov (Levmoor Wanderers) has taken 62% of his team's shots: 10 in total, from 62 touches. Goals scored: 1.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M016",
+  "lang": "ar",
+  "voice": "broadcast",
+  "headline": "باجيسو كوسيزوف يقود المباراة",
+  "body": "نفّذ باجيسو كوسيزوف (ليفمور واندرارز) 62% من تسديدات فريقه: 10 تسديدة في المجموع، من 62 لمسة. الأهداف المسجلة: 1.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M016",
+  "lang": "ar",
+  "voice": "fan_for",
+  "headline": "باجيسو كوسيزوف يقود المباراة",
+  "body": "نفّذ باجيسو كوسيزوف (ليفمور واندرارز) 62% من تسديدات فريقه: 10 تسديدة في المجموع، من 62 لمسة. الأهداف المسجلة: 1. يا لها من لحظة لجماهير ليفمور واندرارز!",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M016",
+  "lang": "ar",
+  "voice": "fan_against",
+  "headline": "باجيسو كوسيزوف يقود المباراة",
+  "body": "نفّذ باجيسو كوسيزوف (ليفمور واندرارز) 62% من تسديدات فريقه: 10 تسديدة في المجموع، من 62 لمسة. الأهداف المسجلة: 1. ضربة لـهوفستيد يونايتد.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M016",
+  "lang": "ar",
+  "voice": "fan_neutral",
+  "headline": "باجيسو كوسيزوف يقود المباراة",
+  "body": "نفّذ باجيسو كوسيزوف (ليفمور واندرارز) 62% من تسديدات فريقه: 10 تسديدة في المجموع، من 62 لمسة. الأهداف المسجلة: 1.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M016",
+  "lang": "es",
+  "voice": "broadcast",
+  "headline": "Bagisu Kosezov manda en el partido",
+  "body": "Bagisu Kosezov (Errantes Levmoor) ha hecho el 62% de los disparos de su equipo: 10 en total, con 62 toques. Goles marcados: 1.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M016",
+  "lang": "es",
+  "voice": "fan_for",
+  "headline": "Bagisu Kosezov manda en el partido",
+  "body": "Bagisu Kosezov (Errantes Levmoor) ha hecho el 62% de los disparos de su equipo: 10 en total, con 62 toques. Goles marcados: 1. ¡Locura en la grada de Errantes Levmoor!",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M016",
+  "lang": "es",
+  "voice": "fan_against",
+  "headline": "Bagisu Kosezov manda en el partido",
+  "body": "Bagisu Kosezov (Errantes Levmoor) ha hecho el 62% de los disparos de su equipo: 10 en total, con 62 toques. Goles marcados: 1. Momento duro para Unido Hovstead.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M016",
+  "lang": "es",
+  "voice": "fan_neutral",
+  "headline": "Bagisu Kosezov manda en el partido",
+  "body": "Bagisu Kosezov (Errantes Levmoor) ha hecho el 62% de los disparos de su equipo: 10 en total, con 62 toques. Goles marcados: 1.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M017",
+  "lang": "en",
+  "voice": "broadcast",
+  "headline": "FULL TIME: Levmoor Wanderers 4-3 Hovstead United",
+  "body": "Levmoor Wanderers beat Hovstead United at Levmoor Park. Shots: 16-8.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M017",
+  "lang": "en",
+  "voice": "fan_for",
+  "headline": "FULL TIME: Levmoor Wanderers 4-3 Hovstead United",
+  "body": "Levmoor Wanderers beat Hovstead United at Levmoor Park. Shots: 16-8. Levmoor Wanderers supporters, this is the one.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M017",
+  "lang": "en",
+  "voice": "fan_against",
+  "headline": "FULL TIME: Levmoor Wanderers 4-3 Hovstead United",
+  "body": "Levmoor Wanderers beat Hovstead United at Levmoor Park. Shots: 16-8. Hovstead United need a response.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M017",
+  "lang": "en",
+  "voice": "fan_neutral",
+  "headline": "FULL TIME: Levmoor Wanderers 4-3 Hovstead United",
+  "body": "Levmoor Wanderers beat Hovstead United at Levmoor Park. Shots: 16-8.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M017",
+  "lang": "ar",
+  "voice": "broadcast",
+  "headline": "نهاية المباراة: ليفمور واندرارز 4-3 هوفستيد يونايتد",
+  "body": "فاز ليفمور واندرارز على هوفستيد يونايتد في Levmoor Park. التسديدات: 16-8.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M017",
+  "lang": "ar",
+  "voice": "fan_for",
+  "headline": "نهاية المباراة: ليفمور واندرارز 4-3 هوفستيد يونايتد",
+  "body": "فاز ليفمور واندرارز على هوفستيد يونايتد في Levmoor Park. التسديدات: 16-8. يا لها من لحظة لجماهير ليفمور واندرارز!",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M017",
+  "lang": "ar",
+  "voice": "fan_against",
+  "headline": "نهاية المباراة: ليفمور واندرارز 4-3 هوفستيد يونايتد",
+  "body": "فاز ليفمور واندرارز على هوفستيد يونايتد في Levmoor Park. التسديدات: 16-8. ضربة لـهوفستيد يونايتد.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M017",
+  "lang": "ar",
+  "voice": "fan_neutral",
+  "headline": "نهاية المباراة: ليفمور واندرارز 4-3 هوفستيد يونايتد",
+  "body": "فاز ليفمور واندرارز على هوفستيد يونايتد في Levmoor Park. التسديدات: 16-8.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M017",
+  "lang": "es",
+  "voice": "broadcast",
+  "headline": "FINAL DEL PARTIDO: Errantes Levmoor 4-3 Unido Hovstead",
+  "body": "Errantes Levmoor vence a Unido Hovstead en Levmoor Park. Disparos: 16-8.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M017",
+  "lang": "es",
+  "voice": "fan_for",
+  "headline": "FINAL DEL PARTIDO: Errantes Levmoor 4-3 Unido Hovstead",
+  "body": "Errantes Levmoor vence a Unido Hovstead en Levmoor Park. Disparos: 16-8. ¡Qué momento para Errantes Levmoor!",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M017",
+  "lang": "es",
+  "voice": "fan_against",
+  "headline": "FINAL DEL PARTIDO: Errantes Levmoor 4-3 Unido Hovstead",
+  "body": "Errantes Levmoor vence a Unido Hovstead en Levmoor Park. Disparos: 16-8. Un golpe para Unido Hovstead.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ },
+ {
+  "moment_id": "M017",
+  "lang": "es",
+  "voice": "fan_neutral",
+  "headline": "FINAL DEL PARTIDO: Errantes Levmoor 4-3 Unido Hovstead",
+  "body": "Errantes Levmoor vence a Unido Hovstead en Levmoor Park. Disparos: 16-8.",
+  "source": "template",
+  "verified": true,
+  "rejected_llm": ""
+ }
+]

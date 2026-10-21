@@ -1,0 +1,517 @@
+{
+  "match_id": "m00021-miv-das",
+  "teams": [
+    {
+      "team_id": "T01",
+      "name": "Mivwick Rovers",
+      "name_i18n": {
+        "en": "Mivwick Rovers",
+        "ar": "ميفويك روفرز",
+        "es": "Rovers Mivwick"
+      },
+      "short_name": "MIV",
+      "primary_color": "#C8102E",
+      "secondary_color": "#FFFFFF",
+      "formation": "4-4-2",
+      "players": [
+        {
+          "player_id": "T01-P01",
+          "name": "Tikere Fukozol",
+          "name_i18n": {
+            "en": "Tikere Fukozol",
+            "ar": "تيكيري فوكوزول",
+            "es": "Tikere Fukozol"
+          },
+          "jersey_number": 1,
+          "position": "GK",
+          "starter": true,
+          "bio_tags": []
+        },
+        {
+          "player_id": "T01-P02",
+          "name": "Gadegat Huvav",
+          "name_i18n": {
+            "en": "Gadegat Huvav",
+            "ar": "جاديجات هوفاف",
+            "es": "Gadegat Huvav"
+          },
+          "jersey_number": 2,
+          "position": "FB",
+          "starter": true,
+          "bio_tags": []
+        },
+        {
+          "player_id": "T01-P03",
+          "name": "Lisoga Kedah",
+          "name_i18n": {
+            "en": "Lisoga Kedah",
+            "ar": "ليسوجا كيداه",
+            "es": "Lisoga Kedah"
+          },
+          "jersey_number": 3,
+          "position": "CB",
+          "starter": true,
+          "bio_tags": []
+        },
+        {
+          "player_id": "T01-P04",
+          "name": "Dodalu Tefedud",
+          "name_i18n": {
+            "en": "Dodalu Tefedud",
+            "ar": "دودالو تيفيدود",
+            "es": "Dodalu Tefedud"
+          },
+          "jersey_number": 4,
+          "position": "CB",
+          "starter": true,
+          "bio_tags": []
+        },
+        {
+          "player_id": "T01-P05",
+          "name": "Ziriton Kahah",
+          "name_i18n": {
+            "en": "Ziriton Kahah",
+            "ar": "زيريتون كاهاه",
+            "es": "Ziriton Kahah"
+          },
+          "jersey_number": 5,
+          "position": "FB",
+          "starter": true,
+          "bio_tags": []
+        },
+        {
+          "player_id": "T01-P06",
+          "name": "Genahe Tehorel",
+          "name_i18n": {
+            "en": "Genahe Tehorel",
+            "ar": "جيناهي تيهوريل",
+            "es": "Genahe Tehorel"
+          },
+          "jersey_number": 6,
+          "position": "W",
+          "starter": true,
+          "bio_tags": [
+            "set-piece taker",
+            "penalty taker"
+          ]
+        },
+        {
+          "player_id": "T01-P08",
+          "name": "Suhero Hahum",
+          "name_i18n": {
+            "en": "Suhero Hahum",
+            "ar": "سوهيرو هاهوم",
+            "es": "Suhero Hahum"
+          },
+          "jersey_number": 8,
+          "position": "CM",
+          "starter": true,
+          "bio_tags": [
+            "captain"
+          ]
+        },
+        {
+          "player_id": "T01-P10",
+          "name": "Nefovas Fomof",
+          "name_i18n": {
+            "en": "Nefovas Fomof",
+            "ar": "نيفوفاس فوموف",
+            "es": "Nefovas Fomof"
+          },
+          "jersey_number": 10,
+          "position": "CM",
+          "starter": true,
+          "bio_tags": []
+        },
+        {
+          "player_id": "T01-P07",
+          "name": "Vidalom Dakinor",
+          "name_i18n": {
+            "en": "Vidalom Dakinor",
+            "ar": "فيدالوم داكينور",
+            "es": "Vidalom Dakinor"
+          },
+          "jersey_number": 7,
+          "position": "W",
+          "starter": true,
+          "bio_tags": []
+        },
+        {
+          "player_id": "T01-P09",
+          "name": "Nasenod Bovun",
+          "name_i18n": {
+            "en": "Nasenod Bovun",
+            "ar": "ناسينود بوفون",
+            "es": "Nasenod Bovun"
+          },
+          "jersey_number": 9,
+          "position": "ST",
+          "starter": true,
+          "bio_tags": [
+            "target man"
+          ]
+        },
+        {
+          "player_id": "T01-P11",
+          "name": "Fudahi Vivog",
+          "name_i18n": {
+            "en": "Fudahi Vivog",
+            "ar": "فوداهي فيفوج",
+            "es": "Fudahi Vivog"
+          },
+          "jersey_number": 11,
+          "position": "ST",
+          "starter": true,
+          "bio_tags": []
+        },
+        {
+          "player_id": "T01-P12",
+          "name": "Lilosi Mutuvab",
+          "name_i18n": {
+            "en": "Lilosi Mutuvab",
+            "ar": "ليلوسي موتوفاب",
+            "es": "Lilosi Mutuvab"
+          },
+          "jersey_number": 12,
+          "position": "GK",
+          "starter": false,
+          "bio_tags": []
+        },
+        {
+          "player_id": "T01-P13",
+          "name": "Hidemo Fifolit",
+          "name_i18n": {
+            "en": "Hidemo Fifolit",
+            "ar": "هيديمو فيفوليت",
+            "es": "Hidemo Fifolit"
+          },
+          "jersey_number": 13,
+          "position": "CB",
+          "starter": false,
+          "bio_tags": []
+        },
+        {
+          "player_id": "T01-P14",
+          "name": "Fefefof Sigokel",
+          "name_i18n": {
+            "en": "Fefefof Sigokel",
+            "ar": "فيفيفوف سيجوكيل",
+            "es": "Fefefof Sigokel"
+          },
+          "jersey_number": 14,
+          "position": "FB",
+          "starter": false,
+          "bio_tags": []
+        },
+        {
+          "player_id": "T01-P15",
+          "name": "Dogileg Kotobam",
+          "name_i18n": {
+            "en": "Dogileg Kotobam",
+            "ar": "دوجيليج كوتوبام",
+            "es": "Dogileg Kotobam"
+          },
+          "jersey_number": 15,
+          "position": "CM",
+          "starter": false,
+          "bio_tags": []
+        },
+        {
+          "player_id": "T01-P16",
+          "name": "Ralidez Gigufol",
+          "name_i18n": {
+            "en": "Ralidez Gigufol",
+            "ar": "راليديز جيجوفول",
+            "es": "Ralidez Gigufol"
+          },
+          "jersey_number": 16,
+          "position": "AM",
+          "starter": false,
+          "bio_tags": []
+        },
+        {
+          "player_id": "T01-P17",
+          "name": "Basirum Gileg",
+          "name_i18n": {
+            "en": "Basirum Gileg",
+            "ar": "باسيروم جيليج",
+            "es": "Basirum Gileg"
+          },
+          "jersey_number": 17,
+          "position": "W",
+          "starter": false,
+          "bio_tags": []
+        },
+        {
+          "player_id": "T01-P18",
+          "name": "Hikegem Rodur",
+          "name_i18n": {
+            "en": "Hikegem Rodur",
+            "ar": "هيكيجيم رودور",
+            "es": "Hikegem Rodur"
+          },
+          "jersey_number": 18,
+          "position": "ST",
+          "starter": false,
+          "bio_tags": []
+        }
+      ]
+    },
+    {
+      "team_id": "T06",
+      "name": "Dasstead City",
+      "name_i18n": {
+        "en": "Dasstead City",
+        "ar": "داسستيد سيتي",
+        "es": "Ciudad Dasstead"
+      },
+      "short_name": "DAS",
+      "primary_color": "#111111",
+      "secondary_color": "#E5E5E5",
+      "formation": "4-3-3",
+      "players": [
+        {
+          "player_id": "T06-P01",
+          "name": "Gizemi Vinus",
+          "name_i18n": {
+            "en": "Gizemi Vinus",
+            "ar": "جيزيمي فينوس",
+            "es": "Gizemi Vinus"
+          },
+          "jersey_number": 1,
+          "position": "GK",
+          "starter": true,
+          "bio_tags": []
+        },
+        {
+          "player_id": "T06-P02",
+          "name": "Boloku Hasov",
+          "name_i18n": {
+            "en": "Boloku Hasov",
+            "ar": "بولوكو هاسوف",
+            "es": "Boloku Hasov"
+          },
+          "jersey_number": 2,
+          "position": "FB",
+          "starter": true,
+          "bio_tags": []
+        },
+        {
+          "player_id": "T06-P03",
+          "name": "Tevezo Vokif",
+          "name_i18n": {
+            "en": "Tevezo Vokif",
+            "ar": "تيفيزو فوكيف",
+            "es": "Tevezo Vokif"
+          },
+          "jersey_number": 3,
+          "position": "CB",
+          "starter": true,
+          "bio_tags": []
+        },
+        {
+          "player_id": "T06-P04",
+          "name": "Fazibut Hutezuh",
+          "name_i18n": {
+            "en": "Fazibut Hutezuh",
+            "ar": "فازيبوت هوتيزوه",
+            "es": "Fazibut Hutezuh"
+          },
+          "jersey_number": 4,
+          "position": "CB",
+          "starter": true,
+          "bio_tags": [
+            "captain"
+          ]
+        },
+        {
+          "player_id": "T06-P05",
+          "name": "Madora Dahehuh",
+          "name_i18n": {
+            "en": "Madora Dahehuh",
+            "ar": "مادورا داهيهوه",
+            "es": "Madora Dahehuh"
+          },
+          "jersey_number": 5,
+          "position": "FB",
+          "starter": true,
+          "bio_tags": []
+        },
+        {
+          "player_id": "T06-P06",
+          "name": "Dihegen Gagader",
+          "name_i18n": {
+            "en": "Dihegen Gagader",
+            "ar": "ديهيجين جاجادير",
+            "es": "Dihegen Gagader"
+          },
+          "jersey_number": 6,
+          "position": "DM",
+          "starter": true,
+          "bio_tags": []
+        },
+        {
+          "player_id": "T06-P08",
+          "name": "Bibovin Rinefak",
+          "name_i18n": {
+            "en": "Bibovin Rinefak",
+            "ar": "بيبوفين رينيفاك",
+            "es": "Bibovin Rinefak"
+          },
+          "jersey_number": 8,
+          "position": "CM",
+          "starter": true,
+          "bio_tags": []
+        },
+        {
+          "player_id": "T06-P10",
+          "name": "Vumeni Matohez",
+          "name_i18n": {
+            "en": "Vumeni Matohez",
+            "ar": "فوميني ماتوهيز",
+            "es": "Vumeni Matohez"
+          },
+          "jersey_number": 10,
+          "position": "CM",
+          "starter": true,
+          "bio_tags": []
+        },
+        {
+          "player_id": "T06-P07",
+          "name": "Nebasu Sagohon",
+          "name_i18n": {
+            "en": "Nebasu Sagohon",
+            "ar": "نيباسو ساجوهون",
+            "es": "Nebasu Sagohon"
+          },
+          "jersey_number": 7,
+          "position": "W",
+          "starter": true,
+          "bio_tags": [
+            "set-piece taker",
+            "penalty taker"
+          ]
+        },
+        {
+          "player_id": "T06-P09",
+          "name": "Tubuku Fezos",
+          "name_i18n": {
+            "en": "Tubuku Fezos",
+            "ar": "توبوكو فيزوس",
+            "es": "Tubuku Fezos"
+          },
+          "jersey_number": 9,
+          "position": "ST",
+          "starter": true,
+          "bio_tags": [
+            "target man"
+          ]
+        },
+        {
+          "player_id": "T06-P11",
+          "name": "Dilubo Vehoz",
+          "name_i18n": {
+            "en": "Dilubo Vehoz",
+            "ar": "ديلوبو فيهوز",
+            "es": "Dilubo Vehoz"
+          },
+          "jersey_number": 11,
+          "position": "W",
+          "starter": true,
+          "bio_tags": []
+        },
+        {
+          "player_id": "T06-P12",
+          "name": "Revazod Fadonoh",
+          "name_i18n": {
+            "en": "Revazod Fadonoh",
+            "ar": "ريفازود فادونوه",
+            "es": "Revazod Fadonoh"
+          },
+          "jersey_number": 12,
+          "position": "GK",
+          "starter": false,
+          "bio_tags": []
+        },
+        {
+          "player_id": "T06-P13",
+          "name": "Rofuref Mosiv",
+          "name_i18n": {
+            "en": "Rofuref Mosiv",
+            "ar": "روفوريف موسيف",
+            "es": "Rofuref Mosiv"
+          },
+          "jersey_number": 13,
+          "position": "CB",
+          "starter": false,
+          "bio_tags": []
+        },
+        {
+          "player_id": "T06-P14",
+          "name": "Migitu Kavozok",
+          "name_i18n": {
+            "en": "Migitu Kavozok",
+            "ar": "ميجيتو كافوزوك",
+            "es": "Migitu Kavozok"
+          },
+          "jersey_number": 14,
+          "position": "FB",
+          "starter": false,
+          "bio_tags": []
+        },
+        {
+          "player_id": "T06-P15",
+          "name": "Nibakag Fevos",
+          "name_i18n": {
+            "en": "Nibakag Fevos",
+            "ar": "نيباكاج فيفوس",
+            "es": "Nibakag Fevos"
+          },
+          "jersey_number": 15,
+          "position": "CM",
+          "starter": false,
+          "bio_tags": []
+        },
+        {
+          "player_id": "T06-P16",
+          "name": "Dulavus Baboson",
+          "name_i18n": {
+            "en": "Dulavus Baboson",
+            "ar": "دولافوس بابوسون",
+            "es": "Dulavus Baboson"
+          },
+          "jersey_number": 16,
+          "position": "AM",
+          "starter": false,
+          "bio_tags": []
+        },
+        {
+          "player_id": "T06-P17",
+          "name": "Givuhe Fufuzes",
+          "name_i18n": {
+            "en": "Givuhe Fufuzes",
+            "ar": "جيفوهي فوفوزيس",
+            "es": "Givuhe Fufuzes"
+          },
+          "jersey_number": 17,
+          "position": "W",
+          "starter": false,
+          "bio_tags": []
+        },
+        {
+          "player_id": "T06-P18",
+          "name": "Rigoze Nininot",
+          "name_i18n": {
+            "en": "Rigoze Nininot",
+            "ar": "ريجوزي نينينوت",
+            "es": "Rigoze Nininot"
+          },
+          "jersey_number": 18,
+          "position": "ST",
+          "starter": false,
+          "bio_tags": []
+        }
+      ]
+    }
+  ]
+}

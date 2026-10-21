@@ -1,0 +1,18 @@
+# Example scenario file: python -m eventgen generate --seed 42 --out out/demo --stories config/stories.example.yaml
+# team: home | away | random | a team_id.  Minutes are approximate match-clock minutes.
+# Omitted fields fall back to stories.defaults in config/default.yaml.
+stories:
+  - type: late_comeback
+    team: home
+    start_minute: 10
+    end_minute: 90
+    strength: 0.8
+  - type: pressing_spell
+    team: away
+    start_minute: 20
+    end_minute: 34
+    strength: 0.8
+  - type: star_player_match
+    team: home
+    start_minute: 10
+    end_minute: 85

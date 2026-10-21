@@ -1,0 +1,103 @@
+{
+  "$defs": {
+    "TrackingPlayer": {
+      "additionalProperties": false,
+      "properties": {
+        "index": {
+          "title": "Index",
+          "type": "integer"
+        },
+        "jersey_number": {
+          "title": "Jersey Number",
+          "type": "integer"
+        },
+        "player_id": {
+          "title": "Player Id",
+          "type": "string"
+        },
+        "team_id": {
+          "title": "Team Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "index",
+        "player_id",
+        "team_id",
+        "jersey_number"
+      ],
+      "title": "TrackingPlayer",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "description": "First line of tracking.jsonl.",
+  "properties": {
+    "coordinates": {
+      "title": "Coordinates",
+      "type": "string"
+    },
+    "fidelity": {
+      "additionalProperties": {
+        "type": "number"
+      },
+      "title": "Fidelity",
+      "type": "object"
+    },
+    "generator_version": {
+      "title": "Generator Version",
+      "type": "string"
+    },
+    "hz": {
+      "title": "Hz",
+      "type": "integer"
+    },
+    "match_id": {
+      "title": "Match Id",
+      "type": "string"
+    },
+    "pitch_length_m": {
+      "title": "Pitch Length M",
+      "type": "number"
+    },
+    "pitch_width_m": {
+      "title": "Pitch Width M",
+      "type": "number"
+    },
+    "players": {
+      "items": {
+        "$ref": "#/$defs/TrackingPlayer"
+      },
+      "title": "Players",
+      "type": "array"
+    },
+    "provenance": {
+      "title": "Provenance",
+      "type": "string"
+    },
+    "seed": {
+      "title": "Seed",
+      "type": "integer"
+    },
+    "type": {
+      "const": "header",
+      "title": "Type",
+      "type": "string"
+    }
+  },
+  "required": [
+    "type",
+    "match_id",
+    "hz",
+    "pitch_length_m",
+    "pitch_width_m",
+    "coordinates",
+    "provenance",
+    "generator_version",
+    "seed",
+    "players",
+    "fidelity"
+  ],
+  "title": "TrackingHeader",
+  "type": "object"
+}
