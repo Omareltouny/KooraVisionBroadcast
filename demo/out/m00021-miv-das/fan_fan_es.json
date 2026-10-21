@@ -55,11 +55,11 @@
   "lang": "es",
   "voice": "fan_for",
   "headline": "Ciudad Dasstead aprieta arriba",
-  "body": "Entre el minuto 19 y el minuto 28, Ciudad Dasstead recuperó el balón 8 veces en campo rival. ¡Qué momento para Ciudad Dasstead!",
+  "body": "Entre los minutos 19 y 28, Ciudad Dasstead recuperó el balón 8 veces en el campo rival, con una tasa de 0,9 por minuto, mucho más que la media de 0,3. ¡Qué momento para nuestra afición!",
   "importance": 0.77,
   "push": true,
   "lower_third": "",
-  "source": "template",
+  "source": "llm",
   "review": "machine_assisted_needs_review",
   "tier": ""
  },

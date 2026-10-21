@@ -4,7 +4,7 @@
   {
    "agent": "Interpret",
    "step": "find moments",
-   "took_ms": 1.8337889999884283,
+   "took_ms": 1.7539530000050263,
    "inputs": "1622 events",
    "outputs": "17 moments: {'pressing_spell': 2, 'goal': 7, 'big_save': 2, 'comeback': 1, 'super_sub': 3, 'star_performance': 1, 'full_time': 1}",
    "notes": [
@@ -14,7 +14,7 @@
   {
    "agent": "Explain",
    "step": "causes and facts",
-   "took_ms": 603.6422390000098,
+   "took_ms": 610.5701439999933,
    "inputs": "17 moments",
    "outputs": "17 fact packets, 5 with a cause",
    "notes": [
@@ -24,25 +24,25 @@
   {
    "agent": "Narrate",
    "step": "write en/ar/es",
-   "took_ms": 11.683527000059257,
+   "took_ms": 614719.0284410001,
    "inputs": "17 fact packets",
-   "outputs": "204 texts (0 model drafts waiting for Verify)",
+   "outputs": "288 texts (84 model drafts waiting for Verify)",
    "notes": [
-    "templates only (no model)"
+    "model cached:agent-framework:openai:openai/gpt-oss-120b: drafts 84, no answer 0, unusable 0"
    ]
   },
   {
    "agent": "Verify",
    "step": "fact-check",
-   "took_ms": 10.090335999962008,
+   "took_ms": 251.91968700005418,
    "inputs": "all texts",
-   "outputs": "{\"templates_ok\": 204, \"templates_failed\": 0, \"llm_accepted\": 0, \"llm_rejected\": 0}",
+   "outputs": "{\"templates_ok\": 204, \"templates_failed\": 0, \"llm_accepted\": 84, \"llm_rejected\": 0}",
    "notes": []
   },
   {
    "agent": "Broadcast desk",
    "step": "rank for producers",
-   "took_ms": 0.1258580000467191,
+   "took_ms": 0.13899399993988482,
    "inputs": "17 moments",
    "outputs": "16 cards, tiers {'A': 3, 'B': 10, 'C': 3}",
    "notes": []
@@ -50,7 +50,7 @@
   {
    "agent": "Fan desk",
    "step": "personalise feeds",
-   "took_ms": 0.2829579999570342,
+   "took_ms": 0.3969040000129098,
    "inputs": "17 moments, 3 profiles",
    "outputs": "48 cards",
    "notes": [
@@ -64,72 +64,72 @@
   {
    "event": "executor_invoked",
    "agent": "interpret",
-   "t_ms": 5.8
+   "t_ms": 2.4
   },
   {
    "event": "executor_completed",
    "agent": "interpret",
-   "t_ms": 5.9
+   "t_ms": 2.5
   },
   {
    "event": "executor_invoked",
    "agent": "explain",
-   "t_ms": 651.2
+   "t_ms": 674.5
   },
   {
    "event": "executor_completed",
    "agent": "explain",
-   "t_ms": 651.3
+   "t_ms": 674.6
   },
   {
    "event": "executor_invoked",
    "agent": "narrate",
-   "t_ms": 664.4
+   "t_ms": 615394.9
   },
   {
    "event": "executor_completed",
    "agent": "narrate",
-   "t_ms": 664.5
+   "t_ms": 615395.0
   },
   {
    "event": "executor_invoked",
    "agent": "verify",
-   "t_ms": 677.5
+   "t_ms": 615651.0
   },
   {
    "event": "executor_completed",
    "agent": "verify",
-   "t_ms": 677.6
+   "t_ms": 615651.1
   },
   {
    "event": "executor_invoked",
    "agent": "broadcast_desk",
-   "t_ms": 683.8
+   "t_ms": 615657.8
   },
   {
    "event": "executor_completed",
    "agent": "broadcast_desk",
-   "t_ms": 683.9
+   "t_ms": 615657.9
   },
   {
    "event": "executor_invoked",
    "agent": "fan_desk",
-   "t_ms": 683.9
+   "t_ms": 615657.9
   },
   {
    "event": "executor_completed",
    "agent": "fan_desk",
-   "t_ms": 684.0
+   "t_ms": 615658.0
   },
   {
    "event": "executor_invoked",
    "agent": "publish",
-   "t_ms": 691.1
+   "t_ms": 615665.1
   },
   {
    "event": "executor_completed",
    "agent": "publish",
-   "t_ms": 691.2
+   "t_ms": 615665.2
   }
  ]
 }

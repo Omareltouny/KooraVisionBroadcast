@@ -3,9 +3,9 @@
  "home": "Levmoor Wanderers",
  "away": "Hovstead United",
  "score": "4-3",
- "mode": "templates",
+ "mode": "templates+llm",
  "engine": "microsoft-agent-framework",
- "model": null,
+ "model": "cached:agent-framework:openai:openai/gpt-oss-120b",
  "language_status": {
   "en": "source",
   "ar": "needs_native_review",
