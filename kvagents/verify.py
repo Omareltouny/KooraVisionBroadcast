@@ -186,11 +186,21 @@ def verify_narration(p: FactPacket, head: str, body: str, lang: str, all_names: 
     return True, ""
 
 
+def held_languages() -> set[str]:
+    """Languages whose model text is NOT published until a native reader approves it: those whose template file says
+    STATUS = "needs_native_review". Approve one by listing it in KV_TRUST_LANGS (for example KV_TRUST_LANGS=ar)."""
+    import os
+    from .lang import LANG
+    trust = set(os.environ.get("KV_TRUST_LANGS", "").replace(",", " ").split())
+    return {code for code, mod in LANG.items() if getattr(mod, "STATUS", "") == "needs_native_review" and code not in trust}
+
+
 def verify_all(narrations, packets: dict[str, FactPacket], all_names: set[str]):
     """Settle every LLM draft: it replaces its template only if it passes. Returns (final narrations, stats, rejections)."""
     from .models import Narration  # local import: models has no dependency on this module
     final: dict[tuple[str, str, str], Narration] = {}
-    stats = {"templates_ok": 0, "templates_failed": 0, "llm_accepted": 0, "llm_rejected": 0}
+    stats = {"templates_ok": 0, "templates_failed": 0, "llm_accepted": 0, "llm_rejected": 0, "llm_held_for_review": 0}
+    hold = held_languages()
     rejections: list[str] = []
     for n in narrations:
         if n.source != "llm_draft":
@@ -203,7 +213,10 @@ def verify_all(narrations, packets: dict[str, FactPacket], all_names: set[str]):
         if n.source == "llm_draft":
             ok, why = verify_narration(packets[n.moment_id], n.headline, n.body, n.lang, all_names)
             key = (n.moment_id, n.lang, n.voice)
-            if ok:
+            if ok and n.lang in hold and key in final:
+                final[key].held_headline, final[key].held_body = n.headline, n.body   # the template stays published
+                stats["llm_held_for_review"] += 1
+            elif ok:
                 n.source, n.verified = "llm", True
                 final[key] = n
                 stats["llm_accepted"] += 1

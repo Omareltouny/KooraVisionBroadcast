@@ -45,6 +45,8 @@ class Narration:
     source: str                    # "template" | "llm_draft" (waiting for Verify) | "llm" (passed Verify)
     verified: bool = True
     rejected_llm: str = ""         # why an LLM draft was thrown away, if it was
+    held_headline: str = ""        # an LLM draft that passed Verify but is held back for a native reader (see verify.held_languages)
+    held_body: str = ""
 
 
 @dataclass

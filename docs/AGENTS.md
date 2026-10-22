@@ -83,3 +83,7 @@ The first run against a real model (Groq, `openai/gpt-oss-120b`) showed that dig
 Known limits: the check is rule based. It cannot tell grammar mistakes, garbled words, or a wrong claim it has no rule for
 (for example saying a team "won" in words the lists do not contain). Arabic model text is therefore only a draft until a native
 reader approves it; the Arabic templates are the safe default. Arabic can use its own model (`KV_LLM_MODEL_AR`, for example `allam-2-7b` on Groq).
+
+Arabic hold: Arabic model text that passes Verify is kept in `held_headline` / `held_body` and the template stays published,
+because the Arabic is not yet approved by a native reader (`STATUS = "needs_native_review"`). After a native reader has approved
+the model's Arabic, set `KV_TRUST_LANGS=ar` to publish it. English is the source language and Spanish is published after Verify.

@@ -139,6 +139,18 @@ def test_arabic_venue_has_no_latin_letters_and_arabic_can_use_its_own_model(mv, 
     assert m.complete("s", "not json") == "main"
 
 
+def test_arabic_model_text_is_held_for_a_native_reader_until_trusted(mv, packets, moments, monkeypatch):
+    monkeypatch.delenv("KV_TRUST_LANGS", raising=False)
+    final, stats, _ = _run_model(mv, packets, moments, "good")
+    ar = [n for n in final if n.lang == "ar"]
+    assert ar and all(n.source == "template" for n in ar)             # Arabic stays on the template
+    assert stats["llm_held_for_review"] > 0 and any(n.held_body for n in ar)
+    assert any(n.source == "llm" for n in final if n.lang in ("en", "es"))
+    monkeypatch.setenv("KV_TRUST_LANGS", "ar")
+    final, stats, _ = _run_model(mv, packets, moments, "good")
+    assert any(n.source == "llm" for n in final if n.lang == "ar") and stats["llm_held_for_review"] == 0
+
+
 def test_arabic_number_agreement():
     T = LANG["ar"].T
     assert _nf(T, "press_body", 5) == T["press_body_few"]
