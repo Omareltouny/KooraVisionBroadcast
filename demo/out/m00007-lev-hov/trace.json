@@ -4,7 +4,7 @@
   {
    "agent": "Interpret",
    "step": "find moments",
-   "took_ms": 1.7539530000050263,
+   "took_ms": 1.5000960000008945,
    "inputs": "1622 events",
    "outputs": "17 moments: {'pressing_spell': 2, 'goal': 7, 'big_save': 2, 'comeback': 1, 'super_sub': 3, 'star_performance': 1, 'full_time': 1}",
    "notes": [
@@ -14,7 +14,7 @@
   {
    "agent": "Explain",
    "step": "causes and facts",
-   "took_ms": 610.5701439999933,
+   "took_ms": 502.7444850000222,
    "inputs": "17 moments",
    "outputs": "17 fact packets, 5 with a cause",
    "notes": [
@@ -24,7 +24,7 @@
   {
    "agent": "Narrate",
    "step": "write en/ar/es",
-   "took_ms": 614719.0284410001,
+   "took_ms": 679410.410229,
    "inputs": "17 fact packets",
    "outputs": "288 texts (84 model drafts waiting for Verify)",
    "notes": [
@@ -34,15 +34,24 @@
   {
    "agent": "Verify",
    "step": "fact-check",
-   "took_ms": 251.91968700005418,
+   "took_ms": 212.6985049999348,
    "inputs": "all texts",
-   "outputs": "{\"templates_ok\": 204, \"templates_failed\": 0, \"llm_accepted\": 84, \"llm_rejected\": 0}",
-   "notes": []
+   "outputs": "{\"templates_ok\": 204, \"templates_failed\": 0, \"llm_accepted\": 71, \"llm_rejected\": 13}",
+   "notes": [
+    "M004/ar/broadcast: claims the match ended",
+    "M006/en/broadcast: claims the match ended",
+    "M006/ar/broadcast: claims the match ended",
+    "M006/ar/fan_for: claims the match ended",
+    "M006/es/broadcast: number not in facts: 0",
+    "M008/ar/fan_for: claims the match ended",
+    "M011/ar/broadcast: claims the match ended",
+    "M012/en/fan_for: claims the match ended"
+   ]
   },
   {
    "agent": "Broadcast desk",
    "step": "rank for producers",
-   "took_ms": 0.13899399993988482,
+   "took_ms": 0.10027100006482215,
    "inputs": "17 moments",
    "outputs": "16 cards, tiers {'A': 3, 'B': 10, 'C': 3}",
    "notes": []
@@ -50,7 +59,7 @@
   {
    "agent": "Fan desk",
    "step": "personalise feeds",
-   "took_ms": 0.3969040000129098,
+   "took_ms": 0.31138099996042,
    "inputs": "17 moments, 3 profiles",
    "outputs": "48 cards",
    "notes": [
@@ -64,72 +73,72 @@
   {
    "event": "executor_invoked",
    "agent": "interpret",
-   "t_ms": 2.4
+   "t_ms": 2.1
   },
   {
    "event": "executor_completed",
    "agent": "interpret",
-   "t_ms": 2.5
+   "t_ms": 2.1
   },
   {
    "event": "executor_invoked",
    "agent": "explain",
-   "t_ms": 674.5
+   "t_ms": 560.7
   },
   {
    "event": "executor_completed",
    "agent": "explain",
-   "t_ms": 674.6
+   "t_ms": 560.8
   },
   {
    "event": "executor_invoked",
    "agent": "narrate",
-   "t_ms": 615394.9
+   "t_ms": 679972.3
   },
   {
    "event": "executor_completed",
    "agent": "narrate",
-   "t_ms": 615395.0
+   "t_ms": 679972.4
   },
   {
    "event": "executor_invoked",
    "agent": "verify",
-   "t_ms": 615651.0
+   "t_ms": 680188.2
   },
   {
    "event": "executor_completed",
    "agent": "verify",
-   "t_ms": 615651.1
+   "t_ms": 680188.3
   },
   {
    "event": "executor_invoked",
    "agent": "broadcast_desk",
-   "t_ms": 615657.8
+   "t_ms": 680193.6
   },
   {
    "event": "executor_completed",
    "agent": "broadcast_desk",
-   "t_ms": 615657.9
+   "t_ms": 680193.6
   },
   {
    "event": "executor_invoked",
    "agent": "fan_desk",
-   "t_ms": 615657.9
+   "t_ms": 680193.7
   },
   {
    "event": "executor_completed",
    "agent": "fan_desk",
-   "t_ms": 615658.0
+   "t_ms": 680193.7
   },
   {
    "event": "executor_invoked",
    "agent": "publish",
-   "t_ms": 615665.1
+   "t_ms": 680199.3
   },
   {
    "event": "executor_completed",
    "agent": "publish",
-   "t_ms": 615665.2
+   "t_ms": 680199.3
   }
  ]
 }
