@@ -72,6 +72,88 @@ def main_actor_ids(p: FactPacket) -> list[str]:
     return []
 
 
+# ---- extra guards: what the model may NOT do even when every digit and name is right
+_LATIN = re.compile(r"[A-Za-z]{2,}")
+_ARABIC = re.compile(r"[\u0600-\u06FF]")
+
+_EN_UNITS = {"two": 2, "three": 3, "four": 4, "five": 5, "six": 6, "seven": 7, "eight": 8, "nine": 9, "ten": 10,
+             "eleven": 11, "twelve": 12, "thirteen": 13, "fourteen": 14, "fifteen": 15, "sixteen": 16, "seventeen": 17,
+             "eighteen": 18, "nineteen": 19, "twenty": 20, "thirty": 30, "forty": 40, "fifty": 50, "sixty": 60,
+             "seventy": 70, "eighty": 80, "ninety": 90, "hundred": 100}
+_ES_UNITS = {"dos": 2, "tres": 3, "cuatro": 4, "cinco": 5, "seis": 6, "siete": 7, "ocho": 8, "nueve": 9, "diez": 10,
+             "once": 11, "doce": 12, "trece": 13, "catorce": 14, "quince": 15, "dieciséis": 16, "diecisiete": 17,
+             "dieciocho": 18, "diecinueve": 19, "veinte": 20, "treinta": 30, "cuarenta": 40, "cincuenta": 50,
+             "sesenta": 60, "setenta": 70, "ochenta": 80, "noventa": 90, "cien": 100}
+_ES_TENS = {"veinti": 20}
+# 'one'/'uno' are left out on purpose: they are ordinary words ("one of the", "no one").
+
+
+def _spelled_numbers(text: str, lang: str) -> list[int]:
+    """Numbers written as words ("fifteen", "thirty-six", "veintitrés"), so they cannot dodge the digit check."""
+    out: list[int] = []
+    low = text.lower()
+    if lang == "en":
+        for m in re.finditer(r"\b([a-z]+)(?:[\-\u2010-\u2015\s]([a-z]+))?\b", low):
+            a, b = m.group(1), m.group(2)
+            if a in _EN_UNITS and a not in ("hundred",):
+                if b in ("one", "two", "three", "four", "five", "six", "seven", "eight", "nine") and _EN_UNITS[a] >= 20:
+                    out.append(_EN_UNITS[a] + (1 if b == "one" else _EN_UNITS[b]))
+                else:
+                    out.append(_EN_UNITS[a])
+            elif b in _EN_UNITS and b != "hundred":
+                out.append(_EN_UNITS[b])
+    elif lang == "es":
+        for w in re.findall(r"[a-záéíóúñ]+", low):
+            if w in _ES_UNITS:
+                out.append(_ES_UNITS[w])
+            elif w.startswith("veinti") and len(w) > 6:
+                out.append(20)
+    return out
+
+
+_AR_L = "\u0621-\u064A"
+
+
+def _ar_word(words: str) -> "re.Pattern[str]":
+    """Arabic words take prefixes (و ب ل ف ك, ال) and suffixes; a plain substring test would also hit names
+    (دافوزول contains فوز), so a match must start at a word boundary, after an optional prefix."""
+    return re.compile(rf"(?<![{_AR_L}])[وبلفك]?(?:ال)?(?:{words})[{_AR_L}]{{0,2}}(?![{_AR_L}])")
+
+
+_OUTCOME = {
+    "en": re.compile(r"\b(victory|triumph|winner|clinch\w*|sealed|sealing|consolation|\d+\W{0,2}\d+ win|win over|win against)\b", re.I),
+    "es": re.compile(r"\b(victoria|triunfo|ganador|consuelo|se impuso|se impone|se lleva|sella|asegura)\b", re.I),
+    "ar": _ar_word("فوز|فاز|انتصار|انتصر|فائز"),
+}
+_ENDED = {
+    "en": re.compile(r"\b(ended|finished|final whistle|full[- ]time|final score)\b", re.I),
+    "es": re.compile(r"\b(terminó|finalizó|final del partido|marcador final|pitido final)\b", re.I),
+    "ar": _ar_word("انتهى|انتهت|ينتهي|ينتهى|نهاية المباراة|النتيجة النهائية"),
+}
+
+
+def _allows_outcome(p: FactPacket) -> bool:
+    """A result may only be called a win/victory when the facts say so: full time, or a winning goal."""
+    f = p.facts
+    return p.kind == "full_time" or bool(isinstance(f.get("flags"), dict) and f["flags"].get("winner"))
+
+
+def _extra_checks(p: FactPacket, text: str, lang: str) -> tuple[bool, str]:
+    if lang == "ar" and _LATIN.search(text):
+        return False, f"Latin letters in Arabic text: {_LATIN.search(text).group(0)}"
+    if lang in ("en", "es") and _ARABIC.search(text):
+        return False, "Arabic letters in a Latin-script text"
+    allowed = {int(x) for x in allowed_numbers(p) if x.isdigit()}
+    for n in _spelled_numbers(text, lang):
+        if n not in allowed:
+            return False, f"spelled-out number not in facts: {n}"
+    if p.kind != "full_time" and _ENDED.get(lang) and _ENDED[lang].search(text):
+        return False, "claims the match ended"
+    if not _allows_outcome(p) and _OUTCOME.get(lang) and _OUTCOME[lang].search(text):
+        return False, "claims a win the facts do not support"
+    return True, ""
+
+
 def verify_text(p: FactPacket, text: str, lang: str, all_names: set[str], headline: bool = False) -> tuple[bool, str]:
     t = text.translate(_ARABIC_DIGITS)
     bad = sorted(set(_NUM.findall(t)) - allowed_numbers(p))
@@ -87,7 +169,7 @@ def verify_text(p: FactPacket, text: str, lang: str, all_names: set[str], headli
                 return False, f"name not in facts: {n}"
     if len(text) > (MAX_HEAD if headline else MAX_BODY):
         return False, "too long"
-    return True, ""
+    return _extra_checks(p, text, lang)
 
 
 def verify_narration(p: FactPacket, head: str, body: str, lang: str, all_names: set[str]) -> tuple[bool, str]:

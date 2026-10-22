@@ -99,6 +99,46 @@ def test_surname_alone_counts_for_the_main_actor_but_cannot_smuggle_in_others(mv
     assert "main actor" not in why2                 # the surname satisfies the main-actor rule
 
 
+def test_guards_catch_what_the_model_got_wrong_in_the_real_run(mv, packets):
+    """Each case below is a kind of mistake seen in the first run against a real model."""
+    names = mv.all_names()
+    g = next(x for x in packets if x.kind == "goal" and not x.facts["flags"]["winner"])
+    ft = next(x for x in packets if x.kind == "full_time")
+    actor = {lang: g.names[g.facts["scorer"]][lang] for lang in ("en", "es", "ar")}
+    m = g.minute.split("+")[0]
+
+    def ok(p, lang, body, head=None):
+        return verify_narration(p, head or actor[lang], f"{actor[lang]} {body}", lang, names)
+
+    assert ok(g, "ar", f"سجّل في ملعب Levmoor Park في الدقيقة {m}.")[1].startswith("Latin letters")   # venue left in Latin letters
+    assert not ok(g, "en", f"scores after a twelve-pass move in minute {m}.")[0]      # a number written as a word
+    assert not ok(g, "es", f"marca y se lleva la victoria en el minuto {m}.")[0]       # a win nobody has reported
+    assert not ok(g, "en", f"scores in minute {m}, and the match ended that way.")[0]  # claims the match ended
+    assert not ok(g, "ar", f"سجّل في الدقيقة {m} لينتهي اللقاء.")[0]
+    assert ok(ft, "en", "is mentioned.", head="FULL TIME")[1] != "claims a win the facts do not support"
+    assert "claims a win" not in verify_narration(ft, "FULL TIME", f"{ft.names[ft.facts['winner']]['en']} secured the victory.", "en", names)[1]
+
+
+def test_arabic_venue_has_no_latin_letters_and_arabic_can_use_its_own_model(mv, packets):
+    from kvagents.llm import ByLanguage
+    from kvagents.narrate import localize_venue
+    p = next(x for x in packets if x.kind == "full_time")
+    v = localize_venue(mv.meta["venue"], "ar", p.names)
+    assert v and not any(c.isascii() and c.isalpha() for c in v)
+    assert localize_venue("Levmoor Park", "en", p.names) == "Levmoor Park"
+
+    class Tag:
+        def __init__(self, n):
+            self.name = n
+
+        def complete(self, system, user):
+            return self.name
+    m = ByLanguage(Tag("main"), {"ar": Tag("arabic")})
+    assert m.complete("s", json.dumps({"language": "ar"})) == "arabic"
+    assert m.complete("s", json.dumps({"language": "es"})) == "main"
+    assert m.complete("s", "not json") == "main"
+
+
 def test_arabic_number_agreement():
     T = LANG["ar"].T
     assert _nf(T, "press_body", 5) == T["press_body_few"]

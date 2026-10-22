@@ -125,14 +125,45 @@ class CachedModel:
         return out
 
 
+class ByLanguage:
+    """Routes each request to a model chosen by the note's language (the request is JSON with a "language" field).
+    Use it to give Arabic a model that is better at Arabic, while the other languages keep the main model."""
+
+    def __init__(self, default: TextModel, per_language: dict[str, TextModel]):
+        self.default, self.per_language = default, per_language
+        self.name = default.name + "".join(f" + {k}:{m.name}" for k, m in per_language.items())
+
+    def complete(self, system: str, user: str) -> str:
+        try:
+            lang = json.loads(user).get("language", "")
+        except (ValueError, AttributeError):
+            lang = ""
+        return self.per_language.get(lang, self.default).complete(system, user)
+
+
+def build_model(url: str | None, model: str, backend: str = "openai", model_ar: str | None = None) -> TextModel | None:
+    def one(name: str) -> TextModel | None:
+        if backend == "plain":
+            return OpenAICompat(url, name) if url else None
+        if backend == "foundry_local":
+            return AgentFrameworkModel(name, backend="foundry_local")
+        return AgentFrameworkModel(name, url, "openai") if url else None
+
+    main = one(model)
+    if main is None:
+        return None
+    if model_ar and model_ar != model:
+        ar = one(model_ar)
+        if ar is not None:
+            return ByLanguage(main, {"ar": ar})
+    return main
+
+
 def model_from_env() -> TextModel | None:
-    """KV_LLM_MODEL (+ KV_LLM_URL for an OpenAI-compatible server). KV_LLM_BACKEND: openai (default), foundry_local, plain."""
-    url, model = os.environ.get("KV_LLM_URL"), os.environ.get("KV_LLM_MODEL")
-    backend = os.environ.get("KV_LLM_BACKEND", "openai")
+    """KV_LLM_MODEL (+ KV_LLM_URL for an OpenAI-compatible server). KV_LLM_BACKEND: openai (default), foundry_local, plain.
+    Optional KV_LLM_MODEL_AR: a different model for Arabic only."""
+    model = os.environ.get("KV_LLM_MODEL")
     if not model:
         return None
-    if backend == "plain":
-        return OpenAICompat(url, model) if url else None
-    if backend == "foundry_local":
-        return AgentFrameworkModel(model, backend="foundry_local")
-    return AgentFrameworkModel(model, url, "openai") if url else None
+    return build_model(os.environ.get("KV_LLM_URL"), model, os.environ.get("KV_LLM_BACKEND", "openai"),
+                       (os.environ.get("KV_LLM_MODEL_AR") or "").strip() or None)

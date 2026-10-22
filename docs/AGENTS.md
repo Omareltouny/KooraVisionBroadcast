@@ -70,3 +70,16 @@ python -m kvagents run out/demo --out demo/out --model-cache demo/llm_cache.json
 
 Outputs per match in `demo/out/<match_id>/`: `moments.json`, `packets.json`, `narrations.json`, `broadcast.json`,
 `fan_<profile>.json`, `trace.json`, `manifest.json`. `demo/` ships two example matches already processed.
+
+## What the Verify agent checks, and what it cannot (updated after the first real-model run)
+
+The first run against a real model (Groq, `openai/gpt-oss-120b`) showed that digits and names are not enough. Verify now also rejects a draft that:
+
+- has a number written as a word (en/es) that is not in the facts ("one"/"uno" are skipped: too common as ordinary words);
+- calls a result a win or victory, or says the match ended, when the facts do not say so (a winning goal or full time);
+- puts Latin letters in Arabic text (the venue is shown in Arabic through `localize_venue`), or Arabic letters in en/es text;
+- uses only a surname that belongs to a player who is not in the facts (a surname alone is accepted for the main actor).
+
+Known limits: the check is rule based. It cannot tell grammar mistakes, garbled words, or a wrong claim it has no rule for
+(for example saying a team "won" in words the lists do not contain). Arabic model text is therefore only a draft until a native
+reader approves it; the Arabic templates are the safe default. Arabic can use its own model (`KV_LLM_MODEL_AR`, for example `allam-2-7b` on Groq).

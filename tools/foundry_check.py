@@ -19,9 +19,9 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from kvagents.explain import explain          # noqa: E402
 from kvagents.interpret import interpret      # noqa: E402
-from kvagents.llm import AgentFrameworkModel, OpenAICompat  # noqa: E402
+from kvagents.llm import build_model  # noqa: E402
 from kvagents.match_view import MatchView     # noqa: E402
-from kvagents.narrate import STYLE_SYSTEM, VOICE_HINT, render  # noqa: E402
+from kvagents.narrate import STYLE_SYSTEM, VOICE_HINT, localize_venue, render  # noqa: E402
 from kvagents.verify import verify_narration  # noqa: E402
 
 DEMO = Path(__file__).resolve().parents[1] / "demo" / "matches"
@@ -57,13 +57,18 @@ def main() -> int:
     packets = explain(mv, interpret(mv))
     p = next(x for x in packets if x.kind == "goal" and x.beneficiary)
     names = mv.all_names()
-    llm = AgentFrameworkModel(model_id, a.url) if a.backend == "openai" else OpenAICompat(a.url, model_id)
+    import os
+    model_ar = (os.environ.get("KV_LLM_MODEL_AR") or "").strip() or None
+    llm = build_model(a.url, model_id, a.backend, model_ar)
+    if model_ar:
+        print(f"Arabic uses a different model: {model_ar}\n")
     ok_count = 0
     for lang in ("en", "ar", "es"):
         head, body = render(p, lang, "fan_for", mv.meta["venue"])
         payload = {"language": lang, "voice": VOICE_HINT["fan_for"], "minute": p.minute, "draft_headline": head,
                    "draft_body": body, "names": {k: v[lang] for k, v in p.names.items()},
-                   "facts": {k: v for k, v in p.facts.items() if k not in ("home", "away")}, "causes": p.causes}
+                   "facts": {k: (localize_venue(v, lang, p.names) if k == "venue" else v) for k, v in p.facts.items() if k not in ("home", "away")},
+                   "causes": p.causes}
         t0 = time.time()
         try:
             raw = llm.complete(STYLE_SYSTEM, json.dumps(payload, ensure_ascii=False))

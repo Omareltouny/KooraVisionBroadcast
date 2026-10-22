@@ -16,7 +16,10 @@ from .models import FactPacket, Narration
 STYLE_SYSTEM = (
     "You are a football commentator. Rewrite the given match note in the requested language and voice. "
     "Use ONLY the facts provided. Do not add any number, minute, name, club, or claim that is not in the facts. "
-    "Keep it to one headline (max 12 words) and one or two sentences. "
+    "Write every number as digits, never as words. Use the names and the venue exactly as given in the facts, in the "
+    "requested script (an Arabic text must contain no Latin letters). "
+    "Do not say who won, that the match ended, or call anything a victory unless the facts say so. "
+    "Keep it to one headline (max 12 words) and one or two sentences, in correct grammar. "
     'Reply with JSON only: {"headline": "...", "body": "..."}'
 )
 VOICE_HINT = {
@@ -44,13 +47,32 @@ def _nm(p: FactPacket, pid: str, lang: str) -> str:
     return p.names[pid][lang]
 
 
+_AR_VENUE_KIND = {"Park": "بارك", "Arena": "أرينا", "Ground": "غراوند", "Field": "فيلد"}
+
+
+def localize_venue(venue: str, lang: str, names: dict) -> str:
+    """The stadium is "<place> <Park|Arena|Ground|Field>". Arabic text must not carry Latin letters, so the place
+    comes from the home team's Arabic name (clubs are named after their place) and the word is mapped."""
+    if lang != "ar" or not venue:
+        return venue
+    place, _, kind = venue.rpartition(" ")
+    ar_kind = _AR_VENUE_KIND.get(kind)
+    if not place or not ar_kind:
+        return "الملعب"
+    for d in names.values():
+        en, ar = d.get("en", ""), d.get("ar", "")
+        if en.startswith(place + " ") and " " in ar:
+            return f"{ar.rsplit(' ', 1)[0]} {ar_kind}"
+    return "الملعب"
+
+
 def render(p: FactPacket, lang: str, voice: str, venue: str = "") -> tuple[str, str]:
     T = LANG[lang].T
     f = p.facts
     n = lambda k: _nm(p, f[k], lang)  # noqa: E731
     home, away = _nm(p, f["home"], lang), _nm(p, f["away"], lang)
     score = f"{home} {f.get('home_goals', 0)}-{f.get('away_goals', 0)} {away}"
-    common = {"minute": p.minute, "scoreline": score, "home": home, "away": away, "venue": venue or f.get("venue", "")}
+    common = {"minute": p.minute, "scoreline": score, "home": home, "away": away, "venue": localize_venue(venue or f.get("venue", ""), lang, p.names)}
     k = p.kind
     if k == "goal":
         fl = f["flags"]
@@ -149,7 +171,8 @@ def _style(model, p: FactPacket, base: Narration, stats: dict[str, int]) -> Narr
     names = {k: v[base.lang] for k, v in p.names.items()}
     payload = {"language": base.lang, "voice": VOICE_HINT[base.voice], "minute": p.minute,
                "draft_headline": base.headline, "draft_body": base.body, "names": names,
-               "facts": {k: v for k, v in p.facts.items() if k not in ("home", "away")}, "causes": p.causes}
+               "facts": {k: (localize_venue(v, base.lang, p.names) if k == "venue" else v) for k, v in p.facts.items() if k not in ("home", "away")},
+               "causes": p.causes}
     try:
         raw = model.complete(STYLE_SYSTEM, json.dumps(payload, ensure_ascii=False))
         raw = re.sub(r"<think>[\s\S]*?</think>", "", raw)   # reasoning models print their thinking first
