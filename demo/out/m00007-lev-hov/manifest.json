@@ -5,7 +5,7 @@
  "score": "4-3",
  "mode": "templates+llm",
  "engine": "microsoft-agent-framework",
- "model": "cached:agent-framework:openai:openai/gpt-oss-120b",
+ "model": "cached:agent-framework:openai:openai/gpt-oss-120b + ar:agent-framework:openai:allam-2-7b",
  "language_status": {
   "en": "source",
   "ar": "needs_native_review",
