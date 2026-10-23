@@ -59,14 +59,23 @@ jobs:
           python -m eventgen.cli generate --seed 7 --stories config/stories.example.yaml --out "$RUNNER_TEMP/a"
           python -m eventgen.cli generate --seed 21 --stories random --out "$RUNNER_TEMP/b"
       - name: Run the agents with the model
+        env:
+          APPROVALS: ${{ hashFiles('demo/approvals-ar.json') != '' && '--approvals demo/approvals-ar.json' || '' }}
         run: |
           for d in a b; do
-            python -m kvagents run "$RUNNER_TEMP/$d" --out demo/out --model-cache demo/llm_cache.json
+            python -m kvagents run "$RUNNER_TEMP/$d" --out demo/out --model-cache demo/llm_cache.json $APPROVALS
+          done
+      - name: Rebuild the 3D replay scenes (no model needed)
+        run: |
+          for d in a b; do
+            python -m kvagents.reconstruct "$RUNNER_TEMP/$d" "$RUNNER_TEMP/$d/tracking.jsonl" --out demo/scenes
           done
       - name: Replay offline from the saved answers (must work with no model)
+        env:
+          APPROVALS: ${{ hashFiles('demo/approvals-ar.json') != '' && '--approvals demo/approvals-ar.json' || '' }}
         run: |
           for d in a b; do
-            python -m kvagents run "$RUNNER_TEMP/$d" --out "$RUNNER_TEMP/replay" --model-cache demo/llm_cache.json --offline
+            python -m kvagents run "$RUNNER_TEMP/$d" --out "$RUNNER_TEMP/replay" --model-cache demo/llm_cache.json --offline $APPROVALS
           done
       - name: Save results to the repository
         run: |

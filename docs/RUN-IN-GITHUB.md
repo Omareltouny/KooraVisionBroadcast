@@ -16,3 +16,11 @@ your API key, and saves the answers into `demo/llm_cache.json` so the demo repla
 Free tiers have limits (Groq's published free limits at the time of writing: 30 requests a minute, 1,000 a day,
 200,000 tokens a day per model, and about 8,000 tokens a minute), so calls are spaced `min_interval` seconds apart and
 retried when the service says "too many requests". Prompts and answers contain only synthetic match data.
+
+## The match desk page and the Arabic review
+
+`python tools/build_site.py` builds `site/index.html` from `demo/out`: one file, data inside, no server and no live model.
+The `pages.yml` workflow publishes it with GitHub Pages (Settings > Pages > Source: GitHub Actions).
+
+The page has an **Arabic review** tab. A native reader approves or rejects each held Arabic draft, copies the decisions, and saves
+them as `demo/approvals-ar.json`. The next run of the Narrate workflow publishes the approved drafts and keeps the template for the rest.

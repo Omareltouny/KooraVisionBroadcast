@@ -43,11 +43,16 @@ def _tracking(state_dir: str):
 class Ctx:
     """Things the agents need that are not part of the message: match view, model, profiles."""
 
-    def __init__(self, match_dir: str, model=None, profiles: list[Profile] | None = None, use_tracking: bool = True):
+    def __init__(self, match_dir: str, model=None, profiles: list[Profile] | None = None, use_tracking: bool = True,
+                 approvals=None):
         self.mv = MatchView(match_dir)
         self.model = model
         self.profiles = profiles or DEFAULT_PROFILES
         self.use_tracking = use_tracking
+        # held drafts a native reader approved, as "moment|lang|voice"; a dict maps match ids to such sets
+        if isinstance(approvals, dict):
+            approvals = approvals.get(self.mv.meta.get("match_id", ""), set()) | approvals.get("", set())
+        self.approvals = set(approvals or ())
 
 
 def step_interpret(state: RunState, ctx: Ctx) -> None:
@@ -85,7 +90,7 @@ def step_narrate(state: RunState, ctx: Ctx) -> None:
 def step_verify(state: RunState, ctx: Ctx) -> None:
     t0 = time.perf_counter()
     pk = {p.moment_id: p for p in state.packets}
-    state.narrations, stats, rej = verify_all(state.narrations, pk, ctx.mv.all_names())
+    state.narrations, stats, rej = verify_all(state.narrations, pk, ctx.mv.all_names(), ctx.approvals)
     state.trace.append(TraceEntry("Verify", "fact-check", (time.perf_counter() - t0) * 1000, "all texts", json.dumps(stats), rej[:8]))
 
 
@@ -179,8 +184,8 @@ async def _run_framework(state: RunState, ctx: Ctx) -> tuple[RunState, list[dict
 
 
 def run_pipeline(match_dir: str | Path, out_dir: str | Path, model=None, profiles: list[Profile] | None = None,
-                 use_tracking: bool = True, engine: str = "auto") -> tuple[RunState, Path]:
-    ctx = Ctx(str(match_dir), model, profiles, use_tracking)
+                 use_tracking: bool = True, engine: str = "auto", approvals=None) -> tuple[RunState, Path]:
+    ctx = Ctx(str(match_dir), model, profiles, use_tracking, approvals)
     state = RunState(match_dir=str(match_dir))
     events: list[dict[str, Any]] = []
     used = "direct"

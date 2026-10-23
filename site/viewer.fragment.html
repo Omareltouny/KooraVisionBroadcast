@@ -1,0 +1,456 @@
+<title>KooraVision Match Desk</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Sans+Arabic:wght@400;600&display=swap">
+<style>
+/* Layout concept: a broadcast scoreboard on top, then a quiet working desk. The only loud element is the scoreboard. */
+:root {
+  --bg: #EDF0F3; --surface: #FFFFFF; --ink: #0D2033; --muted: #55677A; --line: #D3DBE3;
+  --board: #0D2033; --board-ink: #F4F7FA; --board-muted: #9DB0C3;
+  --blue: #1F5FBF; --blue-soft: #E3EDFB; --amber: #B97800; --amber-soft: #FBF0D6;
+  --ok: #1B7F55; --ok-soft: #DDF1E8; --bad: #B63A2E; --bad-soft: #F8E2DF; --held: #6B4FA3; --held-soft: #ECE7F6;
+  --pitch: #2E6B4E; --pitch-line: #D6EADB; --shadow: 0 1px 0 rgba(13,32,51,.04), 0 6px 18px rgba(13,32,51,.06);
+  --display: "Barlow Condensed", "Arial Narrow", Arial, sans-serif;
+  --body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --arabic: "IBM Plex Sans Arabic", "Segoe UI", Tahoma, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0A141D; --surface: #11222F; --ink: #E7EEF4; --muted: #92A5B7; --line: #223648;
+    --board: #07101A; --board-ink: #F4F7FA; --board-muted: #8DA2B6;
+    --blue: #7DB0FF; --blue-soft: #16304F; --amber: #F2B632; --amber-soft: #3A2E10;
+    --ok: #55D19B; --ok-soft: #12382B; --bad: #FF8F82; --bad-soft: #3F1D19; --held: #B7A0F0; --held-soft: #2A2342;
+    --pitch: #1E4A36; --pitch-line: #B9D6C1; --shadow: 0 1px 0 rgba(0,0,0,.3), 0 6px 18px rgba(0,0,0,.25);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0A141D; --surface: #11222F; --ink: #E7EEF4; --muted: #92A5B7; --line: #223648;
+  --board: #07101A; --board-ink: #F4F7FA; --board-muted: #8DA2B6;
+  --blue: #7DB0FF; --blue-soft: #16304F; --amber: #F2B632; --amber-soft: #3A2E10;
+  --ok: #55D19B; --ok-soft: #12382B; --bad: #FF8F82; --bad-soft: #3F1D19; --held: #B7A0F0; --held-soft: #2A2342;
+  --pitch: #1E4A36; --pitch-line: #B9D6C1; --shadow: 0 1px 0 rgba(0,0,0,.3), 0 6px 18px rgba(0,0,0,.25);
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 15px; line-height: 1.5; }
+button { font: inherit; color: inherit; cursor: pointer; }
+:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.wrap { max-width: 980px; margin: 0 auto; padding-inline: 0; }
+.gutter { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+
+/* top bar + scoreboard */
+.top { background: var(--board); color: var(--board-ink); }
+.top .inner { max-width: 980px; margin: 0 auto; padding-block: 14px 20px; }
+.brandrow { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; justify-content: space-between; }
+.brand { font-family: var(--display); font-weight: 700; font-size: 22px; letter-spacing: .04em; text-transform: uppercase; }
+.brand span { color: var(--board-muted); font-weight: 600; }
+.matchpick { display: flex; flex-wrap: wrap; gap: 6px; }
+.matchpick button { background: transparent; border: 1px solid #2B4258; color: var(--board-muted); border-radius: 6px; padding: 5px 10px; font-size: 13px; }
+.matchpick button[aria-pressed="true"] { background: var(--board-ink); color: #0D2033; border-color: var(--board-ink); font-weight: 600; }
+.score { display: grid; grid-template-columns: 1fr auto 1fr; gap: 12px 20px; align-items: center; margin-top: 18px; }
+.team { font-family: var(--display); font-weight: 700; font-size: clamp(17px, 4.6vw, 38px); line-height: 1.05; text-transform: uppercase; letter-spacing: .01em; min-width: 0; overflow-wrap: break-word; hyphens: none; }
+.team.away { text-align: right; }
+.team small { display: block; font-family: var(--body); font-weight: 500; font-size: 12px; color: var(--board-muted); text-transform: none; letter-spacing: 0; margin-top: 4px; }
+.swatch { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-inline-end: 6px; vertical-align: baseline; border: 1px solid rgba(255,255,255,.35); }
+.digits { font-family: var(--display); font-weight: 700; font-size: clamp(44px, 11vw, 84px); line-height: 1; font-variant-numeric: tabular-nums; letter-spacing: .02em; }
+.digits i { font-style: normal; color: var(--board-muted); padding: 0 .12em; }
+.matchmeta { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 13px; color: var(--board-muted); }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.chip { font-size: 12px; padding: 3px 9px; border-radius: 999px; background: #17314A; color: #D5E1EC; white-space: nowrap; }
+.chip b { color: #fff; font-variant-numeric: tabular-nums; }
+
+/* tabs */
+.tabs { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); border-bottom: 1px solid var(--line); }
+.tabs .inner { max-width: 980px; margin: 0 auto; display: flex; gap: 2px; overflow-x: auto; }
+.tabs button { background: none; border: 0; border-bottom: 3px solid transparent; padding: 12px 14px 10px; font-weight: 500; color: var(--muted); white-space: nowrap; }
+.tabs button[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--blue); font-weight: 600; }
+main { max-width: 980px; margin: 0 auto; padding-block: 18px 40px; }
+h2 { font-family: var(--display); font-size: 26px; letter-spacing: .02em; text-transform: uppercase; margin: 6px 0 4px; }
+.lede { color: var(--muted); margin: 0 0 14px; max-width: 70ch; }
+.bar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 14px; }
+.seg { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: var(--surface); }
+.seg button { background: none; border: 0; padding: 6px 12px; font-size: 13px; color: var(--muted); border-inline-end: 1px solid var(--line); }
+.seg button:last-child { border-inline-end: 0; }
+.seg button[aria-pressed="true"] { background: var(--blue-soft); color: var(--blue); font-weight: 600; }
+
+/* cards */
+.feed { display: flex; flex-direction: column; gap: 10px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; box-shadow: var(--shadow); display: grid; grid-template-columns: 74px minmax(0, 1fr); }
+.when { padding: 12px 8px; border-inline-end: 1px solid var(--line); text-align: center; }
+.min { display: block; font-family: var(--display); font-weight: 700; font-size: 26px; line-height: 1; font-variant-numeric: tabular-nums; }
+.kind { display: block; margin-top: 6px; font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+.what { padding: 12px 14px; min-width: 0; }
+.what h3 { margin: 0 0 4px; font-size: 17px; line-height: 1.3; font-weight: 600; text-wrap: balance; }
+.what p { margin: 0; max-width: 68ch; }
+.rtl { direction: rtl; text-align: right; font-family: var(--arabic); }
+.rtl h3 { font-family: var(--arabic); font-weight: 600; }
+.meta { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-top: 10px; }
+.badge { font-size: 11.5px; padding: 2px 8px; border-radius: 999px; background: var(--blue-soft); color: var(--blue); font-weight: 500; white-space: nowrap; }
+.badge.push { background: var(--amber-soft); color: var(--amber); }
+.badge.ok { background: var(--ok-soft); color: var(--ok); }
+.badge.tpl { background: var(--bg); color: var(--muted); border: 1px solid var(--line); }
+.badge.held { background: var(--held-soft); color: var(--held); }
+.badge.bad { background: var(--bad-soft); color: var(--bad); }
+.badge svg { width: 11px; height: 11px; vertical-align: -1px; margin-inline-end: 3px; }
+.more { margin-inline-start: auto; background: none; border: 1px solid var(--line); border-radius: 6px; padding: 3px 10px; font-size: 12.5px; color: var(--muted); }
+.more[aria-expanded="true"] { color: var(--blue); border-color: var(--blue); }
+.tierstripe { box-shadow: inset 4px 0 0 var(--amber), var(--shadow); }
+.detail { margin-top: 12px; padding-top: 12px; border-top: 1px dashed var(--line); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px; }
+@media (max-width: 720px) { .detail { grid-template-columns: minmax(0, 1fr); } .card { grid-template-columns: 58px minmax(0, 1fr); } .min { font-size: 22px; } .score { grid-template-columns: 1fr auto 1fr; } }
+.detail h4 { margin: 0 0 6px; font-size: 12px; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); font-weight: 600; }
+.pitch { width: 100%; height: auto; display: block; border-radius: 6px; }
+.facts { display: grid; grid-template-columns: auto 1fr; gap: 3px 12px; margin: 8px 0 0; font-size: 13px; }
+.facts dt { color: var(--muted); } .facts dd { margin: 0; font-variant-numeric: tabular-nums; }
+.flags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
+.three { display: flex; flex-direction: column; gap: 8px; }
+.q { border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; font-size: 13.5px; background: var(--bg); }
+.q b { display: block; font-size: 11.5px; color: var(--muted); font-weight: 500; margin-bottom: 2px; }
+.q.rtl b { font-family: var(--body); }
+.note { font-size: 12.5px; color: var(--muted); margin-top: 8px; }
+
+/* broadcast lower third */
+.third { display: flex; align-items: stretch; margin-bottom: 8px; border-radius: 4px; overflow: hidden; background: var(--board); color: var(--board-ink); max-width: 560px; }
+.third .m { background: var(--amber); color: #0D2033; font-family: var(--display); font-weight: 700; font-size: 20px; padding: 4px 10px; display: flex; align-items: center; font-variant-numeric: tabular-nums; }
+:root[data-theme="dark"] .third .m { color: #0D2033; }
+.third .t { padding: 5px 12px; font-weight: 500; font-size: 14px; line-height: 1.3; display: flex; align-items: center; min-width: 0; overflow-wrap: anywhere; }
+.third .t.rtl { font-family: var(--arabic); }
+.tier { display: inline-flex; width: 24px; height: 24px; border-radius: 4px; align-items: center; justify-content: center; font-family: var(--display); font-weight: 700; font-size: 16px; background: var(--bg); border: 1px solid var(--line); color: var(--muted); }
+.tier.A { background: var(--amber-soft); color: var(--amber); border-color: var(--amber); }
+.tier.B { background: var(--blue-soft); color: var(--blue); border-color: var(--blue); }
+
+/* agents */
+.flow { display: flex; flex-wrap: wrap; align-items: stretch; gap: 6px; margin: 12px 0 18px; }
+.node { flex: 1 1 118px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; min-width: 0; box-shadow: var(--shadow); }
+.node h4 { margin: 0; font-size: 15px; font-weight: 600; }
+.node .step { font-size: 12px; color: var(--muted); margin-bottom: 6px; }
+.node .io { font-size: 12.5px; overflow-wrap: anywhere; }
+.node .t { font-family: var(--display); font-weight: 600; font-size: 18px; color: var(--blue); font-variant-numeric: tabular-nums; }
+.node.stack { display: flex; flex-direction: column; gap: 8px; background: none; border: 0; padding: 0; box-shadow: none; }
+.node.stack .node { box-shadow: var(--shadow); }
+.arrow { align-self: center; color: var(--muted); font-size: 16px; flex: 0 0 auto; }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; margin-bottom: 14px; box-shadow: var(--shadow); }
+.panel h3 { margin: 0 0 8px; font-size: 16px; }
+.stackbar { display: flex; height: 16px; border-radius: 4px; overflow: hidden; background: var(--bg); margin: 8px 0; }
+.stackbar i { display: block; height: 100%; }
+.legend { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 13px; }
+.legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-inline-end: 6px; }
+.rules { margin: 6px 0 0; padding-inline-start: 18px; font-size: 13.5px; }
+.rules li { margin-bottom: 3px; }
+table.rej { width: 100%; border-collapse: collapse; font-size: 13px; }
+table.rej td { padding: 4px 8px 4px 0; border-top: 1px solid var(--line); vertical-align: top; }
+.tablewrap { overflow-x: auto; }
+
+/* 3D replay */
+.scene { margin: 0 0 26px; }
+.scene h3 { margin: 0 0 4px; font-size: 18px; }
+.scene .why { color: var(--muted); font-size: 14px; max-width: 70ch; margin: 0 0 10px; }
+.scene .twocol { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 10px; margin-top: 10px; }
+@media (max-width: 720px) { .scene .twocol { grid-template-columns: minmax(0,1fr); } }
+.scene .txt { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; font-size: 14px; }
+.scene .txt h5 { margin: 0 0 4px; font-size: 11.5px; color: var(--muted); font-weight: 500; }
+.scene .txt.rtl { direction: rtl; text-align: right; font-family: var(--arabic); }
+.scene .fair { font-size: 12.5px; color: var(--muted); }
+
+/* review */
+.rev { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 10px; margin-top: 8px; }
+@media (max-width: 720px) { .rev { grid-template-columns: minmax(0,1fr); } }
+.rev .q h5 { margin: 0 0 3px; font-size: 11.5px; color: var(--muted); font-weight: 500; }
+.dec { display: flex; gap: 6px; margin-top: 8px; }
+.dec button { border: 1px solid var(--line); background: var(--surface); border-radius: 6px; padding: 5px 12px; font-size: 13px; }
+.dec button[data-v="approve"][aria-pressed="true"] { background: var(--ok-soft); color: var(--ok); border-color: var(--ok); font-weight: 600; }
+.dec button[data-v="reject"][aria-pressed="true"] { background: var(--bad-soft); color: var(--bad); border-color: var(--bad); font-weight: 600; }
+.btn { border: 1px solid var(--blue); background: var(--blue); color: #fff; border-radius: 6px; padding: 7px 14px; font-weight: 600; }
+:root[data-theme="dark"] .btn { color: #07101A; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .btn { color: #07101A; } }
+textarea.out { width: 100%; min-height: 110px; font: 12.5px/1.4 ui-monospace, Menlo, Consolas, monospace; background: var(--surface); color: var(--ink); border: 1px solid var(--line); border-radius: 6px; padding: 8px; margin-top: 8px; }
+.empty { padding: 24px; text-align: center; color: var(--muted); border: 1px dashed var(--line); border-radius: 10px; }
+footer.fine { max-width: 980px; margin: 0 auto; padding-block: 0 36px; font-size: 12.5px; color: var(--muted); }
+@media (prefers-reduced-motion: no-preference) { .card, .node { transition: box-shadow .15s ease; } }
+</style>
+
+<div id="app">
+  <header class="top"><div class="inner gutter">
+    <div class="brandrow">
+      <div class="brand">KooraVision <span>Match Desk</span></div>
+      <div class="matchpick" id="matchpick" role="group" aria-label="Choose a match"></div>
+    </div>
+    <div class="score" id="score"></div>
+    <div class="matchmeta" id="matchmeta"></div>
+    <div class="chips" id="chips"></div>
+  </div></header>
+  <nav class="tabs" aria-label="Views"><div class="inner gutter" role="tablist" id="tabs"></div></nav>
+  <main class="gutter" id="view"></main>
+  <footer class="fine gutter" id="fine"></footer>
+</div>
+
+<script>/*__KV3D__*/</script>
+<script>
+const DATA = /*__DATA__*/null;
+const LANGS = [["en","English"],["ar","العربية"],["es","Español"]];
+const KIND = {goal:"Goal",comeback:"Comeback",big_save:"Big save",pressing_spell:"Pressing spell",super_sub:"Substitute impact",star_performance:"Star performance",full_time:"Full time",red_card:"Red card",penalty_miss:"Penalty miss"};
+const FLAG = {is_penalty:"Penalty",first:"Opening goal",equaliser:"Equaliser",go_ahead:"Go-ahead",late:"Late",comeback:"Comeback",winner:"Winning goal"};
+const FACT_LABEL = {shot_distance_m:"Shot distance (m)",buildup_passes:"Build-up passes",buildup_seconds:"Build-up (seconds)",progression_m:"Ball progression (m)",body_part:"Body part",turnovers:"Turnovers won",rate_per_min:"Per minute",avg_rate_per_min:"Match average per minute",shots:"Shots",goals:"Goals",key_passes:"Key passes",touches:"Touches",shot_share_pct:"Share of team shots (%)",deficit:"Deficit overcome",save_outcome:"Outcome",attackers_in_box:"Attackers in the box",shots_home:"Shots (home)",shots_away:"Shots (away)",pass_pct_home:"Pass accuracy home (%)",pass_pct_away:"Pass accuracy away (%)"};
+const PERSON = ["scorer","assist","keeper","shooter","player"];
+const store = {get(k,d){try{const v=localStorage.getItem("kv:"+k);return v===null?d:JSON.parse(v);}catch(e){return d;}}, set(k,v){try{localStorage.setItem("kv:"+k,JSON.stringify(v));}catch(e){}}};
+const esc = s => String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const $ = id => document.getElementById(id);
+
+const TABS = [["replay","3D replay"],["fan","Fan feed"],["broadcast","Broadcast desk"],["agents","How it was made"],["review","Arabic review"]];
+const st = {
+  match: Math.min(store.get("match",0), DATA.matches.length-1),
+  tab: (location.hash||"").slice(1) || store.get("tab","replay"),
+  profile: store.get("profile","fan_en"),
+  blang: store.get("blang","en"),
+  tier: "all",
+  open: {},
+  dec: store.get("dec",{}),
+  copied: ""
+};
+if (!TABS.some(t=>t[0]===st.tab)) st.tab = "replay";
+const M = () => DATA.matches[st.match];
+
+function nameOf(m, id, lang){ const n = m.names[id]; return n ? (n[lang]||n.en) : id; }
+function textOf(m, mid, lang, voice){ const a=(m.texts[mid]||{})[lang]||{}; return a[voice]||null; }
+function minuteOf(m, mid){ const x=m.moments.find(q=>q.id===mid); return x? x.minute : ""; }
+function momentOf(m, mid){ return m.moments.find(q=>q.id===mid); }
+const isAr = l => l==="ar";
+
+function srcBadge(src, lang, m){
+  if (src==="llm") return '<span class="badge ok">Model-written · fact-checked</span>';
+  const status = (m.language_status||{})[lang];
+  return '<span class="badge tpl">Template · fact-checked</span>';
+}
+const bell = '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.5a4 4 0 0 0-4 4v2.2L2.6 10v1h10.8v-1L12 7.7V5.5a4 4 0 0 0-4-4zM6.5 12.5a1.5 1.5 0 0 0 3 0z" fill="currentColor"/></svg>';
+
+/* ---------- header ---------- */
+function renderHead(){
+  const m = M();
+  $("matchpick").innerHTML = DATA.matches.map((x,i)=>`<button type="button" data-i="${i}" aria-pressed="${i===st.match}">${esc(x.home.names.en)} v ${esc(x.away.names.en)}</button>`).join("");
+  $("score").innerHTML = `
+    <div class="team"><span class="swatch" style="background:${esc(m.home.color)}"></span>${esc(m.home.names.en)}<small>Home · ${esc(m.home.names.ar)} · ${esc(m.home.names.es)}</small></div>
+    <div class="digits" aria-label="Final score ${m.home_goals} to ${m.away_goals}">${m.home_goals}<i>–</i>${m.away_goals}</div>
+    <div class="team away"><span class="swatch" style="background:${esc(m.away.color)}"></span>${esc(m.away.names.en)}<small>Away · ${esc(m.away.names.ar)} · ${esc(m.away.names.es)}</small></div>`;
+  $("matchmeta").innerHTML = `<span>${esc(m.competition)} · ${esc(m.season)} · Matchday ${m.matchday}</span><span>${esc(m.venue)}</span><span>Full time</span><span>Fictional league, synthetic match</span>`;
+  const v = m.verify;
+  $("chips").innerHTML = `<span class="chip"><b>${m.moments.length}</b> moments found</span><span class="chip"><b>${v.llm_accepted}</b> model texts passed the fact-check</span><span class="chip"><b>${v.llm_rejected}</b> rejected</span><span class="chip"><b>${v.llm_held_for_review}</b> Arabic drafts held for review</span>`;
+}
+
+/* ---------- pitch ---------- */
+function pitchSvg(path, m){
+  const lines = `<rect x="0" y="0" width="105" height="68" fill="var(--pitch)"/><g fill="none" stroke="var(--pitch-line)" stroke-width=".4" opacity=".9"><rect x=".3" y=".3" width="104.4" height="67.4"/><line x1="52.5" y1=".3" x2="52.5" y2="67.7"/><circle cx="52.5" cy="34" r="9.15"/><rect x=".3" y="13.85" width="16.5" height="40.3"/><rect x="88.2" y="13.85" width="16.5" height="40.3"/><rect x=".3" y="24.85" width="5.5" height="18.3"/><rect x="99.2" y="24.85" width="5.5" height="18.3"/></g>`;
+  if (!path || path.length<2) return `<svg class="pitch" viewBox="0 0 105 68" role="img" aria-label="Pitch">${lines}</svg>`;
+  const pts = path.map(p=>p.join(",")).join(" ");
+  const last = path[path.length-1];
+  const dots = path.slice(0,-1).map((p,i)=>`<circle cx="${p[0]}" cy="${p[1]}" r="${i===0?1.3:.9}" fill="#fff" opacity="${i===0?1:.8}"/>`).join("");
+  return `<svg class="pitch" viewBox="0 0 105 68" role="img" aria-label="Attack path towards the right-hand goal">${lines}<polyline points="${pts}" fill="none" stroke="#FFD257" stroke-width=".8" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="1.6 1.2"/>${dots}<circle cx="${last[0]}" cy="${last[1]}" r="1.7" fill="#FFD257" stroke="#0D2033" stroke-width=".4"/></svg>`;
+}
+
+/* ---------- detail block for one moment ---------- */
+function detailHtml(m, mom){
+  const lang = "en";
+  const rows = [];
+  PERSON.forEach(k=>{ if (mom.facts[k]) rows.push([k==="scorer"?"Scorer":k==="assist"?"Assist":k==="keeper"?"Keeper":k==="shooter"?"Shooter":"Player", esc(nameOf(m, mom.facts[k], lang))]); });
+  Object.keys(mom.facts).forEach(k=>{
+    if (PERSON.includes(k) || ["flags","team","opp","home","away","venue","start_label","end_label","behind_minute","sub_label","late","home_goals","away_goals","winner","loser","score"].includes(k)) return;
+    const v = mom.facts[k]; if (v===null || typeof v==="object") return;
+    if (["buildup_passes","buildup_seconds","progression_m"].includes(k) && mom.facts.buildup_passes===0) return;   // a set piece or rebound: no build-up to show
+    rows.push([FACT_LABEL[k]||k.replace(/_/g," "), esc(String(v).replace(/_/g," "))]);
+  });
+  if (mom.facts.home_goals!=null && mom.kind!=="full_time") rows.push(["Score at the time", `${mom.facts.home_goals}–${mom.facts.away_goals}`]);
+  if (mom.causes && mom.causes.length) rows.push(["Cause tags", esc(mom.causes.map(c=>c.replace(/_/g," ")).join(", "))]);
+  const flags = mom.facts.flags ? Object.keys(mom.facts.flags).filter(k=>mom.facts.flags[k]&&FLAG[k]).map(k=>`<span class="badge">${FLAG[k]}</span>`).join("") : "";
+  const fans = DATA.profileOrder.map(pid=>{
+    const p = m.fans[pid]; if(!p) return "";
+    const c = p.cards.find(x=>x.moment_id===mom.id); if(!c) return `<div class="q"><b>${esc(p.label)}</b>Not sent to this fan (below their interest threshold).</div>`;
+    return `<div class="q ${isAr(p.lang)?"rtl":""}"><b>${esc(p.label)}${c.push?" · push":""}</b><strong>${esc(c.headline)}</strong><br>${esc(c.body)}</div>`;
+  }).join("");
+  return `<div class="detail">
+    <div><h4>${mom.path&&mom.path.length>1?"Where it happened (attacking right)":"Facts the writer could use"}</h4>
+      ${mom.path&&mom.path.length>1?pitchSvg(mom.path,m):""}
+      <dl class="facts">${rows.map(r=>`<dt>${r[0]}</dt><dd>${r[1]}</dd>`).join("")}</dl>
+      ${flags?`<div class="flags">${flags}</div>`:""}
+      <p class="note">Every number and name in the text has to come from this list. The Verify agent rejects a text that adds anything else.</p></div>
+    <div><h4>Same moment, three fans</h4><div class="three">${fans}</div></div>
+  </div>`;
+}
+
+/* ---------- 3D replay ---------- */
+const SCENE_INFO = {
+  decoy: {title:"Dragging a defender away", why:"The ball events (who passed, who shot, when, from where) come from the match data. The runs of the other players come from the synthetic tracking, and the decoy run is authored on top of it: one attacker runs away from the play, his marker follows, and the cutback goes into the space they left."},
+  scan: {title:"Scanning before the ball arrives", why:"Switch to Player view to see through the eyes of the player who is about to receive the ball. Positions come from the synthetic tracking. The tracking has no head direction, so the looks are authored: opponent, two teammates, the ball, then the pass he has already chosen."}
+};
+let CTRLS = [];
+function scenesOf(m){ return (DATA.scenes||{})[m.id] || []; }
+function viewReplay(){
+  const m = M(); const sc = scenesOf(m); const prof = m.fans[st.profile] || m.fans[DATA.profileOrder[0]];
+  const seg = DATA.profileOrder.map(pid=>m.fans[pid]?`<button type="button" data-p="${pid}" aria-pressed="${pid===prof.id}">${esc(m.fans[pid].short)}</button>`:"").join("");
+  if (!sc.length) return `<h2>3D replay</h2><div class="empty">No 3D moments were built for this match. Run <code>python -m kvagents.reconstruct</code> on it.</div>`;
+  const blocks = sc.map(s=>{
+    const mom = momentOf(m, s.moment_id); const c = prof.cards.find(x=>x.moment_id===s.moment_id); const info = SCENE_INFO[s.kind];
+    const text = c ? `<div class="txt ${isAr(prof.lang)?"rtl":""}"><h5>${esc(prof.label)}${c.push?" · push":""}</h5><strong>${esc(c.headline)}</strong><br>${esc(c.body)}</div>`
+                   : `<div class="txt"><h5>${esc(prof.label)}</h5>Not sent to this fan.</div>`;
+    return `<section class="scene" id="scene-${esc(s.scene_id)}"><h3>${esc(mom.minute)}' · ${info.title}</h3>
+      <p class="why">${esc(info.why)}</p>
+      <div class="kv3d-host" data-scene="${esc(s.scene_id)}"></div>
+      <div class="twocol">${text}<div class="txt fair"><h5>What is real here</h5>The goal, the minute, the score and the pass are the generated match events. Everything else in the picture is an illustrative reconstruction on synthetic data. It does not claim to show how real players move.</div></div></section>`;
+  }).join("");
+  return `<h2>3D replay</h2>
+    <p class="lede">Watch a moment from the match rebuilt in 3D, with the fan text written for it. Use the camera buttons, or scrub the timeline. Press play.</p>
+    <div class="bar"><div class="seg" role="group" aria-label="Fan profile and caption language">${seg}</div><span class="note" style="margin:0">Captions follow the fan: ${esc(prof.label)}</span></div>${blocks}`;
+}
+function mountReplay(keep){
+  CTRLS.forEach(c=>{ try{ c.destroy(); }catch(e){} }); CTRLS = [];
+  if (st.tab!=="replay" || typeof KV3D==="undefined") return;
+  const m = M(); const prof = m.fans[st.profile] || m.fans[DATA.profileOrder[0]];
+  document.querySelectorAll(".kv3d-host").forEach(h=>{
+    const s = scenesOf(m).find(x=>x.scene_id===h.dataset.scene); if(!s) return;
+    const prev = (keep||{})[s.scene_id] || {};
+    CTRLS.push(Object.assign(KV3D.mount(h, s, {lang: prof.lang, t: prev.t, cam: prev.cam, playing: prev.playing}), {sid:s.scene_id}));
+  });
+}
+
+/* ---------- fan feed ---------- */
+function viewFan(){
+  const m = M(); const prof = m.fans[st.profile] || m.fans[DATA.profileOrder[0]];
+  const seg = DATA.profileOrder.map(pid=>m.fans[pid]?`<button type="button" data-p="${pid}" aria-pressed="${pid===prof.id}">${esc(m.fans[pid].short)}</button>`:"").join("");
+  const pushes = prof.cards.filter(c=>c.push).length;
+  const cards = prof.cards.map(c=>{
+    const mom = momentOf(m, c.moment_id); const key = "f:"+prof.id+":"+c.moment_id; const open = !!st.open[key];
+    return `<article class="card ${c.push?"tierstripe":""}">
+      <div class="when"><span class="min">${esc(mom.minute)}'</span><span class="kind">${esc(KIND[mom.kind]||mom.kind)}</span></div>
+      <div class="what ${isAr(prof.lang)?"rtl":""}">
+        <h3>${esc(c.headline)}</h3><p>${esc(c.body)}</p>
+        <div class="meta" style="direction:ltr">${c.push?`<span class="badge push">${bell}Push notification</span>`:""}${srcBadge(c.source, prof.lang, m)}${scenesOf(m).some(s=>s.moment_id===c.moment_id)?`<button type="button" class="more" data-replay="${c.moment_id}">Watch in 3D</button>`:""}<button type="button" class="more" data-open="${key}" aria-expanded="${open}" ${scenesOf(m).some(s=>s.moment_id===c.moment_id)?'style="margin-inline-start:0"':""}>${open?"Hide details":"Details"}</button></div>
+        ${open?`<div style="direction:ltr;text-align:left;font-family:var(--body)">${detailHtml(m, mom)}</div>`:""}
+      </div></article>`;
+  }).join("");
+  return `<h2>Fan feed</h2>
+    <p class="lede">One match, written for three different fans: the language, the club they follow and what is worth a push notification all change. Pick a fan.</p>
+    <div class="bar"><div class="seg" role="group" aria-label="Fan profile">${seg}</div><span class="note" style="margin:0">${esc(prof.label)} · ${prof.cards.length} cards, ${pushes} push</span></div>
+    <div class="feed">${cards}</div>`;
+}
+
+/* ---------- broadcast desk ---------- */
+function lowerThird(min, head){ const t = head.length>70 ? head.slice(0,69)+"…" : head; return {min, t}; }
+function viewBroadcast(){
+  const m = M(); const lang = st.blang;
+  const seg = LANGS.map(l=>`<button type="button" data-b="${l[0]}" aria-pressed="${l[0]===lang}">${l[1]}</button>`).join("");
+  const tiers = ["all","A","B","C"].map(t=>`<button type="button" data-t="${t}" aria-pressed="${t===st.tier}">${t==="all"?"All tiers":"Tier "+t}</button>`).join("");
+  const cards = m.broadcast.filter(c=>st.tier==="all"||c.tier===st.tier).map(c=>{
+    const mom = momentOf(m, c.moment_id); const tx = textOf(m, c.moment_id, lang, "broadcast"); if(!tx) return "";
+    const lt = lowerThird(mom.minute+"'", tx.h); const key = "b:"+c.moment_id; const open = !!st.open[key];
+    return `<article class="card">
+      <div class="when"><span class="tier ${c.tier}" title="Tier ${c.tier}">${c.tier}</span><span class="kind">${esc(KIND[mom.kind]||mom.kind)}</span></div>
+      <div class="what">
+        <div class="third"><span class="m">${esc(lt.min)}</span><span class="t ${isAr(lang)?"rtl":""}">${esc(lt.t)}</span></div>
+        <div class="${isAr(lang)?"rtl":""}"><h3>${esc(tx.h)}</h3><p>${esc(tx.b)}</p></div>
+        <div class="meta">${srcBadge(tx.src, lang, m)}<span class="badge">Importance ${c.importance.toFixed(2)}</span><button type="button" class="more" data-open="${key}" aria-expanded="${open}">${open?"Hide details":"Details"}</button></div>
+        ${open?detailHtml(m, mom):""}
+      </div></article>`;
+  }).join("");
+  return `<h2>Broadcast desk</h2>
+    <p class="lede">Producers get the moments ranked, each with a lower-third line capped at 70 characters. Tier A is importance 0.80 or higher, tier B is 0.60 or higher, tier C is below that.</p>
+    <div class="bar"><div class="seg" role="group" aria-label="Language">${seg}</div><div class="seg" role="group" aria-label="Tier">${tiers}</div></div>
+    <div class="feed">${cards||'<div class="empty">No moments in this tier.</div>'}</div>`;
+}
+
+/* ---------- how it was made ---------- */
+function fmtMs(ms){ return ms<1 ? "<1 ms" : ms<1000 ? Math.round(ms)+" ms" : (ms/1000).toFixed(1)+" s"; }
+function outText(a){
+  if (a.agent==="Verify"){ try{ const v=JSON.parse(a.outputs); return `${v.llm_accepted} model texts published, ${v.llm_rejected} rejected, ${v.llm_held_for_review||0} held for review`; }catch(e){} }
+  return a.outputs.replace(/[{}']/g,"");
+}
+function nodeHtml(a){ return `<div class="node"><h4>${esc(a.agent)}</h4><div class="step">${esc(a.step)}</div><div class="t">${fmtMs(a.took_ms)}</div><div class="io">${esc(a.inputs)}<br>→ ${esc(outText(a))}</div></div>`; }
+function viewAgents(){
+  const m = M(); const ag = m.trace.agents; const by = n=>ag.find(a=>a.agent===n);
+  const v = m.verify; const total = v.llm_accepted+v.llm_rejected+v.llm_held_for_review || 1;
+  const pct = n => (100*n/total).toFixed(1)+"%";
+  const reasons = {}; m.trace.rejections.forEach(r=>{ const why=r.slice(r.indexOf(": ")+2); reasons[why]=(reasons[why]||0)+1; });
+  const rejRows = Object.entries(reasons).sort((a,b)=>b[1]-a[1]).map(([w,n])=>`<tr><td><b>${n}</b></td><td>${esc(w)}</td></tr>`).join("");
+  return `<h2>How it was made</h2>
+    <p class="lede">Six agents run as a workflow on Microsoft Agent Framework. Interpret, Explain, Narrate and Verify run in a chain, then the Broadcast desk and the Fan desk run side by side and meet again at Publish.</p>
+    <div class="flow">
+      ${nodeHtml(by("Interpret"))}<span class="arrow">→</span>${nodeHtml(by("Explain"))}<span class="arrow">→</span>${nodeHtml(by("Narrate"))}<span class="arrow">→</span>${nodeHtml(by("Verify"))}<span class="arrow">→</span>
+      <div class="node stack">${nodeHtml(by("Broadcast desk"))}${nodeHtml(by("Fan desk"))}</div><span class="arrow">→</span>
+      <div class="node"><h4>Publish</h4><div class="step">write the feeds</div><div class="io">JSON for this page, one file per audience</div></div>
+    </div>
+    <div class="panel"><h3>What the Verify agent decided</h3>
+      <div class="stackbar" role="img" aria-label="Model drafts: ${v.llm_accepted} accepted, ${v.llm_held_for_review} held, ${v.llm_rejected} rejected">
+        <i style="width:${pct(v.llm_accepted)};background:var(--ok)"></i><i style="width:${pct(v.llm_held_for_review)};background:var(--held)"></i><i style="width:${pct(v.llm_rejected)};background:var(--bad)"></i></div>
+      <div class="legend"><span><i style="background:var(--ok)"></i><b>${v.llm_accepted}</b> model texts published</span><span><i style="background:var(--held)"></i><b>${v.llm_held_for_review}</b> Arabic drafts held for a native reader</span><span><i style="background:var(--bad)"></i><b>${v.llm_rejected}</b> rejected, template kept</span></div>
+      <p class="note">${v.templates_ok} of ${v.templates_ok+v.templates_failed} template texts passed the same checks.</p>
+      <h3 style="margin-top:14px">Why drafts were rejected</h3>
+      ${rejRows?`<div class="tablewrap"><table class="rej">${rejRows}</table></div>`:'<p class="note">No drafts were rejected in this match.</p>'}
+      <h3 style="margin-top:14px">What Verify checks</h3>
+      <ul class="rules"><li>Every number, written as digits or as words, must be in the facts for that moment.</li><li>No player or club that is not in the facts, and the main actor must be named.</li><li>No claim that a team won or that the match ended unless the facts say so.</li><li>Arabic text has no Latin letters; other text has no Arabic letters.</li><li>Length limits for headlines and bodies. A failed draft is replaced by the template text.</li></ul>
+    </div>
+    <div class="panel"><h3>Where the text comes from</h3>
+      <p style="margin:0 0 6px">Engine: <b>${esc(m.engine)}</b> · Writer model: <b>${esc(m.model_short)}</b>, a free hosted model, called through an Agent Framework agent in GitHub Actions. Answers are saved and replayed, so this page needs no live model.</p>
+      <p class="note" style="margin:0">Interpret, Explain, Verify and the two desks are rule-based and need no model. The writer is the only agent that can use one. If a model is unavailable the templates still produce every text.</p>
+    </div>`;
+}
+
+/* ---------- Arabic review ---------- */
+function heldList(m){
+  const out = [];
+  m.moments.forEach(mom=>{ const a=(m.texts[mom.id]||{}).ar||{}; Object.keys(a).forEach(v=>{ if (a[v].hh) out.push({mom, voice:v, tpl:a[v]}); }); });
+  return out;
+}
+function viewReview(){
+  const m = M(); const list = heldList(m);
+  const mk = (it)=>m.id+"|"+it.mom.id+"|ar|"+it.voice;
+  const n = {approve:0, reject:0}; list.forEach(it=>{ const d=st.dec[mk(it)]; if(d) n[d]++; });
+  const items = list.map(it=>{
+    const k = mk(it); const d = st.dec[k];
+    return `<article class="card"><div class="when"><span class="min">${esc(it.mom.minute)}'</span><span class="kind">${esc(KIND[it.mom.kind]||it.mom.kind)}</span></div>
+      <div class="what"><div class="note" style="margin:0 0 6px">${esc(it.voice.replace("_"," "))} voice</div>
+        <div class="rev">
+          <div class="q rtl"><h5 style="font-family:var(--body)">Published now: template</h5><strong>${esc(it.tpl.h)}</strong><br>${esc(it.tpl.b)}</div>
+          <div class="q rtl"><h5 style="font-family:var(--body)">Model draft, held back</h5><strong>${esc(it.tpl.hh)}</strong><br>${esc(it.tpl.hb)}</div>
+        </div>
+        <div class="dec" data-k="${esc(k)}"><button type="button" data-v="approve" aria-pressed="${d==="approve"}">Approve the draft</button><button type="button" data-v="reject" aria-pressed="${d==="reject"}">Keep the template</button></div>
+      </div></article>`;
+  }).join("");
+  const payload = JSON.stringify(DATA.matches.map(mm=>{ const keys = Object.keys(st.dec).filter(k=>k.startsWith(mm.id+"|")); const pick = v => keys.filter(k=>st.dec[k]===v).map(k=>k.slice(mm.id.length+1)); return {match_id:mm.id, approved:pick("approve"), rejected:pick("reject")}; }));
+  return `<h2>Arabic review</h2>
+    <p class="lede">The Arabic written by the model passed the fact-check, but the fact-check cannot judge grammar or wording. A native reader decides. Approve a draft only if you would be happy to see it on air. Your choices stay in this browser until you copy them out. The copied text covers both matches. Save it as demo/approvals-ar.json in the repository and run the Narrate workflow again: approved drafts are published, the rest keep the template.</p>
+    <div class="bar"><span class="badge ok">${n.approve} approved</span><span class="badge bad">${n.reject} keep template</span><span class="badge held">${list.length-n.approve-n.reject} not reviewed</span>
+      <button type="button" class="btn" id="copydec" style="margin-inline-start:auto">Copy my decisions</button></div>
+    ${st.copied?`<p class="note">${esc(st.copied)}</p>`:""}
+    <textarea class="out" id="decout" readonly aria-label="Decisions as text">${esc(payload)}</textarea>
+    <div class="feed" style="margin-top:12px">${items||'<div class="empty">No Arabic drafts are waiting in this match.</div>'}</div>`;
+}
+
+/* ---------- shell ---------- */
+function renderTabs(){
+  $("tabs").innerHTML = TABS.map(t=>`<button type="button" role="tab" data-tab="${t[0]}" aria-selected="${t[0]===st.tab}">${t[1]}</button>`).join("");
+}
+function renderFine(){
+  const m = M();
+  $("fine").innerHTML = `All clubs, players, stadiums and matches are fictional and generated by software. Nothing here is real match data or a real league. Text is written by templates or by <b>${esc(m.model_short)}</b> and checked by the Verify agent. English is the source language. Arabic model text is held until a native reader approves it. Spanish is machine-assisted and has not been reviewed by a native reader. The 3D replays are illustrative reconstructions built on synthetic tracking; the Arabic and Spanish 3D captions are short templates and have not been reviewed by a native reader.`;
+}
+function render(){
+  const keep = {}; CTRLS.forEach(c=>{ try{ keep[c.sid]=c.state(); }catch(e){} });
+  renderHead(); renderTabs(); renderFine();
+  const v = {replay:viewReplay, fan:viewFan, broadcast:viewBroadcast, agents:viewAgents, review:viewReview}[st.tab]();
+  $("view").innerHTML = v;
+  mountReplay(keep);
+}
+document.addEventListener("click", e=>{
+  const t = e.target.closest("button"); if(!t) return;
+  if (t.dataset.i!==undefined){ st.match=+t.dataset.i; st.open={}; st.copied=""; store.set("match",st.match); render(); return; }
+  if (t.dataset.tab){ st.tab=t.dataset.tab; store.set("tab",st.tab); render(); window.scrollTo({top:0}); return; }
+  if (t.dataset.replay){ const m=M(); const sc=scenesOf(m).find(x=>x.moment_id===t.dataset.replay); st.tab="replay"; store.set("tab","replay"); render(); const el=sc&&document.getElementById("scene-"+sc.scene_id); if(el) el.scrollIntoView({block:"start"}); return; }
+  if (t.dataset.p){ st.profile=t.dataset.p; store.set("profile",st.profile); render(); return; }
+  if (t.dataset.b){ st.blang=t.dataset.b; store.set("blang",st.blang); render(); return; }
+  if (t.dataset.t){ st.tier=t.dataset.t; render(); return; }
+  if (t.dataset.open){ st.open[t.dataset.open]=!st.open[t.dataset.open]; render(); return; }
+  if (t.dataset.v){ const k=t.closest(".dec").dataset.k; st.dec[k] = st.dec[k]===t.dataset.v ? undefined : t.dataset.v; if(st.dec[k]===undefined) delete st.dec[k]; store.set("dec",st.dec); st.copied=""; render(); return; }
+  if (t.id==="copydec"){
+    const ta=$("decout"); const text=ta.value;
+    const done = ok => { st.copied = ok ? "Copied. Paste it into the chat." : "Select the text below and copy it."; render(); if(!ok){ const x=$("decout"); x.focus(); x.select(); } };
+    try { navigator.clipboard.writeText(text).then(()=>done(true), ()=>done(false)); } catch(err){ done(false); }
+  }
+});
+render();
+</script>

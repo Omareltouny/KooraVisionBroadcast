@@ -195,8 +195,10 @@ def held_languages() -> set[str]:
     return {code for code, mod in LANG.items() if getattr(mod, "STATUS", "") == "needs_native_review" and code not in trust}
 
 
-def verify_all(narrations, packets: dict[str, FactPacket], all_names: set[str]):
-    """Settle every LLM draft: it replaces its template only if it passes. Returns (final narrations, stats, rejections)."""
+def verify_all(narrations, packets: dict[str, FactPacket], all_names: set[str], approvals: set[str] | None = None):
+    """Settle every LLM draft: it replaces its template only if it passes. Returns (final narrations, stats, rejections).
+    `approvals` holds "moment|lang|voice" keys a native reader approved: such a held draft is published (it still had to pass)."""
+    approvals = approvals or set()
     from .models import Narration  # local import: models has no dependency on this module
     final: dict[tuple[str, str, str], Narration] = {}
     stats = {"templates_ok": 0, "templates_failed": 0, "llm_accepted": 0, "llm_rejected": 0, "llm_held_for_review": 0}
@@ -213,7 +215,7 @@ def verify_all(narrations, packets: dict[str, FactPacket], all_names: set[str]):
         if n.source == "llm_draft":
             ok, why = verify_narration(packets[n.moment_id], n.headline, n.body, n.lang, all_names)
             key = (n.moment_id, n.lang, n.voice)
-            if ok and n.lang in hold and key in final:
+            if ok and n.lang in hold and key in final and f"{n.moment_id}|{n.lang}|{n.voice}" not in approvals:
                 final[key].held_headline, final[key].held_body = n.headline, n.body   # the template stays published
                 stats["llm_held_for_review"] += 1
             elif ok:

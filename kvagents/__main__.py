@@ -12,6 +12,17 @@ from .personalize import profiles_from_json
 from .pipeline import run_pipeline
 
 
+def _approvals(path: str | None) -> dict[str, set[str]]:
+    """The review page's JSON: one object per match, {"match_id": ..., "approved": ["moment|lang|voice", ...]}."""
+    if not path:
+        return {}
+    data = json.loads(Path(path).read_text(encoding="utf-8"))
+    out: dict[str, set[str]] = {}
+    for d in (data if isinstance(data, list) else [data]):
+        out.setdefault(d.get("match_id", ""), set()).update(d.get("approved", []))
+    return out
+
+
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(prog="kvagents")
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -23,6 +34,7 @@ def main(argv: list[str] | None = None) -> int:
     r.add_argument("--min-interval", type=float, default=float(os.environ.get("KV_LLM_MIN_INTERVAL", "0")),
                    help="seconds between real model calls (free tiers have rate limits)")
     r.add_argument("--offline", action="store_true", help="replay cached model answers only; never call a model")
+    r.add_argument("--approvals", help="JSON saved from the Arabic review page: held model drafts a native reader approved")
     r.add_argument("--no-tracking", action="store_true")
     r.add_argument("--engine", choices=["auto", "framework", "direct"], default="auto")
     e = sub.add_parser("evaluate", help="score the Interpret agent against the planted stories (evaluation only)")
@@ -33,7 +45,7 @@ def main(argv: list[str] | None = None) -> int:
         if a.model_cache:
             model = CachedModel(None if a.offline else model_from_env(), a.model_cache, offline=a.offline, min_interval=a.min_interval)
         profiles = profiles_from_json(json.loads(Path(a.profiles).read_text())) if a.profiles else None
-        state, d = run_pipeline(a.match_dir, a.out, model, profiles, not a.no_tracking, a.engine)
+        state, d = run_pipeline(a.match_dir, a.out, model, profiles, not a.no_tracking, a.engine, _approvals(a.approvals))
         for t in state.trace:
             print(f"[{t.agent}] {t.outputs}  ({t.took_ms:.0f} ms)")
         print(f"wrote {d}")

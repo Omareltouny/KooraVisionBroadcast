@@ -151,6 +151,20 @@ def test_arabic_model_text_is_held_for_a_native_reader_until_trusted(mv, packets
     assert any(n.source == "llm" for n in final if n.lang == "ar") and stats["llm_held_for_review"] == 0
 
 
+def test_reviewer_approval_publishes_a_held_arabic_draft(mv, packets, moments, monkeypatch):
+    monkeypatch.delenv("KV_TRUST_LANGS", raising=False)
+    imp = {m.moment_id: m.importance for m in moments}
+    ns, _ = narrate(mv, packets, FakeModel("good"), importance=imp)
+    pk = {p.moment_id: p for p in packets}
+    held = next(n for n in verify_all(ns, pk, mv.all_names())[0] if n.lang == "ar" and n.held_body)
+    key = f"{held.moment_id}|ar|{held.voice}"
+    final, stats, _ = verify_all(ns, pk, mv.all_names(), {key})
+    got = next(n for n in final if (n.moment_id, n.lang, n.voice) == (held.moment_id, "ar", held.voice))
+    assert got.source == "llm" and got.verified and not got.held_body
+    other = [n for n in final if n.lang == "ar" and n.held_body]
+    assert other and all(n.source == "template" for n in other)       # everything not approved stays on the template
+
+
 def test_arabic_number_agreement():
     T = LANG["ar"].T
     assert _nf(T, "press_body", 5) == T["press_body_few"]
